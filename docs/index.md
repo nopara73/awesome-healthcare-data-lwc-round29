@@ -1,10 +1,10 @@
-# Awesome Health Data
+# Awesome Healthcare Data
 
 <section class="catalog-hero" aria-label="Abstract healthcare data network banner">
   <div class="catalog-hero__content">
-    <p class="catalog-hero__kicker">Machine-readable healthcare data catalog</p>
+    <p class="catalog-hero__kicker">Healthcare data catalog</p>
     <h1>Find the right healthcare dataset faster.</h1>
-    <p>Curated public, credentialed, governed, commercial, research, imaging, genomics, drug, and global-health data sources for ML and analytics workflows.</p>
+    <p>Curated healthcare data sources<br>for governed access, research,<br>imaging, genomics, drug safety,<br>global health, ML, and analytics.</p>
     <div class="catalog-hero__actions">
       <a class="catalog-button catalog-button--primary" href="datasets.md">Browse datasets</a>
       <a class="catalog-button" href="getting-started.md">Get started</a>

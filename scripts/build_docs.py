@@ -55,14 +55,16 @@ stats = catalog_stats(entries)
 docs_dir = ROOT / "docs"
 
 index_lines = []
-index_lines.append("# Awesome Health Data\n\n")
+index_lines.append("# Awesome Healthcare Data\n\n")
 index_lines.append('<section class="catalog-hero" aria-label="Abstract healthcare data network banner">\n')
 index_lines.append('  <div class="catalog-hero__content">\n')
-index_lines.append('    <p class="catalog-hero__kicker">Machine-readable healthcare data catalog</p>\n')
+index_lines.append('    <p class="catalog-hero__kicker">Healthcare data catalog</p>\n')
 index_lines.append("    <h1>Find the right healthcare dataset faster.</h1>\n")
 index_lines.append(
-    "    <p>Curated public, credentialed, governed, commercial, research, imaging, "
-    "genomics, drug, and global-health data sources for ML and analytics workflows.</p>\n"
+    "    <p>Curated healthcare data sources<br>"
+    "for governed access, research,<br>"
+    "imaging, genomics, drug safety,<br>"
+    "global health, ML, and analytics.</p>\n"
 )
 index_lines.append('    <div class="catalog-hero__actions">\n')
 index_lines.append('      <a class="catalog-button catalog-button--primary" href="datasets.md">Browse datasets</a>\n')

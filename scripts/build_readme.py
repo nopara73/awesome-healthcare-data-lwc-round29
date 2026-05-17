@@ -57,7 +57,7 @@ lines.append(
     '<p align="center"><img src="docs/assets/awesome-health-data-banner.png" '
     'alt="Abstract healthcare data network banner" width="100%"></p>\n\n'
 )
-lines.append('<h1 align="center">Awesome Health Data</h1>\n\n')
+lines.append('<h1 align="center">Awesome Healthcare Data</h1>\n\n')
 lines.append(
     '<p align="center"><strong>A machine-readable healthcare dataset catalog '
     "for ML, analytics, public health, policy, and life sciences teams.</strong></p>\n\n"

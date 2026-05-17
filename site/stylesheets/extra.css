@@ -27,6 +27,7 @@
 }
 
 .catalog-hero {
+  box-sizing: border-box;
   min-height: 24rem;
   margin: 0 0 2rem;
   padding: clamp(2rem, 5vw, 4rem);
@@ -42,7 +43,9 @@
 }
 
 .catalog-hero__content {
-  max-width: 42rem;
+  width: 100%;
+  max-width: min(42rem, 16rem + 22vw);
+  min-width: 0;
 }
 
 .catalog-hero__kicker {
@@ -63,9 +66,10 @@
 }
 
 .catalog-hero p {
-  max-width: 38rem;
+  max-width: min(38rem, 8rem + 22vw);
   color: rgba(255, 255, 255, 0.88);
   font-size: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .catalog-hero__actions {
@@ -104,6 +108,7 @@
 }
 
 .stat-card {
+  box-sizing: border-box;
   min-height: 5.25rem;
   padding: 0.9rem;
   border: 1px solid var(--catalog-line);
@@ -136,6 +141,7 @@
 }
 
 .category-card {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 2.1rem minmax(0, 1fr);
   gap: 0.75rem;
@@ -177,6 +183,7 @@
 }
 
 .tier-card {
+  box-sizing: border-box;
   min-height: 7rem;
   padding: 0.9rem;
   border: 1px solid var(--catalog-line);
@@ -225,6 +232,15 @@
 }
 
 @media (max-width: 900px) {
+  .catalog-hero__content,
+  .catalog-hero p {
+    max-width: 18.75rem;
+  }
+
+  .catalog-hero__kicker {
+    overflow-wrap: anywhere;
+  }
+
   .stat-grid,
   .stat-grid--compact,
   .tier-grid {
@@ -238,8 +254,25 @@
 
 @media (max-width: 560px) {
   .catalog-hero {
+    width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
     min-height: 28rem;
     padding: 1.25rem;
+  }
+
+  .catalog-hero__content,
+  .catalog-hero p {
+    max-width: 18.75rem;
+  }
+
+  .catalog-hero__kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .catalog-hero h1 {
+    font-size: 2.05rem;
   }
 
   .stat-grid,
