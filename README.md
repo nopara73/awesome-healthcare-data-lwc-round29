@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/assets/awesome-health-data-banner.png" alt="Abstract healthcare data network banner" width="100%"></p>
 
-<h1 align="center">Awesome Health Data</h1>
+<h1 align="center">Awesome Healthcare Data</h1>
 
 <p align="center"><strong>A machine-readable healthcare dataset catalog for ML, analytics, public health, policy, and life sciences teams.</strong></p>
 
