@@ -1,19 +1,22 @@
+PYTHON ?= python3
+PYTHON_RUN = PYTHONDONTWRITEBYTECODE=1 $(PYTHON)
+
 .PHONY: validate build links freshness site
 
 validate:
-	python scripts/validate.py
+	$(PYTHON_RUN) scripts/validate.py
 
 build:
-	python scripts/build_readme.py
-	python scripts/build_csv.py
-	python scripts/build_search_index.py
-	cp README.md docs/datasets.md
+	$(PYTHON_RUN) scripts/build_readme.py
+	$(PYTHON_RUN) scripts/build_docs.py
+	$(PYTHON_RUN) scripts/build_csv.py
+	$(PYTHON_RUN) scripts/build_search_index.py
 
 links:
-	python scripts/check_links.py
+	$(PYTHON_RUN) scripts/check_links.py
 
 freshness:
-	python scripts/check_freshness.py
+	$(PYTHON_RUN) scripts/check_freshness.py
 
 site:
 	mkdocs build --strict

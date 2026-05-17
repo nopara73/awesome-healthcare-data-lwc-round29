@@ -1,14 +1,80 @@
-# Awesome Health Data
+<p align="center"><img src="docs/assets/awesome-health-data-banner.png" alt="Abstract healthcare data network banner" width="100%"></p>
 
-A machine-readable catalog of healthcare, public health, SDOH, claims, research, imaging, genomics, drug, and global-health datasets for ML and analytics.
+<h1 align="center">Awesome Health Data</h1>
+
+<p align="center"><strong>A machine-readable healthcare dataset catalog for ML, analytics, public health, policy, and life sciences teams.</strong></p>
+
+<p align="center">
+  <img alt="Datasets" src="https://img.shields.io/badge/datasets-108-0b7285.svg?style=for-the-badge">
+  <img alt="Categories" src="https://img.shields.io/badge/categories-14-1864ab.svg?style=for-the-badge">
+  <img alt="Open sources" src="https://img.shields.io/badge/open-69-2f9e44.svg?style=for-the-badge">
+  <img alt="Generated from YAML" src="https://img.shields.io/badge/source-YAML-495057.svg?style=for-the-badge">
+  <img alt="Awesome" src="https://img.shields.io/badge/awesome-health%20data-6741d9.svg?style=for-the-badge">
+</p>
 
 > This README is generated from `datasets/**/*.yaml`. Do not hand-edit dataset tables; update YAML and rerun `make build`.
 
-## What these data sources can help with
+## At a Glance
 
-This catalog brings together data sources that help healthcare, life sciences, public health, policy, and analytics teams answer practical business questions: where care is delivered, what it costs, which populations are at risk, how communities differ, how drugs and devices perform, and how clinical evidence can be reused responsibly. The summaries below explain each source in plain language before the technical index.
+<table>
+<tr>
+<td align="center"><strong>108</strong><br><sub>datasets</sub></td>
+<td align="center"><strong>14</strong><br><sub>categories</sub></td>
+<td align="center"><strong>69</strong><br><sub>open sources</sub></td>
+<td align="center"><strong>17</strong><br><sub>DUA, IRB, or purchase</sub></td>
+<td align="center"><strong>20</strong><br><sub>reference entries</sub></td>
+</tr>
+</table>
 
-### Terminologies & Vocabularies
+## Start Here
+
+| Need | Go to |
+|---|---|
+| Find a source by domain | [Category map](#category-map) |
+| Compare access restrictions | [Access tiers](#access-tiers) |
+| Browse every dataset | [Dataset index](#dataset-index) |
+| Build a governed-data workflow | [PHI guide](docs/phi-guide.md) and [playbooks](playbooks/) |
+| Prototype ML examples | [notebooks](notebooks/) and [sample data](examples/sample_data/) |
+| Consume machine-readable exports | [CSV/JSON exports](exports/) |
+
+## Category Map
+
+| Category | Count | What it covers |
+|---|---:|---|
+| &#x1F524; [Terminologies & Vocabularies](#terminologies) | 16 | Code systems, vocabularies, and ontology sources for semantic normalization. |
+| &#x1F3E5; [CMS / Medicare](#cms-medicare) | 11 | Medicare, quality, payment, enrollment, and federal provider datasets. |
+| &#x1F91D; [Medicaid](#medicaid) | 1 | Medicaid and CHIP files for access, cost, eligibility, and utilization analysis. |
+| &#x1F4CA; [CDC Surveillance & Public Health](#cdc-surveillance) | 16 | Public health surveillance, surveys, registries, and vital statistics. |
+| &#x1F3E8; [HCUP](#hcup) | 4 | Encounter-level inpatient, emergency, and ambulatory surgery research assets. |
+| &#x1F4B3; [Claims, Cost & Transparency](#claims-commercial) | 7 | Commercial claims, APCDs, price transparency, and state encounter files. |
+| &#x1F9D1;&#x200D;&#x2695;&#xFE0F; [Provider Data](#provider) | 6 | Provider directories, taxonomy files, quality measures, and relationship data. |
+| &#x1F3D8;&#xFE0F; [SDOH & Environment](#sdoh) | 13 | Social, economic, environmental, housing, workforce, and place-based context. |
+| &#x1F5FA;&#xFE0F; [Census & Demographic](#census) | 5 | Population, insurance, poverty, commuting, and denominator datasets. |
+| &#x1F52C; [Clinical / Research / ICU](#clinical-research) | 10 | Credentialed EHR, ICU, cohort, trial, and multimodal research datasets. |
+| &#x1F48A; [Drug & Pharmacology](#drug-pharma) | 7 | Drug labels, approvals, adverse events, compounds, side effects, and safety data. |
+| &#x1F5BC;&#xFE0F; [Imaging](#imaging) | 5 | Radiology, dermatology, cancer imaging, and benchmark medical image collections. |
+| &#x1F9EC; [Genomics / Phenotype](#genomics) | 3 | Variant, phenotype, ontology, and association resources for genetics workflows. |
+| &#x1F310; [International / Global Health](#international) | 4 | Global and country-comparable health indicators, burden, and system measures. |
+
+## Access Tiers
+
+| Tier | Count | Meaning |
+|---|---:|---|
+| `open` Open | 69 | Public download, API, or aggregate portal. |
+| `registration` Registration | 13 | Free account, click-through terms, training, or attestation. |
+| `dua` DUA | 8 | Data use agreement or project approval. |
+| `irb` IRB | 2 | IRB, DAC, or human-subjects governed access. |
+| `purchase` Purchase | 7 | Paid license or proprietary component. |
+| `mixed` Mixed | 9 | Dataset family with multiple access paths. |
+
+## What These Data Sources Can Help With
+
+This catalog brings together data sources that help healthcare, life sciences, public health, policy, and analytics teams answer practical business questions: where care is delivered, what it costs, which populations are at risk, how communities differ, how drugs and devices perform, and how clinical evidence can be reused responsibly.
+
+<details>
+<summary><strong>&#x1F524; Terminologies & Vocabularies</strong> <sub>16 datasets</sub></summary>
+
+Code systems, vocabularies, and ontology sources for semantic normalization.
 
 - **[ATC/DDD](https://atcddd.fhi.no/)**: A global drug classification and dose-reference source that helps pharmacy, population health, and market access teams compare medication use across products, classes, regions, and time periods.
 - **[CPT/HCPCS](https://www.cms.gov/medicare/coding/healthcare-common-procedure-system)**: The main U.S. procedure and service billing code sets, useful for understanding what care was delivered, pricing services, measuring utilization, and grouping outpatient or professional claims.
@@ -27,7 +93,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[SNOMED CT](https://www.nlm.nih.gov/healthit/snomedct/)**: A broad clinical terminology for diagnoses, findings, procedures, and body structures, useful for harmonizing EHR data and building clinically meaningful cohorts.
 - **[UMLS](https://www.nlm.nih.gov/research/umls/)**: A large biomedical terminology crosswalk that helps data and AI teams connect different medical vocabularies, synonyms, abbreviations, and text-mining outputs.
 
-### CMS / Medicare
+</details>
+
+<details>
+<summary><strong>&#x1F3E5; CMS / Medicare</strong> <sub>11 datasets</sub></summary>
+
+Medicare, quality, payment, enrollment, and federal provider datasets.
 
 - **[CMS Care Compare](https://data.cms.gov/provider-data/)**: Public CMS quality and performance data for hospitals, nursing homes, home health, hospice, and other providers, useful for provider selection, benchmarking, and network strategy.
 - **[Open Payments](https://openpaymentsdata.cms.gov/)**: Public records of industry payments to physicians and teaching hospitals, useful for compliance reviews, conflict-of-interest checks, market mapping, and provider relationship analysis.
@@ -41,11 +112,21 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[Medicare FFS Claims](https://resdac.org/cms-data/request/cms-data-request-center)**: Detailed Medicare fee-for-service claims used to follow patient care, cost, utilization, outcomes, and provider patterns over time for approved research and analytics.
 - **[Medicare Provider Utilization](https://data.cms.gov/provider-summary-by-type-of-service)**: Public Medicare provider utilization and payment summaries that help teams benchmark services, procedure volumes, prescribing, payment levels, and provider market activity.
 
-### Medicaid
+</details>
+
+<details>
+<summary><strong>&#x1F91D; Medicaid</strong> <sub>1 datasets</sub></summary>
+
+Medicaid and CHIP files for access, cost, eligibility, and utilization analysis.
 
 - **[TAF / T-MSIS](https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html)**: National Medicaid and CHIP eligibility, encounter, and claims-style files that help study access, cost, utilization, equity, and state program performance.
 
-### CDC Surveillance & Public Health
+</details>
+
+<details>
+<summary><strong>&#x1F4CA; CDC Surveillance & Public Health</strong> <sub>16 datasets</sub></summary>
+
+Public health surveillance, surveys, registries, and vital statistics.
 
 - **[BRFSS](https://www.cdc.gov/brfss/data_documentation/index.htm)**: A large adult health behavior survey that helps public health and strategy teams understand smoking, obesity, prevention, chronic disease risks, and state-level population trends.
 - **[WONDER](https://wonder.cdc.gov/)**: A public query system for mortality, births, disease, and other public health data, useful for quick population benchmarks, outcomes research, and local trend checks.
@@ -64,14 +145,24 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[WISQARS](https://wisqars.cdc.gov/)**: CDC injury and violence statistics that help public health, safety, and policy teams measure injury burden, mortality, and prevention priorities.
 - **[YRBSS](https://www.cdc.gov/yrbs/)**: Youth risk behavior survey data that helps schools, public health agencies, and policy teams understand adolescent behaviors, safety, mental health, and prevention needs.
 
-### HCUP
+</details>
+
+<details>
+<summary><strong>&#x1F3E8; HCUP</strong> <sub>4 datasets</sub></summary>
+
+Encounter-level inpatient, emergency, and ambulatory surgery research assets.
 
 - **[HCUP KID](https://hcup-us.ahrq.gov/kidoverview.jsp)**: A national pediatric inpatient sample that helps hospitals, researchers, and planners estimate children's hospital use, outcomes, charges, and service-line needs.
 - **[HCUP NIS](https://hcup-us.ahrq.gov/nisoverview.jsp)**: A national inpatient hospital discharge sample that helps estimate U.S. hospitalization volume, outcomes, charges, diagnoses, procedures, and burden of disease.
 - **[HCUP NEDS](https://hcup-us.ahrq.gov/nedsoverview.jsp)**: A national emergency department sample that helps teams understand ED demand, treat-and-release visits, admissions from the ED, charges, and utilization patterns.
 - **[HCUP SID/SASD](https://hcup-us.ahrq.gov/db/state/siddbdocumentation.jsp)**: State inpatient and ambulatory surgery encounter data that helps analysts study local utilization, outcomes, access, and market patterns when state-level detail matters.
 
-### Claims, Cost & Transparency
+</details>
+
+<details>
+<summary><strong>&#x1F4B3; Claims, Cost & Transparency</strong> <sub>7 datasets</sub></summary>
+
+Commercial claims, APCDs, price transparency, and state encounter files.
 
 - **[CA HCAI](https://hcai.ca.gov/data/data-resources/)**: California healthcare facility, encounter, finance, workforce, and related data that helps teams study state-specific utilization, access, outcomes, capacity, and costs.
 - **[HCCI](https://healthcostinstitute.org/data)**: Commercial claims data and benchmarks that help employers, payers, researchers, and policy teams understand spending, prices, utilization, and privately insured populations.
@@ -81,7 +172,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[TX THCIC](https://www.dshs.texas.gov/center-health-statistics/texas-health-care-information-collection)**: Texas public use healthcare encounter files that help teams analyze hospital and outpatient utilization, charges, outcomes, and regional patterns across the state.
 - **[TiC MRFs](https://www.cms.gov/priorities/healthplan-price-transparency)**: Payer-published negotiated-rate files that help price transparency, contracting, and market intelligence teams study commercial rates, provider networks, and reimbursement variation.
 
-### Provider Data
+</details>
+
+<details>
+<summary><strong>&#x1F9D1;&#x200D;&#x2695;&#xFE0F; Provider Data</strong> <sub>6 datasets</sub></summary>
+
+Provider directories, taxonomy files, quality measures, and relationship data.
 
 - **[Doctors & Clinicians](https://data.cms.gov/provider-data/topics/doctors-clinicians)**: CMS clinician and group practice quality data that helps provider organizations, payers, and consumers compare clinicians, specialties, performance, and network options.
 - **[Provider Data Catalog](https://data.cms.gov/provider-data/)**: The CMS provider data hub that helps teams find official facility, clinician, quality, and reporting datasets for provider benchmarking and market analysis.
@@ -90,7 +186,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[NPPES](https://download.cms.gov/nppes/NPI_Files.html)**: The national NPI registry for clinicians and organizations, useful as core provider master data for directories, claims, networks, and enrichment.
 - **[NUCC Taxonomy](https://taxonomy.nucc.org/)**: Provider specialty and taxonomy codes that help teams classify clinicians and organizations consistently across directories, claims, credentialing, and network analytics.
 
-### SDOH & Environment
+</details>
+
+<details>
+<summary><strong>&#x1F3D8;&#xFE0F; SDOH & Environment</strong> <sub>13 datasets</sub></summary>
+
+Social, economic, environmental, housing, workforce, and place-based context.
 
 - **[AHRQ SDOH](https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html)**: A compiled set of county and ZIP-level social determinants that helps teams add community context to risk, access, equity, and outcomes analytics.
 - **[ADI](https://www.neighborhoodatlas.medicine.wisc.edu/)**: A neighborhood disadvantage score that helps health systems, payers, and researchers account for socioeconomic context in risk adjustment and equity programs.
@@ -106,7 +207,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[USDA Food Atlas](https://www.ers.usda.gov/data-products/food-access-research-atlas/)**: Food access and food environment measures that help teams study nutrition access, food deserts, retail context, and community health risks.
 - **[RUCA](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/)**: Rural-urban commuting classifications that help teams segment markets, access patterns, provider supply, and outcomes by rurality and commuting context.
 
-### Census & Demographic
+</details>
+
+<details>
+<summary><strong>&#x1F5FA;&#xFE0F; Census & Demographic</strong> <sub>5 datasets</sub></summary>
+
+Population, insurance, poverty, commuting, and denominator datasets.
 
 - **[ACS](https://www.census.gov/programs-surveys/acs/data.html)**: The default U.S. demographic and socioeconomic context source, useful for market sizing, equity analytics, community profiles, and denominator estimates.
 - **[Decennial Census](https://www.census.gov/programs-surveys/decennial-census/data.html)**: The once-a-decade population and housing baseline that helps teams build small-area denominators, geography profiles, and long-term demographic comparisons.
@@ -114,7 +220,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[SAHIE](https://www.census.gov/programs-surveys/sahie.html)**: County and state health insurance coverage estimates that help teams study uninsured rates, coverage gaps, access strategy, and policy impact.
 - **[SAIPE](https://www.census.gov/programs-surveys/saipe.html)**: Small-area poverty and income estimates that help public health, education, and policy teams target resources and understand economic need.
 
-### Clinical / Research / ICU
+</details>
+
+<details>
+<summary><strong>&#x1F52C; Clinical / Research / ICU</strong> <sub>10 datasets</sub></summary>
+
+Credentialed EHR, ICU, cohort, trial, and multimodal research datasets.
 
 - **[All of Us](https://www.researchallofus.org/)**: A diverse U.S. research cohort with EHR, surveys, measurements, wearables, and genomics that helps study precision medicine and health equity.
 - **[ClinicalTrials.gov](https://clinicaltrials.gov/data-api)**: A public registry of clinical studies and results that helps life sciences, research, and strategy teams monitor evidence, trial activity, and competitors.
@@ -127,7 +238,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[SEER-Medicare](https://healthcaredelivery.cancer.gov/seermedicare/obtain/)**: Linked cancer registry and Medicare claims data that helps oncology teams study treatment paths, outcomes, utilization, survivorship, and cost of cancer care.
 - **[UK Biobank](https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/)**: A large U.K. cohort with health, imaging, lifestyle, and genetic data that helps study long-term disease risk and multimodal prediction.
 
-### Drug & Pharmacology
+</details>
+
+<details>
+<summary><strong>&#x1F48A; Drug & Pharmacology</strong> <sub>7 datasets</sub></summary>
+
+Drug labels, approvals, adverse events, compounds, side effects, and safety data.
 
 - **[ChEMBL](https://www.ebi.ac.uk/chembl/downloads/)**: A public bioactivity and compound database that helps drug discovery teams study targets, assays, compounds, and mechanism-aware modeling.
 - **[DailyMed](https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm)**: Structured FDA drug labels that help teams extract indications, warnings, contraindications, dosage, labeling history, and regulatory text features.
@@ -137,7 +253,12 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[openFDA](https://open.fda.gov/)**: Open FDA APIs and downloads that help teams quickly access regulatory, recall, label, adverse event, and enforcement data for lightweight analytics.
 - **[SIDER](http://sideeffects.embl.de/)**: A side-effect knowledge resource that helps teams prototype drug safety knowledge graphs, adverse event matching, and medication risk features.
 
-### Imaging
+</details>
+
+<details>
+<summary><strong>&#x1F5BC;&#xFE0F; Imaging</strong> <sub>5 datasets</sub></summary>
+
+Radiology, dermatology, cancer imaging, and benchmark medical image collections.
 
 - **[ADNI](https://adni.loni.usc.edu/data-samples/)**: Longitudinal Alzheimer's imaging, biomarker, clinical, and genetics data that helps teams study disease progression and multimodal prediction.
 - **[CheXpert](https://aimi.stanford.edu/datasets/chexpert-chest-x-rays)**: A large chest radiograph dataset with labels that helps teams benchmark medical imaging classification, uncertainty handling, and radiology AI workflows.
@@ -145,43 +266,48 @@ This catalog brings together data sources that help healthcare, life sciences, p
 - **[ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)**: A public chest X-ray benchmark that helps teams prototype computer vision models for thoracic disease detection and transfer learning.
 - **[TCIA](https://www.cancerimagingarchive.net/collections/)**: Cancer imaging collections that help oncology, radiology, and AI teams study imaging biomarkers, segmentation, treatment response, and multimodal research.
 
-### Genomics / Phenotype
+</details>
+
+<details>
+<summary><strong>&#x1F9EC; Genomics / Phenotype</strong> <sub>3 datasets</sub></summary>
+
+Variant, phenotype, ontology, and association resources for genetics workflows.
 
 - **[ClinVar-OMIM-gnomAD](https://www.ncbi.nlm.nih.gov/clinvar/)**: Variant, disease, and population frequency resources that help genetics teams interpret variants, connect genes to phenotypes, and assess population context.
 - **[HPO](https://hpo.jax.org/app/download/ontology)**: A standard vocabulary for clinical features that helps rare disease, genomics, and AI teams describe phenotypes consistently.
 - **[GWAS Catalog](https://www.ebi.ac.uk/gwas/downloads)**: Curated genome-wide association results that help teams find trait-linked variants, build genetic evidence features, and explore polygenic risk signals.
 
-### International / Global Health
+</details>
+
+<details>
+<summary><strong>&#x1F310; International / Global Health</strong> <sub>4 datasets</sub></summary>
+
+Global and country-comparable health indicators, burden, and system measures.
 
 - **[Eurostat Health](https://ec.europa.eu/eurostat/web/health/database)**: European health indicator data that helps policy, market, and public health teams compare countries and regions across health status, care, and systems.
 - **[GBD + DHS](https://www.healthdata.org/research-analysis/gbd)**: Global disease burden estimates and demographic health surveys that help teams compare risks, outcomes, coverage, and population health across countries.
 - **[OECD Health Statistics](https://www.oecd.org/en/data/datasets/oecd-health-statistics.html)**: Comparable health system, spending, workforce, and outcome indicators that help strategy and policy teams benchmark OECD and partner countries.
 - **[WHO GHO](https://www.who.int/data/gho)**: WHO country-level health indicators that help teams monitor global disease burden, risk factors, system capacity, and public health progress.
 
-## What makes this maintainable
+</details>
+
+## What Makes This Maintainable
 
 - **Machine-readable entries**: every dataset is YAML validated against `schemas/dataset.schema.json`.
 - **Use-case-first navigation**: `use-cases/` pages shortlist datasets for real ML workflows.
 - **Access-tier + PHI filters**: prototype-now sources are separated from DUA/IRB assets.
 - **OMOP/PCORnet mapping status**: each entry records CDM fit and ETL notes.
 - **Crosswalks and notebooks**: vocabulary/geography joins and starter analyses are first-class content.
-- **Freshness signals**: CI can flag stale `last_validated` dates and broken links.
+- **Freshness signals**: scripts can flag stale `last_validated` dates and broken links.
 
-## Start here
-
-- [Getting started](docs/getting-started.md)
-- [Access tiers](docs/access-tiers.md)
-- [PHI guide](docs/phi-guide.md)
-- [Use cases](use-cases/)
-- [Crosswalks](crosswalks/)
-- [Playbooks](playbooks/)
-- [Generated exports](exports/)
-
-## Dataset index
+## Dataset Index
 
 Total entries: **108**.
 
-### Terminologies & Vocabularies
+<a id="terminologies"></a>
+
+<details>
+<summary><strong>&#x1F524; Terminologies & Vocabularies</strong> <sub>16 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -202,7 +328,12 @@ Total entries: **108**.
 | [SNOMED CT](https://www.nlm.nih.gov/healthit/snomedct/)<br><sub>[yaml](datasets/terminologies/snomed-ct.yaml)</sub> | `registration` | none | concept-code, terminology relationship, or ontology release table | source-or-standard-vocabulary | seed | 2026-05-17 |
 | [UMLS](https://www.nlm.nih.gov/research/umls/)<br><sub>[yaml](datasets/terminologies/umls-metathesaurus.yaml)</sub> | `registration` | none | CUI, atom, string, semantic type, and relationship tables in Rich Release Format | terminology-reconciliation | reference | 2026-05-17 |
 
-### CMS / Medicare
+</details>
+
+<a id="cms-medicare"></a>
+
+<details>
+<summary><strong>&#x1F3E5; CMS / Medicare</strong> <sub>11 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -218,13 +349,23 @@ Total entries: **108**.
 | [Medicare FFS Claims](https://resdac.org/cms-data/request/cms-data-request-center)<br><sub>[yaml](datasets/cms-medicare/medicare-ffs-claims-rif.yaml)</sub> | `dua` | research-identifiable-or-limited-data-set | beneficiary, claim, claim-line, enrollment-month, and provider/facility records | well-supported | reference | 2026-05-17 |
 | [Medicare Provider Utilization](https://data.cms.gov/provider-summary-by-type-of-service)<br><sub>[yaml](datasets/cms-medicare/medicare-provider-utilization-payment.yaml)</sub> | `open` | public-aggregate-or-restricted-microdata | provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file | supported-or-custom-claims-etl | seed | 2026-05-17 |
 
-### Medicaid
+</details>
+
+<a id="medicaid"></a>
+
+<details>
+<summary><strong>&#x1F91D; Medicaid</strong> <sub>1 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
 | [TAF / T-MSIS](https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html)<br><sub>[yaml](datasets/medicaid/tmsis-analytic-files.yaml)</sub> | `dua` | restricted | beneficiary eligibility, enrollment, claim, encounter, and service-line files | custom-claims-etl | reference | 2026-05-17 |
 
-### CDC Surveillance & Public Health
+</details>
+
+<a id="cdc-surveillance"></a>
+
+<details>
+<summary><strong>&#x1F4CA; CDC Surveillance & Public Health</strong> <sub>16 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -245,7 +386,12 @@ Total entries: **108**.
 | [WISQARS](https://wisqars.cdc.gov/)<br><sub>[yaml](datasets/cdc-surveillance/wisqars.yaml)</sub> | `open` | public-use-deidentified-or-aggregate | respondent, report, certificate, facility, or aggregate public-health record | not-primary-omop-source | seed | 2026-05-17 |
 | [YRBSS](https://www.cdc.gov/yrbs/)<br><sub>[yaml](datasets/cdc-surveillance/yrbss.yaml)</sub> | `open` | public-use-deidentified-or-aggregate | respondent, report, certificate, facility, or aggregate public-health record | not-primary-omop-source | seed | 2026-05-17 |
 
-### HCUP
+</details>
+
+<a id="hcup"></a>
+
+<details>
+<summary><strong>&#x1F3E8; HCUP</strong> <sub>4 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -254,7 +400,12 @@ Total entries: **108**.
 | [HCUP NEDS](https://hcup-us.ahrq.gov/nedsoverview.jsp)<br><sub>[yaml](datasets/hcup/hcup-neds.yaml)</sub> | `purchase` | deidentified-governed | weighted hospital discharge or encounter record | custom-encounter-etl | seed | 2026-05-17 |
 | [HCUP SID/SASD](https://hcup-us.ahrq.gov/db/state/siddbdocumentation.jsp)<br><sub>[yaml](datasets/hcup/hcup-sid-sasd.yaml)</sub> | `purchase` | deidentified-governed | weighted hospital discharge or encounter record | custom-encounter-etl | seed | 2026-05-17 |
 
-### Claims, Cost & Transparency
+</details>
+
+<a id="claims-commercial"></a>
+
+<details>
+<summary><strong>&#x1F4B3; Claims, Cost & Transparency</strong> <sub>7 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -266,7 +417,12 @@ Total entries: **108**.
 | [TX THCIC](https://www.dshs.texas.gov/center-health-statistics/texas-health-care-information-collection)<br><sub>[yaml](datasets/claims-commercial/tx-thcic.yaml)</sub> | `mixed` | none-to-restricted | claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product | custom-claims-etl | seed | 2026-05-17 |
 | [TiC MRFs](https://www.cms.gov/priorities/healthplan-price-transparency)<br><sub>[yaml](datasets/claims-commercial/transparency-in-coverage-mrfs.yaml)</sub> | `open` | none-to-restricted | claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product | custom-claims-etl | seed | 2026-05-17 |
 
-### Provider Data
+</details>
+
+<a id="provider"></a>
+
+<details>
+<summary><strong>&#x1F9D1;&#x200D;&#x2695;&#xFE0F; Provider Data</strong> <sub>6 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -277,7 +433,12 @@ Total entries: **108**.
 | [NPPES](https://download.cms.gov/nppes/NPI_Files.html)<br><sub>[yaml](datasets/provider/nppes-npi-registry.yaml)</sub> | `open` | none-provider-public | one record per NPI plus taxonomy, address, endpoint, and status fields | provider-dimension-enrichment | reference | 2026-05-17 |
 | [NUCC Taxonomy](https://taxonomy.nucc.org/)<br><sub>[yaml](datasets/provider/nucc-provider-taxonomy.yaml)</sub> | `open` | none-provider-public | provider, facility, taxonomy, or provider-pair edge | provider-dimension-enrichment | seed | 2026-05-17 |
 
-### SDOH & Environment
+</details>
+
+<a id="sdoh"></a>
+
+<details>
+<summary><strong>&#x1F3D8;&#xFE0F; SDOH & Environment</strong> <sub>13 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -295,7 +456,12 @@ Total entries: **108**.
 | [USDA Food Atlas](https://www.ers.usda.gov/data-products/food-access-research-atlas/)<br><sub>[yaml](datasets/sdoh/usda-food-access-environment.yaml)</sub> | `open` | none-aggregate-geography | county, tract, block-group, ZIP, ZCTA, or geography-time indicator | geospatial-context-enrichment | seed | 2026-05-17 |
 | [RUCA](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/)<br><sub>[yaml](datasets/sdoh/ruca-codes.yaml)</sub> | `open` | none-aggregate-geography | county, tract, block-group, ZIP, ZCTA, or geography-time indicator | geospatial-context-enrichment | seed | 2026-05-17 |
 
-### Census & Demographic
+</details>
+
+<a id="census"></a>
+
+<details>
+<summary><strong>&#x1F5FA;&#xFE0F; Census & Demographic</strong> <sub>5 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -305,7 +471,12 @@ Total entries: **108**.
 | [SAHIE](https://www.census.gov/programs-surveys/sahie.html)<br><sub>[yaml](datasets/census/sahie.yaml)</sub> | `open` | none-aggregate-geography | geography-indicator-year estimate | geospatial-context-enrichment | seed | 2026-05-17 |
 | [SAIPE](https://www.census.gov/programs-surveys/saipe.html)<br><sub>[yaml](datasets/census/saipe.yaml)</sub> | `open` | none-aggregate-geography | geography-indicator-year estimate | geospatial-context-enrichment | seed | 2026-05-17 |
 
-### Clinical / Research / ICU
+</details>
+
+<a id="clinical-research"></a>
+
+<details>
+<summary><strong>&#x1F52C; Clinical / Research / ICU</strong> <sub>10 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -320,7 +491,12 @@ Total entries: **108**.
 | [SEER-Medicare](https://healthcaredelivery.cancer.gov/seermedicare/obtain/)<br><sub>[yaml](datasets/clinical-research/seer-medicare.yaml)</sub> | `dua` | restricted-linked-registry-claims | tumor/case registry records linked to beneficiary enrollment and Medicare claims | custom-registry-plus-claims-etl | reference | 2026-05-17 |
 | [UK Biobank](https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/)<br><sub>[yaml](datasets/clinical-research/uk-biobank.yaml)</sub> | `irb` | credentialed-deidentified-or-controlled | participant, encounter, stay, event, waveform, image, or study record | supported-for-some-sources | seed | 2026-05-17 |
 
-### Drug & Pharmacology
+</details>
+
+<a id="drug-pharma"></a>
+
+<details>
+<summary><strong>&#x1F48A; Drug & Pharmacology</strong> <sub>7 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -332,7 +508,12 @@ Total entries: **108**.
 | [openFDA](https://open.fda.gov/)<br><sub>[yaml](datasets/drug-pharma/openfda.yaml)</sub> | `open` | none-public-regulatory-or-knowledgebase | endpoint-specific JSON record or bulk download document | knowledge-enrichment | reference | 2026-05-17 |
 | [SIDER](http://sideeffects.embl.de/)<br><sub>[yaml](datasets/drug-pharma/sider.yaml)</sub> | `open` | none-public-regulatory-or-knowledgebase | drug product, label, adverse-event report, compound, target, or safety concept | drug-vocabulary-or-knowledge-enrichment | seed | 2026-05-17 |
 
-### Imaging
+</details>
+
+<a id="imaging"></a>
+
+<details>
+<summary><strong>&#x1F5BC;&#xFE0F; Imaging</strong> <sub>5 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -342,7 +523,12 @@ Total entries: **108**.
 | [ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)<br><sub>[yaml](datasets/imaging/nih-chestxray14.yaml)</sub> | `open` | deidentified-or-governed | image, study, series, DICOM object, report, participant, or collection | custom-imaging-extension | seed | 2026-05-17 |
 | [TCIA](https://www.cancerimagingarchive.net/collections/)<br><sub>[yaml](datasets/imaging/tcia.yaml)</sub> | `open` | deidentified-or-governed | image, study, series, DICOM object, report, participant, or collection | custom-imaging-extension | seed | 2026-05-17 |
 
-### Genomics / Phenotype
+</details>
+
+<a id="genomics"></a>
+
+<details>
+<summary><strong>&#x1F9EC; Genomics / Phenotype</strong> <sub>3 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -350,7 +536,12 @@ Total entries: **108**.
 | [HPO](https://hpo.jax.org/app/download/ontology)<br><sub>[yaml](datasets/genomics/human-phenotype-ontology.yaml)</sub> | `open` | none-public-aggregate-or-controlled-if-individual-level | variant, gene, phenotype, association, or ontology concept | custom-genomics-extension | seed | 2026-05-17 |
 | [GWAS Catalog](https://www.ebi.ac.uk/gwas/downloads)<br><sub>[yaml](datasets/genomics/gwas-catalog.yaml)</sub> | `open` | none-public-aggregate-or-controlled-if-individual-level | variant, gene, phenotype, association, or ontology concept | custom-genomics-extension | seed | 2026-05-17 |
 
-### International / Global Health
+</details>
+
+<a id="international"></a>
+
+<details>
+<summary><strong>&#x1F310; International / Global Health</strong> <sub>4 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -358,6 +549,8 @@ Total entries: **108**.
 | [GBD + DHS](https://www.healthdata.org/research-analysis/gbd)<br><sub>[yaml](datasets/international/ihme-gbd-dhs.yaml)</sub> | `mixed` | none-aggregate-or-deidentified-survey | country, region, indicator, survey respondent, household, or modeled estimate | not-primary-omop-source | seed | 2026-05-17 |
 | [OECD Health Statistics](https://www.oecd.org/en/data/datasets/oecd-health-statistics.html)<br><sub>[yaml](datasets/international/oecd-health-statistics.yaml)</sub> | `open` | none-aggregate-or-deidentified-survey | country, region, indicator, survey respondent, household, or modeled estimate | not-primary-omop-source | seed | 2026-05-17 |
 | [WHO GHO](https://www.who.int/data/gho)<br><sub>[yaml](datasets/international/who-global-health-observatory.yaml)</sub> | `open` | none-aggregate-or-deidentified-survey | country, region, indicator, survey respondent, household, or modeled estimate | not-primary-omop-source | seed | 2026-05-17 |
+
+</details>
 
 ## Contributing
 

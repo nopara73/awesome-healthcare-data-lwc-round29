@@ -3,11 +3,22 @@ site_description: Machine-readable healthcare dataset catalog for ML and analyti
 repo_url: https://github.com/adnanmasood/awesome-health-data
 theme:
   name: material
+  palette:
+    primary: teal
+    accent: cyan
   features:
     - navigation.sections
     - navigation.expand
     - search.suggest
+    - search.highlight
+    - navigation.top
     - content.code.copy
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
 extra_css:
   - stylesheets/extra.css
 nav:
