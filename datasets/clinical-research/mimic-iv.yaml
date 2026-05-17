@@ -1,0 +1,93 @@
+id: mimic-iv
+name: MIMIC-IV
+short_name: MIMIC-IV
+category: clinical-research
+status: active
+description: Credentialed de-identified hospital and ICU EHR dataset from Beth Israel Deaconess used for critical care and clinical ML benchmarks.
+owner:
+  organization: MIT Laboratory for Computational Physiology / BIDMC
+  distributor: MIT Laboratory for Computational Physiology / BIDMC
+  url: https://physionet.org/content/mimiciv/
+  contact: null
+access:
+  tier: registration
+  cost_usd: 0 or nominal
+  request_url: https://physionet.org/content/mimiciv/
+  download_url: https://physionet.org/content/mimiciv/
+  typical_turnaround_days: 1-14
+  redistribution: restricted-by-clickthrough-or-license
+  commercial_use: check-source-terms
+  enclave_required: false
+  license_notes: Registration, click-through terms, account creation, training, or license attestation may be required.
+resources:
+  official_page: https://physionet.org/content/mimiciv/
+  download_url: https://physionet.org/content/mimiciv/
+  api_url: null
+  documentation_url: https://physionet.org/content/mimiciv/
+vocabularies:
+- subject_id
+- hadm_id
+- stay_id
+- ICD-9-CM
+- ICD-10-CM
+- RxNorm via ETL
+- LOINC-like lab item IDs
+grain: person, admission, ICU stay, procedure, diagnosis, lab, medication, chart-event, and note/module records depending access
+unit_of_observation: hospital admission, ICU stay, or event
+primary_keys:
+  patient: subject_id
+  provider: null
+  geo: single health-system context; no patient geography
+  code: hadm_id, stay_id, itemid, ICD codes, RxNorm via ETL
+  other: []
+coverage:
+  population_n: null
+  population_description: single-center emergency, inpatient, and ICU patients
+  excludes:
+  - multi-center generalization
+  - full ambulatory longitudinal care
+  geographic_scope: BIDMC, Boston
+  years: 2008-2022
+  refresh_cadence: versioned-release
+  completeness_lag_months: versioned release
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: deidentified-credentialed
+  hipaa_status: deidentified-with-date-shifting-and-DUA
+  contains_dates: shifted
+  contains_geo: []
+  reid_risk: medium
+  deidentification_method: HIPAA de-identification, date shifting, age handling, credentialed access
+quality_gotchas:
+- Single-center practice patterns can dominate model behavior.
+- Anchor dates and shifted times preserve intervals but not calendar time.
+- MIMIC-IV schema differs materially from MIMIC-III; do not blindly port SQL.
+- Patient-level train/test splits are mandatory to avoid leakage.
+common_use_cases:
+- mortality-risk
+- clinical-benchmarking
+- multimodal-modeling
+omop_mapping:
+  status: well-supported
+  reference_etl: https://github.com/OHDSI/MIMIC
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Obtain governed access, load database-specific schemas, track release version, and map to OMOP where reference ETLs or platform tables exist.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks:
+- notebooks/04-mimic-iv-mortality.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

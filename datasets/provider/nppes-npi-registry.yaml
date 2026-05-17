@@ -1,0 +1,89 @@
+id: nppes-npi-registry
+name: NPPES NPI Registry
+short_name: NPPES
+category: provider
+status: active
+description: Public NPI registry and downloadable provider reference file used to normalize clinicians and organizations.
+owner:
+  organization: Centers for Medicare & Medicaid Services
+  distributor: Centers for Medicare & Medicaid Services
+  url: https://download.cms.gov/nppes/NPI_Files.html
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://download.cms.gov/nppes/NPI_Files.html
+  download_url: https://download.cms.gov/nppes/NPI_Files.html
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://download.cms.gov/nppes/NPI_Files.html
+  download_url: https://download.cms.gov/nppes/NPI_Files.html
+  api_url: null
+  documentation_url: https://download.cms.gov/nppes/NPI_Files.html
+vocabularies:
+- NPI
+- NUCC taxonomy
+grain: one record per NPI plus taxonomy, address, endpoint, and status fields
+unit_of_observation: provider or organization NPI
+primary_keys:
+  patient: null
+  provider: NPI
+  geo: mailing/practice address, ZIP, state
+  code: NUCC taxonomy, entity type, enumeration/deactivation fields
+  other: []
+coverage:
+  population_n: null
+  population_description: U.S. providers and organizations assigned NPIs
+  excludes:
+  - providers without NPIs, detailed credentialing quality
+  geographic_scope: United States
+  years: current monthly files with historical update metadata
+  refresh_cadence: monthly-quarterly-or-annual depending source
+  completeness_lag_months: monthly
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-provider-public
+  hipaa_status: not-patient-phi
+  contains_dates: true
+  contains_geo:
+  - address
+  - zip
+  - state
+  - county-if-derived
+  reid_risk: none-for-patient-reid
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Mailing address and practice address differ.
+- Taxonomy can be self-attested and stale.
+- Deactivated NPIs and organization changes require temporal provider mastering.
+common_use_cases:
+- provider-benchmarking
+- network-analysis
+- provider-mastering
+omop_mapping:
+  status: provider-dimension-enrichment
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Build a provider master keyed by NPI, CCN, taxonomy, address, organization identifiers, and status; enrich OMOP provider/care_site dimensions.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

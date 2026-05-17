@@ -1,0 +1,19 @@
+site_name: Awesome Health Data
+site_description: Machine-readable healthcare dataset catalog for ML and analytics
+repo_url: https://github.com/adnanmasood/awesome-health-data
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - content.code.copy
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Access tiers: access-tiers.md
+  - PHI guide: phi-guide.md
+  - Research method: research-method.md
+  - Dataset index: datasets.md

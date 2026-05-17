@@ -1,0 +1,89 @@
+id: hospital-price-transparency-mrfs
+name: Hospital Price Transparency Machine-Readable Files
+short_name: Hospital Price Transparency
+category: claims-commercial
+status: active
+description: Hospital Price Transparency Machine-Readable Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+owner:
+  organization: Individual hospitals / CMS rule
+  distributor: Individual hospitals / CMS rule
+  url: https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency
+  download_url: https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency
+  download_url: https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency
+  api_url: null
+  documentation_url: https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency
+vocabularies:
+- HCPCS
+- CPT
+- DRG
+- payer/plan names
+grain: claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product
+unit_of_observation: commercial claims or price record
+primary_keys:
+  patient: available only in patient-level products
+  provider: NPI/CCN/TIN/provider IDs where available
+  geo: source-specific geography or not applicable
+  code: ICD/CPT/HCPCS/NDC/DRG/revenue/service codes where applicable
+  other: []
+coverage:
+  population_n: null
+  population_description: See official documentation; coverage varies by sub-resource, release, geography, and access tier.
+  excludes: []
+  geographic_scope: source-specific
+  years: source-specific
+  refresh_cadence: monthly-quarterly-or-annual depending source
+  completeness_lag_months: null
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-to-restricted
+  hipaa_status: public-aggregate-or-limited-data-set
+  contains_dates: true
+  contains_geo:
+  - state
+  - county
+  - zip-or-market
+  reid_risk: low-to-high depending product
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Commercial claims sources are rarely nationally representative.
+- Self-funded employer plan reporting gaps can bias APCDs.
+- Price-transparency files are large, redundant, and schema-fragile.
+common_use_cases:
+- price-transparency
+- cost-prediction
+- market-intelligence
+omop_mapping:
+  status: custom-claims-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Normalize payer, plan, provider, code, date, and geography fields; for claims extracts, map line-level utilization to OMOP/PCORnet.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: seed
+  review_notes: Schema-complete seed entry; needs deeper source-specific maintainer review.

@@ -1,0 +1,87 @@
+id: omop-cdm-athena
+name: OMOP CDM / Athena Vocabulary Server
+short_name: OMOP/Athena
+category: terminologies
+status: active
+description: Common data model and standardized vocabulary distribution layer for harmonizing claims, EHR, registry, and public reference assets.
+owner:
+  organization: OHDSI
+  distributor: OHDSI
+  url: https://athena.ohdsi.org/
+  contact: null
+access:
+  tier: registration
+  cost_usd: 0 or nominal
+  request_url: https://athena.ohdsi.org/
+  download_url: https://athena.ohdsi.org/
+  typical_turnaround_days: 1-14
+  redistribution: restricted-by-clickthrough-or-license
+  commercial_use: check-source-terms
+  enclave_required: false
+  license_notes: Registration, click-through terms, account creation, training, or license attestation may be required.
+resources:
+  official_page: https://athena.ohdsi.org/
+  download_url: https://athena.ohdsi.org/
+  api_url: null
+  documentation_url: https://athena.ohdsi.org/
+vocabularies:
+- OMOP CDM
+- OHDSI standardized vocabularies
+grain: OMOP CDM tables and standardized vocabulary tables
+unit_of_observation: person-centric standardized observational record and vocabulary concept
+primary_keys:
+  patient: person_id when mapped from source data
+  provider: provider_id/care_site_id
+  geo: location_id and source-specific geography
+  code: concept_id, source_concept_id, vocabulary_id
+  other: []
+coverage:
+  population_n: null
+  population_description: harmonization layer rather than a single source population
+  excludes:
+  - source-specific raw nuance if over-collapsed
+  geographic_scope: global OHDSI community
+  years: CDM/vocabulary versioned
+  refresh_cadence: annual-or-more-frequent
+  completeness_lag_months: versioned
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: depends-on-source-data
+  hipaa_status: depends-on-source-data
+  contains_dates: depends-on-source-data
+  contains_geo:
+  - depends-on-source-data
+  reid_risk: depends-on-source-data
+  deidentification_method: not a de-identification method; standardization layer only
+quality_gotchas:
+- OMOP standardization improves reuse but can hide source nuance.
+- Athena vocabulary downloads inherit source vocabulary licensing rules.
+- Local extensions/custom concepts require governance and documentation.
+common_use_cases:
+- semantic-normalization
+- feature-engineering
+- crosswalks
+omop_mapping:
+  status: canonical-target
+  reference_etl: https://www.ohdsi.org/software-tools/
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Version-lock the release, load source tables, preserve source codes, and map to OMOP/Athena standard concepts where supported.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks:
+- notebooks/05-omop-etl-walkthrough.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

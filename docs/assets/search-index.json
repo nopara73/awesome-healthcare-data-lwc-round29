@@ -1,0 +1,2259 @@
+[
+  {
+    "id": "brfss",
+    "title": "Behavioral Risk Factor Surveillance System",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "survey variables",
+      "FIPS/state",
+      "weights"
+    ],
+    "url": "https://www.cdc.gov/brfss/data_documentation/index.htm",
+    "text": "Behavioral Risk Factor Surveillance System Behavioral Risk Factor Surveillance System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "cdc-wonder",
+    "title": "CDC WONDER",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "ICD-10",
+      "FIPS",
+      "suppressed aggregate counts"
+    ],
+    "url": "https://wonder.cdc.gov/",
+    "text": "CDC WONDER CDC WONDER entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "fluview-flusurvnet",
+    "title": "FluView / FluSurv-NET",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "MMWR week",
+      "region",
+      "age strata"
+    ],
+    "url": "https://www.cdc.gov/fluview/",
+    "text": "FluView / FluSurv-NET FluView / FluSurv-NET entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "nhanes",
+    "title": "National Health and Nutrition Examination Survey",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "custom-survey-etl",
+    "curation": "reference",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "SEQN",
+      "LOINC-like lab variables",
+      "survey weights"
+    ],
+    "url": "https://www.cdc.gov/nchs/nhanes/index.htm",
+    "text": "National Health and Nutrition Examination Survey National survey combining interviews, physical exams, labs, and dietary data for U.S. population health and biomarker modeling. person-level component files keyed by SEQN across two-year survey cycles raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Use the correct interview, exam, fasting, subsample, or lab weights for each analysis. Merge components by SEQN and survey cycle; not every participant has every lab. Complex survey design must be used for valid national estimates."
+  },
+  {
+    "id": "nhis",
+    "title": "National Health Interview Survey",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "survey variables",
+      "weights"
+    ],
+    "url": "https://www.cdc.gov/nchs/nhis/documentation/index.html",
+    "text": "National Health Interview Survey National Health Interview Survey entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "nhsn",
+    "title": "National Healthcare Safety Network",
+    "category": "cdc-surveillance",
+    "tier": "dua",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [],
+    "url": "https://www.cdc.gov/nhsn/",
+    "text": "National Healthcare Safety Network National Healthcare Safety Network entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "nndss",
+    "title": "National Notifiable Diseases Surveillance System",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "condition codes",
+      "MMWR week",
+      "jurisdiction"
+    ],
+    "url": "https://www.cdc.gov/nndss/",
+    "text": "National Notifiable Diseases Surveillance System National Notifiable Diseases Surveillance System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "npcr",
+    "title": "National Program of Cancer Registries",
+    "category": "cdc-surveillance",
+    "tier": "dua",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "ICD-O-3",
+      "cancer registry identifiers"
+    ],
+    "url": "https://www.cdc.gov/national-program-cancer-registries/index.html",
+    "text": "National Program of Cancer Registries National Program of Cancer Registries entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "nsduh",
+    "title": "National Survey on Drug Use and Health",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "survey variables",
+      "weights"
+    ],
+    "url": "https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health",
+    "text": "National Survey on Drug Use and Health National Survey on Drug Use and Health entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "nvss",
+    "title": "National Vital Statistics System",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "ICD-10 cause of death",
+      "FIPS"
+    ],
+    "url": "https://www.cdc.gov/nchs/nvss/index.htm",
+    "text": "National Vital Statistics System National Vital Statistics System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "places-500-cities",
+    "title": "PLACES / 500 Cities Small-Area Health Estimates",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "geospatial-context-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "FIPS",
+      "GEOID",
+      "ZCTA",
+      "model-based estimates"
+    ],
+    "url": "https://www.cdc.gov/places/",
+    "text": "PLACES / 500 Cities Small-Area Health Estimates CDC small-area model-based estimates for chronic disease, prevention, and health behaviors. county, place, census tract, and ZCTA-level modeled indicator estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts PLACES values are modeled estimates; include confidence intervals where available. Do not use the estimates as ground-truth individual outcomes. 500 Cities legacy products and PLACES current products require version labels."
+  },
+  {
+    "id": "prams",
+    "title": "Pregnancy Risk Assessment Monitoring System",
+    "category": "cdc-surveillance",
+    "tier": "dua",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [],
+    "url": "https://www.cdc.gov/prams/php/data-research/index.html",
+    "text": "Pregnancy Risk Assessment Monitoring System Pregnancy Risk Assessment Monitoring System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "seer",
+    "title": "SEER Cancer Incidence and Survival Data",
+    "category": "cdc-surveillance",
+    "tier": "registration",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "ICD-O-3",
+      "AJCC stage",
+      "SEER site recodes"
+    ],
+    "url": "https://seer.cancer.gov/data/",
+    "text": "SEER Cancer Incidence and Survival Data SEER Cancer Incidence and Survival Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "vaers",
+    "title": "Vaccine Adverse Event Reporting System",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [
+      "VAERS_ID",
+      "MedDRA",
+      "vaccine codes"
+    ],
+    "url": "https://vaers.hhs.gov/data.html",
+    "text": "Vaccine Adverse Event Reporting System Vaccine Adverse Event Reporting System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "wisqars",
+    "title": "Web-based Injury Statistics Query and Reporting System",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [],
+    "url": "https://wisqars.cdc.gov/",
+    "text": "Web-based Injury Statistics Query and Reporting System Web-based Injury Statistics Query and Reporting System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "yrbss",
+    "title": "Youth Risk Behavior Surveillance System",
+    "category": "cdc-surveillance",
+    "tier": "open",
+    "phi": "public-use-deidentified-or-aggregate",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "disease-surveillance",
+      "population-risk",
+      "health-equity-analysis"
+    ],
+    "vocabularies": [],
+    "url": "https://www.cdc.gov/yrbs/",
+    "text": "Youth Risk Behavior Surveillance System Youth Risk Behavior Surveillance System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. respondent, report, certificate, facility, or aggregate public-health record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Survey-weighted estimates require design variables and correct weights. Public surveillance outputs may suppress small cells. Reporting lag, questionnaire redesign, and COVID-era anomalies can affect longitudinal modeling."
+  },
+  {
+    "id": "acs-1yr-5yr",
+    "title": "American Community Survey 1-Year and 5-Year Data",
+    "category": "census",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "health-equity-analysis",
+      "population-denominators",
+      "sdoh-risk-stratification"
+    ],
+    "vocabularies": [
+      "GEOID",
+      "ACS table IDs",
+      "MOE"
+    ],
+    "url": "https://www.census.gov/programs-surveys/acs/data.html",
+    "text": "American Community Survey 1-Year and 5-Year Data American Community Survey 1-Year and 5-Year Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. geography-indicator-year estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts ACS estimates include margins of error that should be retained. 1-year ACS products have population thresholds; 5-year files are better for small areas. Disclosure avoidance and vintage changes affect longitudinal comparisons."
+  },
+  {
+    "id": "decennial-census",
+    "title": "Decennial Census",
+    "category": "census",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "health-equity-analysis",
+      "population-denominators",
+      "sdoh-risk-stratification"
+    ],
+    "vocabularies": [
+      "GEOID",
+      "decennial tables"
+    ],
+    "url": "https://www.census.gov/programs-surveys/decennial-census/data.html",
+    "text": "Decennial Census Decennial Census entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. geography-indicator-year estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts ACS estimates include margins of error that should be retained. 1-year ACS products have population thresholds; 5-year files are better for small areas. Disclosure avoidance and vintage changes affect longitudinal comparisons."
+  },
+  {
+    "id": "lehd-onthemap",
+    "title": "LEHD / OnTheMap",
+    "category": "census",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "health-equity-analysis",
+      "population-denominators",
+      "sdoh-risk-stratification"
+    ],
+    "vocabularies": [],
+    "url": "https://lehd.ces.census.gov/data/",
+    "text": "LEHD / OnTheMap LEHD / OnTheMap entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. geography-indicator-year estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts ACS estimates include margins of error that should be retained. 1-year ACS products have population thresholds; 5-year files are better for small areas. Disclosure avoidance and vintage changes affect longitudinal comparisons."
+  },
+  {
+    "id": "sahie",
+    "title": "Small Area Health Insurance Estimates",
+    "category": "census",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "health-equity-analysis",
+      "population-denominators",
+      "sdoh-risk-stratification"
+    ],
+    "vocabularies": [],
+    "url": "https://www.census.gov/programs-surveys/sahie.html",
+    "text": "Small Area Health Insurance Estimates Small Area Health Insurance Estimates entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. geography-indicator-year estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts ACS estimates include margins of error that should be retained. 1-year ACS products have population thresholds; 5-year files are better for small areas. Disclosure avoidance and vintage changes affect longitudinal comparisons."
+  },
+  {
+    "id": "saipe",
+    "title": "Small Area Income and Poverty Estimates",
+    "category": "census",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "health-equity-analysis",
+      "population-denominators",
+      "sdoh-risk-stratification"
+    ],
+    "vocabularies": [],
+    "url": "https://www.census.gov/programs-surveys/saipe.html",
+    "text": "Small Area Income and Poverty Estimates Small Area Income and Poverty Estimates entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. geography-indicator-year estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts ACS estimates include margins of error that should be retained. 1-year ACS products have population thresholds; 5-year files are better for small areas. Disclosure avoidance and vintage changes affect longitudinal comparisons."
+  },
+  {
+    "id": "ca-hcai",
+    "title": "California Health Care Access and Information Data Resources",
+    "category": "claims-commercial",
+    "tier": "mixed",
+    "phi": "none-to-restricted",
+    "reid_risk": "low-to-high depending product",
+    "omop": "custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [],
+    "url": "https://hcai.ca.gov/data/data-resources/",
+    "text": "California Health Care Access and Information Data Resources California Health Care Access and Information Data Resources entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Commercial claims sources are rarely nationally representative. Self-funded employer plan reporting gaps can bias APCDs. Price-transparency files are large, redundant, and schema-fragile."
+  },
+  {
+    "id": "hcci-commercial-claims",
+    "title": "Health Care Cost Institute Commercial Claims Data and Aggregates",
+    "category": "claims-commercial",
+    "tier": "dua",
+    "phi": "none-to-restricted",
+    "reid_risk": "low-to-high depending product",
+    "omop": "custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [
+      "ICD",
+      "CPT",
+      "HCPCS",
+      "NDC",
+      "NPI"
+    ],
+    "url": "https://healthcostinstitute.org/data",
+    "text": "Health Care Cost Institute Commercial Claims Data and Aggregates Health Care Cost Institute Commercial Claims Data and Aggregates entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Commercial claims sources are rarely nationally representative. Self-funded employer plan reporting gaps can bias APCDs. Price-transparency files are large, redundant, and schema-fragile."
+  },
+  {
+    "id": "hospital-price-transparency-mrfs",
+    "title": "Hospital Price Transparency Machine-Readable Files",
+    "category": "claims-commercial",
+    "tier": "open",
+    "phi": "none-to-restricted",
+    "reid_risk": "low-to-high depending product",
+    "omop": "custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [
+      "HCPCS",
+      "CPT",
+      "DRG",
+      "payer/plan names"
+    ],
+    "url": "https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency",
+    "text": "Hospital Price Transparency Machine-Readable Files Hospital Price Transparency Machine-Readable Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Commercial claims sources are rarely nationally representative. Self-funded employer plan reporting gaps can bias APCDs. Price-transparency files are large, redundant, and schema-fragile."
+  },
+  {
+    "id": "ny-sparcs",
+    "title": "New York SPARCS Hospital Inpatient / ED / Ambulatory Surgery Data",
+    "category": "claims-commercial",
+    "tier": "mixed",
+    "phi": "none-to-restricted",
+    "reid_risk": "low-to-high depending product",
+    "omop": "custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [],
+    "url": "https://www.health.ny.gov/statistics/sparcs/access/",
+    "text": "New York SPARCS Hospital Inpatient / ED / Ambulatory Surgery Data New York SPARCS Hospital Inpatient / ED / Ambulatory Surgery Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Commercial claims sources are rarely nationally representative. Self-funded employer plan reporting gaps can bias APCDs. Price-transparency files are large, redundant, and schema-fragile."
+  },
+  {
+    "id": "state-apcds",
+    "title": "State All-Payer Claims Databases",
+    "category": "claims-commercial",
+    "tier": "mixed",
+    "phi": "mixed-public-aggregate-to-restricted-microdata",
+    "reid_risk": "medium-high for microdata",
+    "omop": "custom-state-claims-etl",
+    "curation": "reference",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [
+      "ICD",
+      "CPT",
+      "HCPCS",
+      "NDC",
+      "NPI",
+      "payer identifiers"
+    ],
+    "url": "https://www.apcdcouncil.org/",
+    "text": "State All-Payer Claims Databases State-administered all-payer claims databases with variable access, coverage, and reporting rules. member, enrollment month, claim, claim-line, provider, or aggregate depending state and access tier raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts No single national APCD schema exists. ERISA/self-funded plan gaps can bias commercial estimates. State statutes, suppression thresholds, and use restrictions vary."
+  },
+  {
+    "id": "transparency-in-coverage-mrfs",
+    "title": "Transparency in Coverage Payer Machine-Readable Files",
+    "category": "claims-commercial",
+    "tier": "open",
+    "phi": "none-to-restricted",
+    "reid_risk": "low-to-high depending product",
+    "omop": "custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [
+      "HCPCS",
+      "CPT",
+      "NPI",
+      "TIN",
+      "payer/plan"
+    ],
+    "url": "https://www.cms.gov/priorities/healthplan-price-transparency",
+    "text": "Transparency in Coverage Payer Machine-Readable Files Transparency in Coverage Payer Machine-Readable Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Commercial claims sources are rarely nationally representative. Self-funded employer plan reporting gaps can bias APCDs. Price-transparency files are large, redundant, and schema-fragile."
+  },
+  {
+    "id": "tx-thcic",
+    "title": "Texas Health Care Information Collection Public Use Data Files",
+    "category": "claims-commercial",
+    "tier": "mixed",
+    "phi": "none-to-restricted",
+    "reid_risk": "low-to-high depending product",
+    "omop": "custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "price-transparency",
+      "cost-prediction",
+      "market-intelligence"
+    ],
+    "vocabularies": [],
+    "url": "https://www.dshs.texas.gov/center-health-statistics/texas-health-care-information-collection",
+    "text": "Texas Health Care Information Collection Public Use Data Files Texas Health Care Information Collection Public Use Data Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. claim-line, negotiated-rate, encounter, plan, provider, or aggregate depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Commercial claims sources are rarely nationally representative. Self-funded employer plan reporting gaps can bias APCDs. Price-transparency files are large, redundant, and schema-fragile."
+  },
+  {
+    "id": "all-of-us",
+    "title": "All of Us Research Program",
+    "category": "clinical-research",
+    "tier": "registration",
+    "phi": "controlled-access-deidentified",
+    "reid_risk": "medium-high",
+    "omop": "native-omop-oriented",
+    "curation": "reference",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "OMOP CDM",
+      "SNOMED CT",
+      "LOINC",
+      "RxNorm"
+    ],
+    "url": "https://www.researchallofus.org/",
+    "text": "All of Us Research Program NIH precision-medicine cohort with surveys, EHR, physical measures, wearables, and genomics exposed through a governed Researcher Workbench. participant-level OMOP tables, surveys, measurements, biospecimens, wearables, and genomics by access tier raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Analyses run inside the Researcher Workbench rather than arbitrary local downloads. CDR versions evolve; pin version for reproducibility. Participant volunteer design affects representativeness."
+  },
+  {
+    "id": "clinicaltrials-gov",
+    "title": "ClinicalTrials.gov",
+    "category": "clinical-research",
+    "tier": "open",
+    "phi": "credentialed-deidentified-or-controlled",
+    "reid_risk": "medium-to-high",
+    "omop": "supported-for-some-sources",
+    "curation": "seed",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "NCT ID",
+      "MeSH-like condition/intervention terms"
+    ],
+    "url": "https://clinicaltrials.gov/data-api",
+    "text": "ClinicalTrials.gov ClinicalTrials.gov entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. participant, encounter, stay, event, waveform, image, or study record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Access approval, training, and workspace restrictions can dominate the project timeline. Single-site or volunteer cohort bias can limit external validity. Patient-level splits, temporal splits, and leakage checks are mandatory."
+  },
+  {
+    "id": "dbgap",
+    "title": "Database of Genotypes and Phenotypes",
+    "category": "clinical-research",
+    "tier": "irb",
+    "phi": "credentialed-deidentified-or-controlled",
+    "reid_risk": "medium-to-high",
+    "omop": "supported-for-some-sources",
+    "curation": "seed",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [],
+    "url": "https://www.ncbi.nlm.nih.gov/gap/",
+    "text": "Database of Genotypes and Phenotypes Database of Genotypes and Phenotypes entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. participant, encounter, stay, event, waveform, image, or study record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Access approval, training, and workspace restrictions can dominate the project timeline. Single-site or volunteer cohort bias can limit external validity. Patient-level splits, temporal splits, and leakage checks are mandatory."
+  },
+  {
+    "id": "eicu-crd",
+    "title": "eICU Collaborative Research Database",
+    "category": "clinical-research",
+    "tier": "registration",
+    "phi": "deidentified-credentialed",
+    "reid_risk": "medium",
+    "omop": "custom-critical-care-etl",
+    "curation": "reference",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "patientUnitStayID",
+      "hospitalid",
+      "event tables"
+    ],
+    "url": "https://physionet.org/content/eicu-crd/2.0/",
+    "text": "eICU Collaborative Research Database Multi-center de-identified ICU database from tele-ICU systems for external validation and critical-care ML. ICU patient/unit-stay/event tables across multiple hospitals raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Cross-site missingness and local practice differences are central. Tele-ICU workflows differ from bedside EHR workflows. Use site-aware validation to test generalization."
+  },
+  {
+    "id": "mimic-cxr",
+    "title": "MIMIC-CXR",
+    "category": "clinical-research",
+    "tier": "registration",
+    "phi": "credentialed-deidentified-or-controlled",
+    "reid_risk": "medium-to-high",
+    "omop": "supported-for-some-sources",
+    "curation": "seed",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "subject_id",
+      "study_id",
+      "DICOM metadata"
+    ],
+    "url": "https://physionet.org/content/mimic-cxr/",
+    "text": "MIMIC-CXR MIMIC-CXR entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. participant, encounter, stay, event, waveform, image, or study record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Access approval, training, and workspace restrictions can dominate the project timeline. Single-site or volunteer cohort bias can limit external validity. Patient-level splits, temporal splits, and leakage checks are mandatory."
+  },
+  {
+    "id": "mimic-iii",
+    "title": "MIMIC-III",
+    "category": "clinical-research",
+    "tier": "registration",
+    "phi": "credentialed-deidentified-or-controlled",
+    "reid_risk": "medium-to-high",
+    "omop": "supported-for-some-sources",
+    "curation": "seed",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "subject_id",
+      "hadm_id",
+      "ICD-9-CM",
+      "itemid"
+    ],
+    "url": "https://physionet.org/content/mimiciii/",
+    "text": "MIMIC-III MIMIC-III entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. participant, encounter, stay, event, waveform, image, or study record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Access approval, training, and workspace restrictions can dominate the project timeline. Single-site or volunteer cohort bias can limit external validity. Patient-level splits, temporal splits, and leakage checks are mandatory."
+  },
+  {
+    "id": "mimic-iv",
+    "title": "MIMIC-IV",
+    "category": "clinical-research",
+    "tier": "registration",
+    "phi": "deidentified-credentialed",
+    "reid_risk": "medium",
+    "omop": "well-supported",
+    "curation": "reference",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "subject_id",
+      "hadm_id",
+      "stay_id",
+      "ICD-9-CM",
+      "ICD-10-CM",
+      "RxNorm via ETL",
+      "LOINC-like lab item IDs"
+    ],
+    "url": "https://physionet.org/content/mimiciv/",
+    "text": "MIMIC-IV Credentialed de-identified hospital and ICU EHR dataset from Beth Israel Deaconess used for critical care and clinical ML benchmarks. person, admission, ICU stay, procedure, diagnosis, lab, medication, chart-event, and note/module records depending access raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Single-center practice patterns can dominate model behavior. Anchor dates and shifted times preserve intervals but not calendar time. MIMIC-IV schema differs materially from MIMIC-III; do not blindly port SQL. Patient-level train/test splits are mandatory to avoid leakage."
+  },
+  {
+    "id": "physionet",
+    "title": "PhysioNet Database Catalog",
+    "category": "clinical-research",
+    "tier": "mixed",
+    "phi": "credentialed-deidentified-or-controlled",
+    "reid_risk": "medium-to-high",
+    "omop": "supported-for-some-sources",
+    "curation": "seed",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [],
+    "url": "https://physionet.org/",
+    "text": "PhysioNet Database Catalog PhysioNet Database Catalog entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. participant, encounter, stay, event, waveform, image, or study record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Access approval, training, and workspace restrictions can dominate the project timeline. Single-site or volunteer cohort bias can limit external validity. Patient-level splits, temporal splits, and leakage checks are mandatory."
+  },
+  {
+    "id": "seer-medicare",
+    "title": "SEER-Medicare Linked Data",
+    "category": "clinical-research",
+    "tier": "dua",
+    "phi": "restricted-linked-registry-claims",
+    "reid_risk": "high",
+    "omop": "custom-registry-plus-claims-etl",
+    "curation": "reference",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [
+      "ICD-O-3",
+      "BENE_ID",
+      "Medicare claims vocabularies"
+    ],
+    "url": "https://healthcaredelivery.cancer.gov/seermedicare/obtain/",
+    "text": "SEER-Medicare Linked Data Linked cancer registry and Medicare claims data supporting oncology outcomes, treatment, utilization, and cost research. tumor/case registry records linked to beneficiary enrollment and Medicare claims raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Generalization is strongest for older Medicare-eligible oncology populations. SEER treatment fields and claims treatment ascertainment must be reconciled carefully. Cost models need inflation and benefit design handling. Right-censoring is central for survival analyses."
+  },
+  {
+    "id": "uk-biobank",
+    "title": "UK Biobank",
+    "category": "clinical-research",
+    "tier": "irb",
+    "phi": "credentialed-deidentified-or-controlled",
+    "reid_risk": "medium-to-high",
+    "omop": "supported-for-some-sources",
+    "curation": "seed",
+    "use_cases": [
+      "mortality-risk",
+      "clinical-benchmarking",
+      "multimodal-modeling"
+    ],
+    "vocabularies": [],
+    "url": "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/",
+    "text": "UK Biobank UK Biobank entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. participant, encounter, stay, event, waveform, image, or study record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Access approval, training, and workspace restrictions can dominate the project timeline. Single-site or volunteer cohort bias can limit external validity. Patient-level splits, temporal splits, and leakage checks are mandatory."
+  },
+  {
+    "id": "cms-care-compare-family",
+    "title": "CMS Hospital / Nursing Home / Home Health / Hospice Compare",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://data.cms.gov/provider-data/",
+    "text": "CMS Hospital / Nursing Home / Home Health / Hospice Compare CMS Hospital / Nursing Home / Home Health / Hospice Compare entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "cms-open-payments",
+    "title": "CMS Open Payments",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://openpaymentsdata.cms.gov/",
+    "text": "CMS Open Payments CMS Open Payments entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "cms-provider-of-services-file",
+    "title": "CMS Provider of Services File",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file",
+    "text": "CMS Provider of Services File CMS Provider of Services File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "hcahps",
+    "title": "HCAHPS Survey Results",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.cms.gov/medicare/quality/initiatives/hospital-quality-initiative/hcahps-patients-perspectives-care-survey",
+    "text": "HCAHPS Survey Results HCAHPS Survey Results entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "medicare-advantage-enrollment-landscape",
+    "title": "Medicare Advantage Enrollment and Landscape Files",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicareadvantagepartdenrollment",
+    "text": "Medicare Advantage Enrollment and Landscape Files Medicare Advantage Enrollment and Landscape Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "medicare-beneficiary-summary-file",
+    "title": "Medicare Beneficiary Summary File",
+    "category": "cms-medicare",
+    "tier": "dua",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "BENE_ID",
+      "CCW chronic condition flags"
+    ],
+    "url": "https://resdac.org/cms-data/files/mbsf-base",
+    "text": "Medicare Beneficiary Summary File Medicare Beneficiary Summary File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "medicare-cost-reports-hcris",
+    "title": "Medicare Cost Reports / HCRIS",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.cms.gov/data-research/statistics-trends-and-reports/cost-reports",
+    "text": "Medicare Cost Reports / HCRIS Medicare Cost Reports / HCRIS entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "medicare-ffs-claims-rif",
+    "title": "Medicare Fee-for-Service Claims Research Identifiable and Limited Data Files",
+    "category": "cms-medicare",
+    "tier": "dua",
+    "phi": "research-identifiable-or-limited-data-set",
+    "reid_risk": "high",
+    "omop": "well-supported",
+    "curation": "reference",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "ICD-10-CM",
+      "ICD-10-PCS",
+      "HCPCS",
+      "CPT",
+      "NDC",
+      "NPI",
+      "MS-DRG"
+    ],
+    "url": "https://resdac.org/cms-data/request/cms-data-request-center",
+    "text": "Medicare Fee-for-Service Claims Research Identifiable and Limited Data Files Research-identifiable and limited-data-set Medicare fee-for-service claims and enrollment files used for longitudinal utilization, outcomes, and cost research. beneficiary, claim, claim-line, enrollment-month, and provider/facility records raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Claims runout and adjudication lag make near-real-time modeling difficult. The October 2015 ICD-9 to ICD-10 transition requires explicit code-era handling. FFS Medicare is older and sicker than commercial populations and excludes Medicare Advantage claims completeness. Use MBSF/enrollment files for denominator, plan, dual-eligible, and vital-status logic rather than claims alone. Payment and DRG rules change annually and can confound longitudinal cost features."
+  },
+  {
+    "id": "medicare-provider-utilization-payment",
+    "title": "Medicare Provider Utilization and Payment Public Use Files",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "NPI",
+      "HCPCS",
+      "CPT",
+      "NDC",
+      "DRG"
+    ],
+    "url": "https://data.cms.gov/provider-summary-by-type-of-service",
+    "text": "Medicare Provider Utilization and Payment Public Use Files Medicare Provider Utilization and Payment Public Use Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "medicare-synpuf",
+    "title": "Medicare Claims Synthetic Public Use Files",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "synthetic",
+    "reid_risk": "none",
+    "omop": "well-supported",
+    "curation": "reference",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "HCPCS",
+      "CPT",
+      "NDC",
+      "MS-DRG"
+    ],
+    "url": "https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files",
+    "text": "Medicare Claims Synthetic Public Use Files Synthetic Medicare claims files designed for software prototyping, schema testing, and ETL dry-runs without exposing real beneficiaries. synthetic beneficiary, claim, claim-line, and prescription event records raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Use it for ETL and CI, not for clinical or epidemiologic conclusions. Clinical covariance and outcome relationships are intentionally degraded to protect privacy. Some modern code systems are absent because the source era predates ICD-10."
+  },
+  {
+    "id": "meps",
+    "title": "Medical Expenditure Panel Survey",
+    "category": "cms-medicare",
+    "tier": "open",
+    "phi": "public-aggregate-or-restricted-microdata",
+    "reid_risk": "low-to-high depending access tier",
+    "omop": "supported-or-custom-claims-etl",
+    "curation": "seed",
+    "use_cases": [
+      "cost-prediction",
+      "provider-benchmarking",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD/condition recodes",
+      "event identifiers",
+      "survey weights"
+    ],
+    "url": "https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp",
+    "text": "Medical Expenditure Panel Survey Medical Expenditure Panel Survey entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations. Claims completion/runout and annual payment-rule changes can introduce leakage or drift. Public-use files are usually aggregated and cannot reconstruct patient-level care pathways."
+  },
+  {
+    "id": "chembl",
+    "title": "ChEMBL",
+    "category": "drug-pharma",
+    "tier": "open",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "drug-vocabulary-or-knowledge-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "ChEMBL IDs",
+      "InChI",
+      "assay/target IDs"
+    ],
+    "url": "https://www.ebi.ac.uk/chembl/downloads/",
+    "text": "ChEMBL ChEMBL entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. drug product, label, adverse-event report, compound, target, or safety concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Regulatory and spontaneous-report systems are not causal event registries. Duplicate follow-up reports and stimulated reporting can bias signal detection. Drug identifiers vary by product, package, ingredient, brand, and labeler."
+  },
+  {
+    "id": "dailymed",
+    "title": "DailyMed Structured Product Labels",
+    "category": "drug-pharma",
+    "tier": "open",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "drug-vocabulary-or-knowledge-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "SPL Set ID",
+      "NDC",
+      "RxNorm maps"
+    ],
+    "url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+    "text": "DailyMed Structured Product Labels DailyMed Structured Product Labels entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. drug product, label, adverse-event report, compound, target, or safety concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Regulatory and spontaneous-report systems are not causal event registries. Duplicate follow-up reports and stimulated reporting can bias signal detection. Drug identifiers vary by product, package, ingredient, brand, and labeler."
+  },
+  {
+    "id": "drugbank",
+    "title": "DrugBank",
+    "category": "drug-pharma",
+    "tier": "purchase",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "drug-vocabulary-or-knowledge-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "DrugBank ID",
+      "targets",
+      "pathways"
+    ],
+    "url": "https://go.drugbank.com/",
+    "text": "DrugBank DrugBank entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. drug product, label, adverse-event report, compound, target, or safety concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Regulatory and spontaneous-report systems are not causal event registries. Duplicate follow-up reports and stimulated reporting can bias signal detection. Drug identifiers vary by product, package, ingredient, brand, and labeler."
+  },
+  {
+    "id": "faers",
+    "title": "FDA Adverse Event Reporting System",
+    "category": "drug-pharma",
+    "tier": "open",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "custom-pharmacovigilance-etl",
+    "curation": "reference",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "CASEID",
+      "ISR",
+      "MedDRA",
+      "drug names"
+    ],
+    "url": "https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard",
+    "text": "FDA Adverse Event Reporting System FDA spontaneous adverse drug event reports for pharmacovigilance signal detection. case/report tables across demographic, drug, reaction, indication, outcome, and therapy components raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts FAERS reports do not establish causality. Deduplicate initial/follow-up reports and manufacturer duplicates. Reporting biases, notoriety bias, and the Weber effect distort signal strength. No reliable exposed population denominator is present."
+  },
+  {
+    "id": "openfda",
+    "title": "openFDA",
+    "category": "drug-pharma",
+    "tier": "open",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "knowledge-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "NDC",
+      "UNII",
+      "MedDRA where applicable"
+    ],
+    "url": "https://open.fda.gov/",
+    "text": "openFDA FDA open API and downloads for drugs, devices, food, labels, enforcement reports, recalls, and adverse events. endpoint-specific JSON record or bulk download document raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Read endpoint-specific schema notes; fields are nested and not uniform across sources. API rate limits make API keys and bulk downloads preferable for production. Source systems differ in completeness, deduplication, and timeliness."
+  },
+  {
+    "id": "orange-purple-book",
+    "title": "FDA Orange Book / Purple Book",
+    "category": "drug-pharma",
+    "tier": "open",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "drug-vocabulary-or-knowledge-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "NDA/ANDA/BLA",
+      "TE codes",
+      "patent/exclusivity"
+    ],
+    "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/approved-drug-products-therapeutic-equivalence-evaluations-orange-book",
+    "text": "FDA Orange Book / Purple Book FDA Orange Book / Purple Book entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. drug product, label, adverse-event report, compound, target, or safety concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Regulatory and spontaneous-report systems are not causal event registries. Duplicate follow-up reports and stimulated reporting can bias signal detection. Drug identifiers vary by product, package, ingredient, brand, and labeler."
+  },
+  {
+    "id": "sider",
+    "title": "SIDER Side Effect Resource",
+    "category": "drug-pharma",
+    "tier": "open",
+    "phi": "none-public-regulatory-or-knowledgebase",
+    "reid_risk": "low",
+    "omop": "drug-vocabulary-or-knowledge-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "adverse-drug-events",
+      "pharmacovigilance",
+      "drug-knowledge-graph"
+    ],
+    "vocabularies": [
+      "drug identifiers",
+      "side-effect terms"
+    ],
+    "url": "http://sideeffects.embl.de/",
+    "text": "SIDER Side Effect Resource SIDER Side Effect Resource entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. drug product, label, adverse-event report, compound, target, or safety concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Regulatory and spontaneous-report systems are not causal event registries. Duplicate follow-up reports and stimulated reporting can bias signal detection. Drug identifiers vary by product, package, ingredient, brand, and labeler."
+  },
+  {
+    "id": "clinvar-omim-gnomad",
+    "title": "ClinVar / OMIM / gnomAD",
+    "category": "genomics",
+    "tier": "mixed",
+    "phi": "none-public-aggregate-or-controlled-if-individual-level",
+    "reid_risk": "medium for genomic merges",
+    "omop": "custom-genomics-extension",
+    "curation": "seed",
+    "use_cases": [
+      "variant-interpretation",
+      "rare-disease-phenotyping",
+      "polygenic-risk"
+    ],
+    "vocabularies": [
+      "ClinVar Variation ID",
+      "HGVS",
+      "rsID",
+      "OMIM",
+      "gnomAD frequency"
+    ],
+    "url": "https://www.ncbi.nlm.nih.gov/clinvar/",
+    "text": "ClinVar / OMIM / gnomAD ClinVar / OMIM / gnomAD entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. variant, gene, phenotype, association, or ontology concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Genome build, transcript version, and variant representation must be explicit. Ancestry and ascertainment imbalance can bias interpretation. Genomic linkage can increase re-identification risk even when source data are public aggregates."
+  },
+  {
+    "id": "gwas-catalog",
+    "title": "NHGRI-EBI GWAS Catalog",
+    "category": "genomics",
+    "tier": "open",
+    "phi": "none-public-aggregate-or-controlled-if-individual-level",
+    "reid_risk": "medium for genomic merges",
+    "omop": "custom-genomics-extension",
+    "curation": "seed",
+    "use_cases": [
+      "variant-interpretation",
+      "rare-disease-phenotyping",
+      "polygenic-risk"
+    ],
+    "vocabularies": [
+      "rsID",
+      "EFO trait",
+      "study accession"
+    ],
+    "url": "https://www.ebi.ac.uk/gwas/downloads",
+    "text": "NHGRI-EBI GWAS Catalog NHGRI-EBI GWAS Catalog entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. variant, gene, phenotype, association, or ontology concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Genome build, transcript version, and variant representation must be explicit. Ancestry and ascertainment imbalance can bias interpretation. Genomic linkage can increase re-identification risk even when source data are public aggregates."
+  },
+  {
+    "id": "human-phenotype-ontology",
+    "title": "Human Phenotype Ontology",
+    "category": "genomics",
+    "tier": "open",
+    "phi": "none-public-aggregate-or-controlled-if-individual-level",
+    "reid_risk": "medium for genomic merges",
+    "omop": "custom-genomics-extension",
+    "curation": "seed",
+    "use_cases": [
+      "variant-interpretation",
+      "rare-disease-phenotyping",
+      "polygenic-risk"
+    ],
+    "vocabularies": [
+      "HPO ID",
+      "disease annotations"
+    ],
+    "url": "https://hpo.jax.org/app/download/ontology",
+    "text": "Human Phenotype Ontology Human Phenotype Ontology entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. variant, gene, phenotype, association, or ontology concept raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Genome build, transcript version, and variant representation must be explicit. Ancestry and ascertainment imbalance can bias interpretation. Genomic linkage can increase re-identification risk even when source data are public aggregates."
+  },
+  {
+    "id": "hcup-kid",
+    "title": "HCUP Kids\u2019 Inpatient Database",
+    "category": "hcup",
+    "tier": "purchase",
+    "phi": "deidentified-governed",
+    "reid_risk": "medium",
+    "omop": "custom-encounter-etl",
+    "curation": "seed",
+    "use_cases": [
+      "utilization-modeling",
+      "burden-estimation",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "ICD-10-CM/PCS",
+      "HCUP weights"
+    ],
+    "url": "https://hcup-us.ahrq.gov/kidoverview.jsp",
+    "text": "HCUP Kids\u2019 Inpatient Database HCUP Kids\u2019 Inpatient Database entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. weighted hospital discharge or encounter record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts National samples require survey weights for valid estimates. Most HCUP national files do not support longitudinal patient tracking. State products vary in available identifiers, years, and restrictions."
+  },
+  {
+    "id": "hcup-neds",
+    "title": "HCUP Nationwide Emergency Department Sample",
+    "category": "hcup",
+    "tier": "purchase",
+    "phi": "deidentified-governed",
+    "reid_risk": "medium",
+    "omop": "custom-encounter-etl",
+    "curation": "seed",
+    "use_cases": [
+      "utilization-modeling",
+      "burden-estimation",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "ICD-10-CM/PCS",
+      "HCUP weights"
+    ],
+    "url": "https://hcup-us.ahrq.gov/nedsoverview.jsp",
+    "text": "HCUP Nationwide Emergency Department Sample HCUP Nationwide Emergency Department Sample entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. weighted hospital discharge or encounter record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts National samples require survey weights for valid estimates. Most HCUP national files do not support longitudinal patient tracking. State products vary in available identifiers, years, and restrictions."
+  },
+  {
+    "id": "hcup-nis",
+    "title": "HCUP National Inpatient Sample",
+    "category": "hcup",
+    "tier": "purchase",
+    "phi": "deidentified-governed",
+    "reid_risk": "medium",
+    "omop": "custom-discharge-etl",
+    "curation": "reference",
+    "use_cases": [
+      "utilization-modeling",
+      "burden-estimation",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "ICD-10-CM/PCS",
+      "HCUP weights"
+    ],
+    "url": "https://hcup-us.ahrq.gov/nisoverview.jsp",
+    "text": "HCUP National Inpatient Sample Nationally weighted inpatient discharge sample for estimating U.S. hospital utilization, outcomes, and charges. discharge-level inpatient record with survey design variables and weights raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Use discharge weights and design variables; unweighted analyses mislead. No longitudinal patient linkage in national files. NIS redesigns and ICD transition affect longitudinal comparability."
+  },
+  {
+    "id": "hcup-sid-sasd",
+    "title": "HCUP State Inpatient Databases / State Ambulatory Surgery and Services Databases",
+    "category": "hcup",
+    "tier": "purchase",
+    "phi": "deidentified-governed",
+    "reid_risk": "medium",
+    "omop": "custom-encounter-etl",
+    "curation": "seed",
+    "use_cases": [
+      "utilization-modeling",
+      "burden-estimation",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "ICD-10-CM/PCS",
+      "state identifiers"
+    ],
+    "url": "https://hcup-us.ahrq.gov/db/state/siddbdocumentation.jsp",
+    "text": "HCUP State Inpatient Databases / State Ambulatory Surgery and Services Databases HCUP State Inpatient Databases / State Ambulatory Surgery and Services Databases entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. weighted hospital discharge or encounter record raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts National samples require survey weights for valid estimates. Most HCUP national files do not support longitudinal patient tracking. State products vary in available identifiers, years, and restrictions."
+  },
+  {
+    "id": "adni",
+    "title": "Alzheimer\u2019s Disease Neuroimaging Initiative",
+    "category": "imaging",
+    "tier": "registration",
+    "phi": "deidentified-or-governed",
+    "reid_risk": "medium",
+    "omop": "custom-imaging-extension",
+    "curation": "seed",
+    "use_cases": [
+      "medical-imaging",
+      "multimodal-modeling",
+      "clinical-benchmarking"
+    ],
+    "vocabularies": [
+      "RID",
+      "visit",
+      "imaging/biomarker/genetic IDs"
+    ],
+    "url": "https://adni.loni.usc.edu/data-samples/",
+    "text": "Alzheimer\u2019s Disease Neuroimaging Initiative Alzheimer\u2019s Disease Neuroimaging Initiative entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. image, study, series, DICOM object, report, participant, or collection raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Image labels are often report-derived and noisy. Patient-level split leakage can inflate benchmark performance. Device, site, acquisition protocol, and preprocessing shift can dominate model behavior."
+  },
+  {
+    "id": "chexpert",
+    "title": "CheXpert",
+    "category": "imaging",
+    "tier": "registration",
+    "phi": "deidentified-or-governed",
+    "reid_risk": "medium",
+    "omop": "custom-imaging-extension",
+    "curation": "seed",
+    "use_cases": [
+      "medical-imaging",
+      "multimodal-modeling",
+      "clinical-benchmarking"
+    ],
+    "vocabularies": [
+      "patient/study/image IDs",
+      "uncertainty labels"
+    ],
+    "url": "https://aimi.stanford.edu/datasets/chexpert-chest-x-rays",
+    "text": "CheXpert CheXpert entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. image, study, series, DICOM object, report, participant, or collection raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Image labels are often report-derived and noisy. Patient-level split leakage can inflate benchmark performance. Device, site, acquisition protocol, and preprocessing shift can dominate model behavior."
+  },
+  {
+    "id": "isic-archive",
+    "title": "ISIC Dermoscopy Archive",
+    "category": "imaging",
+    "tier": "open",
+    "phi": "deidentified-or-governed",
+    "reid_risk": "medium",
+    "omop": "custom-imaging-extension",
+    "curation": "seed",
+    "use_cases": [
+      "medical-imaging",
+      "multimodal-modeling",
+      "clinical-benchmarking"
+    ],
+    "vocabularies": [
+      "image IDs",
+      "diagnosis labels"
+    ],
+    "url": "https://www.isic-archive.com/",
+    "text": "ISIC Dermoscopy Archive ISIC Dermoscopy Archive entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. image, study, series, DICOM object, report, participant, or collection raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Image labels are often report-derived and noisy. Patient-level split leakage can inflate benchmark performance. Device, site, acquisition protocol, and preprocessing shift can dominate model behavior."
+  },
+  {
+    "id": "nih-chestxray14",
+    "title": "NIH ChestX-ray14",
+    "category": "imaging",
+    "tier": "open",
+    "phi": "deidentified-or-governed",
+    "reid_risk": "medium",
+    "omop": "custom-imaging-extension",
+    "curation": "seed",
+    "use_cases": [
+      "medical-imaging",
+      "multimodal-modeling",
+      "clinical-benchmarking"
+    ],
+    "vocabularies": [
+      "patient/image IDs",
+      "report-derived labels"
+    ],
+    "url": "https://nihcc.app.box.com/v/ChestXray-NIHCC",
+    "text": "NIH ChestX-ray14 NIH ChestX-ray14 entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. image, study, series, DICOM object, report, participant, or collection raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Image labels are often report-derived and noisy. Patient-level split leakage can inflate benchmark performance. Device, site, acquisition protocol, and preprocessing shift can dominate model behavior."
+  },
+  {
+    "id": "tcia",
+    "title": "The Cancer Imaging Archive",
+    "category": "imaging",
+    "tier": "open",
+    "phi": "deidentified-or-governed",
+    "reid_risk": "medium",
+    "omop": "custom-imaging-extension",
+    "curation": "seed",
+    "use_cases": [
+      "medical-imaging",
+      "multimodal-modeling",
+      "clinical-benchmarking"
+    ],
+    "vocabularies": [
+      "DICOM identifiers",
+      "collection metadata"
+    ],
+    "url": "https://www.cancerimagingarchive.net/collections/",
+    "text": "The Cancer Imaging Archive The Cancer Imaging Archive entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. image, study, series, DICOM object, report, participant, or collection raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Image labels are often report-derived and noisy. Patient-level split leakage can inflate benchmark performance. Device, site, acquisition protocol, and preprocessing shift can dominate model behavior."
+  },
+  {
+    "id": "eurostat-health",
+    "title": "Eurostat Health Data",
+    "category": "international",
+    "tier": "open",
+    "phi": "none-aggregate-or-deidentified-survey",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "global-health-benchmarking",
+      "policy-modeling",
+      "health-system-resilience"
+    ],
+    "vocabularies": [
+      "country/region",
+      "indicator",
+      "year"
+    ],
+    "url": "https://ec.europa.eu/eurostat/web/health/database",
+    "text": "Eurostat Health Data Eurostat Health Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. country, region, indicator, survey respondent, household, or modeled estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Country definitions, indicators, and measurement conventions vary across sources. Modeled estimates should not be mixed with observed survey microdata without labeling provenance. Access rules differ sharply between aggregate indicators and household microdata."
+  },
+  {
+    "id": "ihme-gbd-dhs",
+    "title": "IHME Global Burden of Disease + DHS Program",
+    "category": "international",
+    "tier": "mixed",
+    "phi": "none-aggregate-or-deidentified-survey",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "global-health-benchmarking",
+      "policy-modeling",
+      "health-system-resilience"
+    ],
+    "vocabularies": [
+      "country/age/sex/cause/risk",
+      "DHS household/respondent IDs"
+    ],
+    "url": "https://www.healthdata.org/research-analysis/gbd",
+    "text": "IHME Global Burden of Disease + DHS Program IHME Global Burden of Disease + DHS Program entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. country, region, indicator, survey respondent, household, or modeled estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Country definitions, indicators, and measurement conventions vary across sources. Modeled estimates should not be mixed with observed survey microdata without labeling provenance. Access rules differ sharply between aggregate indicators and household microdata."
+  },
+  {
+    "id": "oecd-health-statistics",
+    "title": "OECD Health Statistics",
+    "category": "international",
+    "tier": "open",
+    "phi": "none-aggregate-or-deidentified-survey",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "global-health-benchmarking",
+      "policy-modeling",
+      "health-system-resilience"
+    ],
+    "vocabularies": [
+      "country",
+      "indicator",
+      "year"
+    ],
+    "url": "https://www.oecd.org/en/data/datasets/oecd-health-statistics.html",
+    "text": "OECD Health Statistics OECD Health Statistics entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. country, region, indicator, survey respondent, household, or modeled estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Country definitions, indicators, and measurement conventions vary across sources. Modeled estimates should not be mixed with observed survey microdata without labeling provenance. Access rules differ sharply between aggregate indicators and household microdata."
+  },
+  {
+    "id": "who-global-health-observatory",
+    "title": "WHO Global Health Observatory",
+    "category": "international",
+    "tier": "open",
+    "phi": "none-aggregate-or-deidentified-survey",
+    "reid_risk": "low",
+    "omop": "not-primary-omop-source",
+    "curation": "seed",
+    "use_cases": [
+      "global-health-benchmarking",
+      "policy-modeling",
+      "health-system-resilience"
+    ],
+    "vocabularies": [
+      "country",
+      "indicator",
+      "year"
+    ],
+    "url": "https://www.who.int/data/gho",
+    "text": "WHO Global Health Observatory WHO Global Health Observatory entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. country, region, indicator, survey respondent, household, or modeled estimate raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Country definitions, indicators, and measurement conventions vary across sources. Modeled estimates should not be mixed with observed survey microdata without labeling provenance. Access rules differ sharply between aggregate indicators and household microdata."
+  },
+  {
+    "id": "tmsis-analytic-files",
+    "title": "T-MSIS Analytic Files",
+    "category": "medicaid",
+    "tier": "dua",
+    "phi": "restricted",
+    "reid_risk": "high",
+    "omop": "custom-claims-etl",
+    "curation": "reference",
+    "use_cases": [
+      "health-equity-analysis",
+      "cost-prediction",
+      "utilization-modeling"
+    ],
+    "vocabularies": [
+      "ICD-10-CM",
+      "HCPCS",
+      "CPT",
+      "NDC",
+      "NPI",
+      "state Medicaid identifiers"
+    ],
+    "url": "https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html",
+    "text": "T-MSIS Analytic Files CMS Medicaid and CHIP analytic files derived from Transformed Medicaid Statistical Information System submissions. beneficiary eligibility, enrollment, claim, encounter, and service-line files raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts State data quality and managed-care encounter completeness vary. Eligibility categories, dual status, waiver programs, and churn must be modeled explicitly. National pooled modeling requires state-fixed effects or state-specific validation."
+  },
+  {
+    "id": "cms-doctors-clinicians",
+    "title": "CMS Doctors & Clinicians / Physician Compare",
+    "category": "provider",
+    "tier": "open",
+    "phi": "none-provider-public",
+    "reid_risk": "none-for-patient-reid",
+    "omop": "provider-dimension-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "provider-benchmarking",
+      "network-analysis",
+      "provider-mastering"
+    ],
+    "vocabularies": [
+      "NPI",
+      "CCN",
+      "measure IDs"
+    ],
+    "url": "https://data.cms.gov/provider-data/topics/doctors-clinicians",
+    "text": "CMS Doctors & Clinicians / Physician Compare CMS Doctors & Clinicians / Physician Compare entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, facility, taxonomy, or provider-pair edge raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Provider identity, address, organization, and specialty data drift over time. Provider specialty fields can be self-reported or incomplete. Facility and clinician files often use different identifiers and refresh cadences."
+  },
+  {
+    "id": "cms-provider-data-catalog",
+    "title": "CMS Provider Data Catalog",
+    "category": "provider",
+    "tier": "open",
+    "phi": "none-provider-public",
+    "reid_risk": "none-for-patient-reid",
+    "omop": "provider-dimension-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "provider-benchmarking",
+      "network-analysis",
+      "provider-mastering"
+    ],
+    "vocabularies": [],
+    "url": "https://data.cms.gov/provider-data/",
+    "text": "CMS Provider Data Catalog CMS Provider Data Catalog entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, facility, taxonomy, or provider-pair edge raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Provider identity, address, organization, and specialty data drift over time. Provider specialty fields can be self-reported or incomplete. Facility and clinician files often use different identifiers and refresh cadences."
+  },
+  {
+    "id": "docgraph-referral-graph",
+    "title": "DocGraph / Medicare Provider Referral Graph",
+    "category": "provider",
+    "tier": "open",
+    "phi": "none-provider-public",
+    "reid_risk": "none-for-patient-reid",
+    "omop": "provider-dimension-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "provider-benchmarking",
+      "network-analysis",
+      "provider-mastering"
+    ],
+    "vocabularies": [
+      "NPI",
+      "provider graph edges"
+    ],
+    "url": "https://careset.com/docgraph-open-social-doctor-data/",
+    "text": "DocGraph / Medicare Provider Referral Graph DocGraph / Medicare Provider Referral Graph entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, facility, taxonomy, or provider-pair edge raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Provider identity, address, organization, and specialty data drift over time. Provider specialty fields can be self-reported or incomplete. Facility and clinician files often use different identifiers and refresh cadences."
+  },
+  {
+    "id": "npdb-public-use-file",
+    "title": "National Practitioner Data Bank Public Use File",
+    "category": "provider",
+    "tier": "open",
+    "phi": "none-provider-public",
+    "reid_risk": "none-for-patient-reid",
+    "omop": "provider-dimension-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "provider-benchmarking",
+      "network-analysis",
+      "provider-mastering"
+    ],
+    "vocabularies": [],
+    "url": "https://www.npdb.hrsa.gov/resources/publicData.jsp",
+    "text": "National Practitioner Data Bank Public Use File National Practitioner Data Bank Public Use File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, facility, taxonomy, or provider-pair edge raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Provider identity, address, organization, and specialty data drift over time. Provider specialty fields can be self-reported or incomplete. Facility and clinician files often use different identifiers and refresh cadences."
+  },
+  {
+    "id": "nppes-npi-registry",
+    "title": "NPPES NPI Registry",
+    "category": "provider",
+    "tier": "open",
+    "phi": "none-provider-public",
+    "reid_risk": "none-for-patient-reid",
+    "omop": "provider-dimension-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "provider-benchmarking",
+      "network-analysis",
+      "provider-mastering"
+    ],
+    "vocabularies": [
+      "NPI",
+      "NUCC taxonomy"
+    ],
+    "url": "https://download.cms.gov/nppes/NPI_Files.html",
+    "text": "NPPES NPI Registry Public NPI registry and downloadable provider reference file used to normalize clinicians and organizations. one record per NPI plus taxonomy, address, endpoint, and status fields raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Mailing address and practice address differ. Taxonomy can be self-attested and stale. Deactivated NPIs and organization changes require temporal provider mastering."
+  },
+  {
+    "id": "nucc-provider-taxonomy",
+    "title": "NUCC Provider Taxonomy Code Set",
+    "category": "provider",
+    "tier": "open",
+    "phi": "none-provider-public",
+    "reid_risk": "none-for-patient-reid",
+    "omop": "provider-dimension-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "provider-benchmarking",
+      "network-analysis",
+      "provider-mastering"
+    ],
+    "vocabularies": [
+      "NUCC taxonomy"
+    ],
+    "url": "https://taxonomy.nucc.org/",
+    "text": "NUCC Provider Taxonomy Code Set NUCC Provider Taxonomy Code Set entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. provider, facility, taxonomy, or provider-pair edge raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Provider identity, address, organization, and specialty data drift over time. Provider specialty fields can be self-reported or incomplete. Facility and clinician files often use different identifiers and refresh cadences."
+  },
+  {
+    "id": "ahrq-sdoh-database",
+    "title": "AHRQ Social Determinants of Health Database",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "FIPS",
+      "county",
+      "ZIP"
+    ],
+    "url": "https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html",
+    "text": "AHRQ Social Determinants of Health Database County and ZIP-level social determinants compendium designed for health services and disparities analytics. county- and ZIP-level SDOH variables by year/vintage raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Source years differ across variables; store variable-level vintage. Highly collinear neighborhood variables can destabilize coefficients. Do not interpret ZIP/county-level context as individual-level fact."
+  },
+  {
+    "id": "area-deprivation-index",
+    "title": "Area Deprivation Index / Neighborhood Atlas",
+    "category": "sdoh",
+    "tier": "registration",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "GEOID",
+      "block group",
+      "ADI"
+    ],
+    "url": "https://www.neighborhoodatlas.medicine.wisc.edu/",
+    "text": "Area Deprivation Index / Neighborhood Atlas Neighborhood socioeconomic deprivation index for geospatial risk adjustment and equity analytics. census block-group or ZIP/neighborhood deprivation score depending product raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Registration/terms and citation requirements matter for redistribution. Geography vintage and address-geocoding precision determine join validity. Index construction can be sensitive to housing-market variables."
+  },
+  {
+    "id": "bls-laus",
+    "title": "BLS Local Area Unemployment Statistics",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.bls.gov/lau/",
+    "text": "BLS Local Area Unemployment Statistics BLS Local Area Unemployment Statistics entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "cdc-atsdr-svi",
+    "title": "CDC/ATSDR Social Vulnerability Index",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "FIPS",
+      "GEOID",
+      "SVI themes"
+    ],
+    "url": "https://www.atsdr.cdc.gov/place-health/php/svi/",
+    "text": "CDC/ATSDR Social Vulnerability Index CDC/ATSDR Social Vulnerability Index entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "county-health-rankings",
+    "title": "County Health Rankings & Roadmaps",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.countyhealthrankings.org/health-data",
+    "text": "County Health Rankings & Roadmaps County-level health outcomes and health factors measures for community health benchmarking. county/state measure and rank records raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Rankings and composite scores should not be used as labels without understanding methodology. Small rural counties can have wide uncertainty. Method changes across years affect trend analysis."
+  },
+  {
+    "id": "dartmouth-atlas",
+    "title": "Dartmouth Atlas of Health Care",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-and-provider-context-enrichment",
+    "curation": "reference",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://data.dartmouthatlas.org/",
+    "text": "Dartmouth Atlas of Health Care Regional health-care variation measures and crosswalks based largely on Medicare utilization and referral regions. Hospital Referral Region, Hospital Service Area, provider, or geographic measure depending extract raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Medicare FFS-centric measures should not be generalized without caution. Referral-region geography is not the same as county/state boundaries. Historical crosswalks may lag rapid market consolidation."
+  },
+  {
+    "id": "epa-aqs",
+    "title": "EPA Air Quality System",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "AQS site",
+      "pollutant",
+      "date/time"
+    ],
+    "url": "https://www.epa.gov/aqs",
+    "text": "EPA Air Quality System EPA Air Quality System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "epa-ejscreen",
+    "title": "EPA EJScreen",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "GEOID",
+      "environmental indicators"
+    ],
+    "url": "https://www.epa.gov/ejscreen",
+    "text": "EPA EJScreen EPA EJScreen entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "epa-walkability-index",
+    "title": "EPA National Walkability Index / Smart Location Mapping",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.epa.gov/smartgrowth/smart-location-mapping",
+    "text": "EPA National Walkability Index / Smart Location Mapping EPA National Walkability Index / Smart Location Mapping entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "hrsa-ahrf",
+    "title": "Area Health Resources File",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "FIPS",
+      "county variables"
+    ],
+    "url": "https://data.hrsa.gov/data/download",
+    "text": "Area Health Resources File Area Health Resources File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "hud-hmis-pit",
+    "title": "HUD HMIS / Point-in-Time Homelessness Counts",
+    "category": "sdoh",
+    "tier": "mixed",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [],
+    "url": "https://www.huduser.gov/portal/datasets/ahar.html",
+    "text": "HUD HMIS / Point-in-Time Homelessness Counts HUD HMIS / Point-in-Time Homelessness Counts entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "ruca-codes",
+    "title": "USDA Rural-Urban Commuting Area Codes",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "tract",
+      "RUCA",
+      "ZIP approximation"
+    ],
+    "url": "https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/",
+    "text": "USDA Rural-Urban Commuting Area Codes USDA Rural-Urban Commuting Area Codes entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "usda-food-access-environment",
+    "title": "USDA Food Access Research Atlas / Food Environment Atlas",
+    "category": "sdoh",
+    "tier": "open",
+    "phi": "none-aggregate-geography",
+    "reid_risk": "none",
+    "omop": "geospatial-context-enrichment",
+    "curation": "seed",
+    "use_cases": [
+      "sdoh-risk-stratification",
+      "health-equity-analysis",
+      "readmission-prediction"
+    ],
+    "vocabularies": [
+      "FIPS",
+      "tract/county"
+    ],
+    "url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/",
+    "text": "USDA Food Access Research Atlas / Food Environment Atlas USDA Food Access Research Atlas / Food Environment Atlas entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. county, tract, block-group, ZIP, ZCTA, or geography-time indicator raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Ecological fallacy risk is high when geography aggregates are treated as individual attributes. Geography vintage and crosswalk choice can change model outputs. Many SDOH variables are collinear; feature selection and fairness checks are needed."
+  },
+  {
+    "id": "atc-ddd",
+    "title": "ATC/DDD Index",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "ATC",
+      "DDD"
+    ],
+    "url": "https://atcddd.fhi.no/",
+    "text": "ATC/DDD Index ATC/DDD Index entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "cpt-hcpcs-level-ii",
+    "title": "CPT / HCPCS Level II",
+    "category": "terminologies",
+    "tier": "purchase",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "CPT",
+      "HCPCS Level II"
+    ],
+    "url": "https://www.cms.gov/medicare/coding/healthcare-common-procedure-system",
+    "text": "CPT / HCPCS Level II CPT / HCPCS Level II entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "fda-ndc-directory",
+    "title": "FDA National Drug Code Directory",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "NDC"
+    ],
+    "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory",
+    "text": "FDA National Drug Code Directory FDA National Drug Code Directory entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "icd-10-cm-pcs",
+    "title": "ICD-10-CM / ICD-10-PCS",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "ICD-10-CM",
+      "ICD-10-PCS"
+    ],
+    "url": "https://www.cms.gov/medicare/coding-billing/icd-10-codes",
+    "text": "ICD-10-CM / ICD-10-PCS ICD-10-CM / ICD-10-PCS entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "icd-11",
+    "title": "ICD-11",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "ICD-11"
+    ],
+    "url": "https://icd.who.int/browse11",
+    "text": "ICD-11 ICD-11 entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "icd-9-cm-gems",
+    "title": "ICD-9-CM and General Equivalence Mappings",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "ICD-9-CM",
+      "GEMs"
+    ],
+    "url": "https://www.cms.gov/medicare/coding-billing/icd-10-codes/general-equivalence-mappings",
+    "text": "ICD-9-CM and General Equivalence Mappings ICD-9-CM and General Equivalence Mappings entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "icd-o-3",
+    "title": "ICD-O-3 Oncology Coding Resources",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "ICD-O-3"
+    ],
+    "url": "https://seer.cancer.gov/icd-o-3/",
+    "text": "ICD-O-3 Oncology Coding Resources ICD-O-3 Oncology Coding Resources entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "loinc",
+    "title": "LOINC",
+    "category": "terminologies",
+    "tier": "registration",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "LOINC"
+    ],
+    "url": "https://loinc.org/downloads/",
+    "text": "LOINC LOINC entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "meddra",
+    "title": "MedDRA",
+    "category": "terminologies",
+    "tier": "purchase",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "MedDRA"
+    ],
+    "url": "https://www.meddra.org/",
+    "text": "MedDRA MedDRA entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "mesh",
+    "title": "Medical Subject Headings",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "MeSH"
+    ],
+    "url": "https://www.nlm.nih.gov/mesh/download_mesh.html",
+    "text": "Medical Subject Headings Medical Subject Headings entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "ms-drg-apr-drg",
+    "title": "MS-DRG / APR-DRG",
+    "category": "terminologies",
+    "tier": "mixed",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "MS-DRG",
+      "APR-DRG"
+    ],
+    "url": "https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/ms-drg-classifications-and-software",
+    "text": "MS-DRG / APR-DRG MS-DRG / APR-DRG entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "nci-thesaurus",
+    "title": "NCI Thesaurus",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "NCIt"
+    ],
+    "url": "https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/",
+    "text": "NCI Thesaurus NCI Thesaurus entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "omop-cdm-athena",
+    "title": "OMOP CDM / Athena Vocabulary Server",
+    "category": "terminologies",
+    "tier": "registration",
+    "phi": "depends-on-source-data",
+    "reid_risk": "depends-on-source-data",
+    "omop": "canonical-target",
+    "curation": "reference",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "OMOP CDM",
+      "OHDSI standardized vocabularies"
+    ],
+    "url": "https://athena.ohdsi.org/",
+    "text": "OMOP CDM / Athena Vocabulary Server Common data model and standardized vocabulary distribution layer for harmonizing claims, EHR, registry, and public reference assets. OMOP CDM tables and standardized vocabulary tables raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts OMOP standardization improves reuse but can hide source nuance. Athena vocabulary downloads inherit source vocabulary licensing rules. Local extensions/custom concepts require governance and documentation."
+  },
+  {
+    "id": "rxnorm",
+    "title": "RxNorm",
+    "category": "terminologies",
+    "tier": "open",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "RxNorm"
+    ],
+    "url": "https://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html",
+    "text": "RxNorm RxNorm entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "snomed-ct",
+    "title": "SNOMED CT",
+    "category": "terminologies",
+    "tier": "registration",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "source-or-standard-vocabulary",
+    "curation": "seed",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "SNOMED CT"
+    ],
+    "url": "https://www.nlm.nih.gov/healthit/snomedct/",
+    "text": "SNOMED CT SNOMED CT entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics. concept-code, terminology relationship, or ontology release table raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Release versions matter; never mix vocabulary vintages without recording the release date. Source-to-standard mappings can collapse clinically meaningful nuance. Some vocabularies have licensing restrictions even when the catalog metadata is public."
+  },
+  {
+    "id": "umls-metathesaurus",
+    "title": "UMLS Metathesaurus",
+    "category": "terminologies",
+    "tier": "registration",
+    "phi": "none",
+    "reid_risk": "none",
+    "omop": "terminology-reconciliation",
+    "curation": "reference",
+    "use_cases": [
+      "semantic-normalization",
+      "feature-engineering",
+      "crosswalks"
+    ],
+    "vocabularies": [
+      "UMLS",
+      "CUI",
+      "semantic types"
+    ],
+    "url": "https://www.nlm.nih.gov/research/umls/",
+    "text": "UMLS Metathesaurus Large NLM biomedical terminology compendium and crosswalk layer using CUIs across many source vocabularies. CUI, atom, string, semantic type, and relationship tables in Rich Release Format raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Full releases are large and require installation/subsetting choices. UMLS synonymy is not always clinical equivalence. Downstream licenses can inherit restrictions from source vocabularies."
+  }
+]

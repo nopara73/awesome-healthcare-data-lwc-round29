@@ -1,0 +1,525 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Health Data dataset entry",
+  "description": "Schema for a machine-readable healthcare dataset catalog entry.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "short_name",
+    "category",
+    "status",
+    "description",
+    "owner",
+    "access",
+    "resources",
+    "vocabularies",
+    "grain",
+    "unit_of_observation",
+    "primary_keys",
+    "coverage",
+    "size",
+    "phi",
+    "quality_gotchas",
+    "common_use_cases",
+    "omop_mapping",
+    "etl",
+    "prototyping_alternative",
+    "linked_datasets",
+    "example_notebooks",
+    "key_papers",
+    "freshness",
+    "maintainer",
+    "curation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "short_name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "terminologies",
+        "cms-medicare",
+        "medicaid",
+        "cdc-surveillance",
+        "hcup",
+        "claims-commercial",
+        "provider",
+        "sdoh",
+        "census",
+        "clinical-research",
+        "drug-pharma",
+        "imaging",
+        "genomics",
+        "international"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "deprecated",
+        "archived",
+        "planned"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "owner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "organization",
+        "distributor",
+        "url",
+        "contact"
+      ],
+      "properties": {
+        "organization": {
+          "type": "string"
+        },
+        "distributor": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "contact": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tier",
+        "cost_usd",
+        "request_url",
+        "download_url",
+        "typical_turnaround_days",
+        "redistribution",
+        "commercial_use",
+        "enclave_required",
+        "license_notes"
+      ],
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": [
+            "open",
+            "registration",
+            "dua",
+            "irb",
+            "purchase",
+            "mixed"
+          ]
+        },
+        "cost_usd": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "request_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "download_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "typical_turnaround_days": {
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "redistribution": {
+          "type": "string"
+        },
+        "commercial_use": {
+          "type": "string"
+        },
+        "enclave_required": {
+          "type": "boolean"
+        },
+        "license_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "official_page",
+        "download_url",
+        "api_url",
+        "documentation_url"
+      ],
+      "properties": {
+        "official_page": {
+          "type": "string",
+          "format": "uri"
+        },
+        "download_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "api_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "documentation_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      }
+    },
+    "vocabularies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "grain": {
+      "type": "string",
+      "minLength": 5
+    },
+    "unit_of_observation": {
+      "type": "string",
+      "minLength": 3
+    },
+    "primary_keys": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patient",
+        "provider",
+        "geo",
+        "code",
+        "other"
+      ],
+      "properties": {
+        "patient": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provider": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "other": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "population_n",
+        "population_description",
+        "excludes",
+        "geographic_scope",
+        "years",
+        "refresh_cadence",
+        "completeness_lag_months",
+        "representativeness_notes"
+      ],
+      "properties": {
+        "population_n": {
+          "type": [
+            "integer",
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "population_description": {
+          "type": "string"
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "geographic_scope": {
+          "type": "string"
+        },
+        "years": {
+          "type": [
+            "string",
+            "array"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "integer"
+            ]
+          }
+        },
+        "refresh_cadence": {
+          "type": "string"
+        },
+        "completeness_lag_months": {
+          "type": [
+            "integer",
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "representativeness_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "size": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rows_per_year_est",
+        "storage_gb_per_year",
+        "size_notes"
+      ],
+      "properties": {
+        "rows_per_year_est": {
+          "type": [
+            "integer",
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "storage_gb_per_year": {
+          "type": [
+            "integer",
+            "number",
+            "string",
+            "null"
+          ]
+        },
+        "size_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "phi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "classification",
+        "hipaa_status",
+        "contains_dates",
+        "contains_geo",
+        "reid_risk",
+        "deidentification_method"
+      ],
+      "properties": {
+        "classification": {
+          "type": "string"
+        },
+        "hipaa_status": {
+          "type": "string"
+        },
+        "contains_dates": {
+          "type": [
+            "boolean",
+            "string"
+          ]
+        },
+        "contains_geo": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reid_risk": {
+          "type": "string"
+        },
+        "deidentification_method": {
+          "type": "string"
+        }
+      }
+    },
+    "quality_gotchas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "common_use_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "omop_mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reference_etl",
+        "vocab_coverage_pct",
+        "notes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "reference_etl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "vocab_coverage_pct": {
+          "type": [
+            "integer",
+            "number",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "etl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_path",
+        "notes"
+      ],
+      "properties": {
+        "canonical_path": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "prototyping_alternative": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "linked_datasets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "example_notebooks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "key_papers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "last_validated",
+        "validation_method"
+      ],
+      "properties": {
+        "last_validated": {
+          "type": "string",
+          "format": "date"
+        },
+        "validation_method": {
+          "type": "string"
+        }
+      }
+    },
+    "maintainer": {
+      "type": "string"
+    },
+    "curation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "review_notes"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "seed",
+            "reference",
+            "needs-review"
+          ]
+        },
+        "review_notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

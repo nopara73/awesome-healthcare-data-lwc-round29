@@ -1,0 +1,90 @@
+id: hcup-nis
+name: HCUP National Inpatient Sample
+short_name: HCUP NIS
+category: hcup
+status: active
+description: Nationally weighted inpatient discharge sample for estimating U.S. hospital utilization, outcomes, and charges.
+owner:
+  organization: AHRQ HCUP
+  distributor: AHRQ HCUP
+  url: https://hcup-us.ahrq.gov/nisoverview.jsp
+  contact: null
+access:
+  tier: purchase
+  cost_usd: varies
+  request_url: https://hcup-us.ahrq.gov/nisoverview.jsp
+  download_url: https://hcup-us.ahrq.gov/nisoverview.jsp
+  typical_turnaround_days: 7-90
+  redistribution: prohibited-or-license-limited
+  commercial_use: license-dependent
+  enclave_required: false
+  license_notes: Fee, purchase order, license, or proprietary agreement required.
+resources:
+  official_page: https://hcup-us.ahrq.gov/nisoverview.jsp
+  download_url: https://hcup-us.ahrq.gov/nisoverview.jsp
+  api_url: null
+  documentation_url: https://hcup-us.ahrq.gov/nisoverview.jsp
+vocabularies:
+- ICD-9-CM
+- ICD-10-CM/PCS
+- HCUP weights
+grain: discharge-level inpatient record with survey design variables and weights
+unit_of_observation: hospital discharge
+primary_keys:
+  patient: null
+  provider: hospital identifier/version-dependent
+  geo: region/division; state details limited
+  code: ICD-9-CM or ICD-10-CM/PCS, DRG, HCUP variables
+  other: []
+coverage:
+  population_n: null
+  population_description: U.S. community hospital inpatient stays
+  excludes:
+  - longitudinal patient tracking
+  - some federal/specialty settings
+  geographic_scope: United States
+  years: annual releases
+  refresh_cadence: annual-or-periodic depending product
+  completeness_lag_months: 1-3 years
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: deidentified-governed
+  hipaa_status: deidentified-with-use-agreement
+  contains_dates: true
+  contains_geo:
+  - state
+  - region
+  - hospital-or-county-fields-vary
+  reid_risk: medium
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Use discharge weights and design variables; unweighted analyses mislead.
+- No longitudinal patient linkage in national files.
+- NIS redesigns and ICD transition affect longitudinal comparability.
+common_use_cases:
+- utilization-modeling
+- burden-estimation
+- readmission-prediction
+omop_mapping:
+  status: custom-discharge-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Load HCUP files and dictionaries, preserve weights/design variables, normalize diagnosis/procedure fields, and map encounters to analytic or OMOP tables where useful.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

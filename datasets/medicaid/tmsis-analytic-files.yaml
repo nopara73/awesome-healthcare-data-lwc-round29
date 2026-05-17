@@ -1,0 +1,92 @@
+id: tmsis-analytic-files
+name: T-MSIS Analytic Files
+short_name: TAF / T-MSIS
+category: medicaid
+status: active
+description: CMS Medicaid and CHIP analytic files derived from Transformed Medicaid Statistical Information System submissions.
+owner:
+  organization: Centers for Medicare & Medicaid Services / Medicaid.gov
+  distributor: Centers for Medicare & Medicaid Services / Medicaid.gov
+  url: https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html
+  contact: null
+access:
+  tier: dua
+  cost_usd: varies
+  request_url: https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html
+  download_url: https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html
+  typical_turnaround_days: 30-180
+  redistribution: prohibited
+  commercial_use: restricted-by-dua
+  enclave_required: false
+  license_notes: Formal data-use agreement, project description, institutional approval, and restricted user list are typically required.
+resources:
+  official_page: https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html
+  download_url: https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html
+  api_url: null
+  documentation_url: https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html
+vocabularies:
+- ICD-10-CM
+- HCPCS
+- CPT
+- NDC
+- NPI
+- state Medicaid identifiers
+grain: beneficiary eligibility, enrollment, claim, encounter, and service-line files
+unit_of_observation: Medicaid beneficiary, enrollment month, claim, or encounter
+primary_keys:
+  patient: state-specific beneficiary identifiers
+  provider: NPI and state provider IDs
+  geo: state/county/ZIP where approved
+  code: ICD/CPT/HCPCS/NDC and Medicaid program fields
+  other: []
+coverage:
+  population_n: null
+  population_description: Medicaid and CHIP enrollees across states
+  excludes:
+  - commercial and Medicare-only populations
+  geographic_scope: United States, state-administered programs
+  years: 2014-present depending file maturity
+  refresh_cadence: annual-or-quarterly depending release
+  completeness_lag_months: variable
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: restricted
+  hipaa_status: limited-data-set-or-identifiable-under-dua
+  contains_dates: actual/restricted
+  contains_geo:
+  - state
+  - county
+  - ZIP when approved
+  reid_risk: high
+  deidentification_method: CMS-governed access
+quality_gotchas:
+- State data quality and managed-care encounter completeness vary.
+- Eligibility categories, dual status, waiver programs, and churn must be modeled explicitly.
+- National pooled modeling requires state-fixed effects or state-specific validation.
+common_use_cases:
+- health-equity-analysis
+- cost-prediction
+- utilization-modeling
+omop_mapping:
+  status: custom-claims-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Normalize state-specific enrollment, managed-care encounter, claims, and eligibility fields before mapping into OMOP/PCORnet.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

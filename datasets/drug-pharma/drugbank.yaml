@@ -1,0 +1,86 @@
+id: drugbank
+name: DrugBank
+short_name: DrugBank
+category: drug-pharma
+status: active
+description: DrugBank entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+owner:
+  organization: DrugBank
+  distributor: DrugBank
+  url: https://go.drugbank.com/
+  contact: null
+access:
+  tier: purchase
+  cost_usd: varies
+  request_url: https://go.drugbank.com/
+  download_url: https://go.drugbank.com/
+  typical_turnaround_days: 7-90
+  redistribution: prohibited-or-license-limited
+  commercial_use: license-dependent
+  enclave_required: false
+  license_notes: Fee, purchase order, license, or proprietary agreement required.
+resources:
+  official_page: https://go.drugbank.com/
+  download_url: https://go.drugbank.com/
+  api_url: null
+  documentation_url: https://go.drugbank.com/
+vocabularies:
+- DrugBank ID
+- targets
+- pathways
+grain: drug product, label, adverse-event report, compound, target, or safety concept
+unit_of_observation: drug/safety record
+primary_keys:
+  patient: null
+  provider: null
+  geo: source-specific geography or not applicable
+  code: standard vocabulary, concept, product, variant, or ontology identifiers
+  other: []
+coverage:
+  population_n: null
+  population_description: See official documentation; coverage varies by sub-resource, release, geography, and access tier.
+  excludes: []
+  geographic_scope: source-specific
+  years: source-specific
+  refresh_cadence: daily-quarterly-or-versioned
+  completeness_lag_months: null
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-public-regulatory-or-knowledgebase
+  hipaa_status: deidentified-or-not-applicable
+  contains_dates: true
+  contains_geo:
+  - country-or-reporting-region-where-available
+  reid_risk: low
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Regulatory and spontaneous-report systems are not causal event registries.
+- Duplicate follow-up reports and stimulated reporting can bias signal detection.
+- Drug identifiers vary by product, package, ingredient, brand, and labeler.
+common_use_cases:
+- adverse-drug-events
+- pharmacovigilance
+- drug-knowledge-graph
+omop_mapping:
+  status: drug-vocabulary-or-knowledge-enrichment
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Normalize product identifiers through NDC/RxNorm/UNII, version labels and adverse-event extracts, deduplicate reports, and map safety terms to MedDRA where possible.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: seed
+  review_notes: Schema-complete seed entry; needs deeper source-specific maintainer review.

@@ -1,0 +1,85 @@
+id: cms-care-compare-family
+name: CMS Hospital / Nursing Home / Home Health / Hospice Compare
+short_name: CMS Care Compare
+category: cms-medicare
+status: active
+description: CMS Hospital / Nursing Home / Home Health / Hospice Compare entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+owner:
+  organization: Centers for Medicare & Medicaid Services
+  distributor: Centers for Medicare & Medicaid Services
+  url: https://data.cms.gov/provider-data/
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://data.cms.gov/provider-data/
+  download_url: https://data.cms.gov/provider-data/
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://data.cms.gov/provider-data/
+  download_url: https://data.cms.gov/provider-data/
+  api_url: null
+  documentation_url: https://data.cms.gov/provider-data/
+vocabularies: []
+grain: provider, beneficiary, claim, claim-line, plan, or facility-measure record depending on file
+unit_of_observation: Medicare analytic record
+primary_keys:
+  patient: available only in patient-level products
+  provider: NPI/CCN/TIN/provider IDs where available
+  geo: source-specific geography or not applicable
+  code: ICD/CPT/HCPCS/NDC/DRG/revenue/service codes where applicable
+  other: []
+coverage:
+  population_n: null
+  population_description: See official documentation; coverage varies by sub-resource, release, geography, and access tier.
+  excludes: []
+  geographic_scope: source-specific
+  years: source-specific
+  refresh_cadence: annual-or-monthly depending file
+  completeness_lag_months: null
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: public-aggregate-or-restricted-microdata
+  hipaa_status: public-aggregate-or-limited-data-set
+  contains_dates: true
+  contains_geo:
+  - state
+  - county
+  - zip-or-county-where-available
+  reid_risk: low-to-high depending access tier
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Fee-for-service Medicare is not representative of Medicare Advantage, commercial, Medicaid-only, or uninsured populations.
+- Claims completion/runout and annual payment-rule changes can introduce leakage or drift.
+- Public-use files are usually aggregated and cannot reconstruct patient-level care pathways.
+common_use_cases:
+- cost-prediction
+- provider-benchmarking
+- readmission-prediction
+omop_mapping:
+  status: supported-or-custom-claims-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Land raw CMS files with provenance, normalize claims/enrollment/provider identifiers, and map patient-level files to OMOP or PCORnet when available.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: seed
+  review_notes: Schema-complete seed entry; needs deeper source-specific maintainer review.

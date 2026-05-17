@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Awesome Health Data crosswalk entry",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "from_system",
+    "to_system",
+    "access",
+    "official_page",
+    "gotchas",
+    "last_validated"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "from_system": {
+      "type": "string"
+    },
+    "to_system": {
+      "type": "string"
+    },
+    "access": {
+      "type": "string"
+    },
+    "official_page": {
+      "type": "string",
+      "format": "uri"
+    },
+    "gotchas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_validated": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this catalog, please cite it."
+title: "Awesome Health Data"
+authors:
+  - family-names: Masood
+    given-names: Adnan
+version: 0.1.0
+date-released: 2026-05-17
+repository-code: "https://github.com/adnanmasood/awesome-health-data"
+license: "CC-BY-4.0 AND MIT"

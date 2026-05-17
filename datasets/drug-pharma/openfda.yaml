@@ -1,0 +1,88 @@
+id: openfda
+name: openFDA
+short_name: openFDA
+category: drug-pharma
+status: active
+description: FDA open API and downloads for drugs, devices, food, labels, enforcement reports, recalls, and adverse events.
+owner:
+  organization: U.S. Food and Drug Administration
+  distributor: U.S. Food and Drug Administration
+  url: https://open.fda.gov/
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://open.fda.gov/
+  download_url: https://open.fda.gov/
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://open.fda.gov/
+  download_url: https://open.fda.gov/
+  api_url: null
+  documentation_url: https://open.fda.gov/
+vocabularies:
+- NDC
+- UNII
+- MedDRA where applicable
+grain: endpoint-specific JSON record or bulk download document
+unit_of_observation: regulatory record
+primary_keys:
+  patient: null
+  provider: null
+  geo: reporting region/country where endpoint supplies it
+  code: endpoint-specific IDs, NDC, UNII, MedDRA, SPL identifiers
+  other: []
+coverage:
+  population_n: null
+  population_description: FDA regulatory systems and public releases
+  excludes:
+  - non-U.S. non-FDA sources unless submitted to FDA systems
+  geographic_scope: United States regulatory jurisdiction
+  years: endpoint-specific
+  refresh_cadence: daily-quarterly-or-versioned
+  completeness_lag_months: daily-to-quarterly
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-public-regulatory-or-knowledgebase
+  hipaa_status: deidentified-or-not-applicable
+  contains_dates: true
+  contains_geo:
+  - country-or-reporting-region-where-available
+  reid_risk: low
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Read endpoint-specific schema notes; fields are nested and not uniform across sources.
+- API rate limits make API keys and bulk downloads preferable for production.
+- Source systems differ in completeness, deduplication, and timeliness.
+common_use_cases:
+- adverse-drug-events
+- pharmacovigilance
+- drug-knowledge-graph
+omop_mapping:
+  status: knowledge-enrichment
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Normalize product identifiers through NDC/RxNorm/UNII, version labels and adverse-event extracts, deduplicate reports, and map safety terms to MedDRA where possible.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks:
+- notebooks/06-faers-signal-detection.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

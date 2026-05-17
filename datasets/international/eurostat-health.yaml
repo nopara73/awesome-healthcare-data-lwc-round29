@@ -1,0 +1,88 @@
+id: eurostat-health
+name: Eurostat Health Data
+short_name: Eurostat Health
+category: international
+status: active
+description: Eurostat Health Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+owner:
+  organization: Eurostat / European Commission
+  distributor: Eurostat / European Commission
+  url: https://ec.europa.eu/eurostat/web/health/database
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://ec.europa.eu/eurostat/web/health/database
+  download_url: https://ec.europa.eu/eurostat/web/health/database
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://ec.europa.eu/eurostat/web/health/database
+  download_url: https://ec.europa.eu/eurostat/web/health/database
+  api_url: null
+  documentation_url: https://ec.europa.eu/eurostat/web/health/database
+vocabularies:
+- country/region
+- indicator
+- year
+grain: country, region, indicator, survey respondent, household, or modeled estimate
+unit_of_observation: global health analytic record
+primary_keys:
+  patient: null
+  provider: null
+  geo: FIPS/GEOID/country/region depending source
+  code: indicator ID and year
+  other: []
+coverage:
+  population_n: null
+  population_description: See official documentation; coverage varies by sub-resource, release, geography, and access tier.
+  excludes: []
+  geographic_scope: source-specific
+  years: source-specific
+  refresh_cadence: annual-or-versioned
+  completeness_lag_months: null
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-aggregate-or-deidentified-survey
+  hipaa_status: not-applicable
+  contains_dates: true
+  contains_geo:
+  - country
+  - region
+  - survey-cluster-where-approved
+  reid_risk: low
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Country definitions, indicators, and measurement conventions vary across sources.
+- Modeled estimates should not be mixed with observed survey microdata without labeling provenance.
+- Access rules differ sharply between aggregate indicators and household microdata.
+common_use_cases:
+- global-health-benchmarking
+- policy-modeling
+- health-system-resilience
+omop_mapping:
+  status: not-primary-omop-source
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Load indicator APIs or approved microdata, retain country/region/time definitions, and harmonize units and indicator definitions before modeling.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: seed
+  review_notes: Schema-complete seed entry; needs deeper source-specific maintainer review.

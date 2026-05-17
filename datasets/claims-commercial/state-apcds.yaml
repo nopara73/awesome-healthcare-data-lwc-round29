@@ -1,0 +1,91 @@
+id: state-apcds
+name: State All-Payer Claims Databases
+short_name: State APCDs
+category: claims-commercial
+status: active
+description: State-administered all-payer claims databases with variable access, coverage, and reporting rules.
+owner:
+  organization: State APCD agencies / APCD Council
+  distributor: State APCD agencies / APCD Council
+  url: https://www.apcdcouncil.org/
+  contact: null
+access:
+  tier: mixed
+  cost_usd: 0 to paid
+  request_url: https://www.apcdcouncil.org/
+  download_url: https://www.apcdcouncil.org/
+  typical_turnaround_days: 0-180
+  redistribution: varies-by-subresource
+  commercial_use: varies-by-subresource
+  enclave_required: false
+  license_notes: 'Sub-resources vary: some public aggregate files are open, while microdata or richer extracts require approval, fee, DUA, or registration.'
+resources:
+  official_page: https://www.apcdcouncil.org/
+  download_url: https://www.apcdcouncil.org/
+  api_url: null
+  documentation_url: https://www.apcdcouncil.org/
+vocabularies:
+- ICD
+- CPT
+- HCPCS
+- NDC
+- NPI
+- payer identifiers
+grain: member, enrollment month, claim, claim-line, provider, or aggregate depending state and access tier
+unit_of_observation: state claims analytic record
+primary_keys:
+  patient: state/product-specific member identifiers
+  provider: NPI/TIN/CCN where available
+  geo: state/county/ZIP/market
+  code: ICD/CPT/HCPCS/NDC/revenue/DRG
+  other: []
+coverage:
+  population_n: null
+  population_description: state-specific insured populations across commercial, Medicaid, Medicare, and other payers depending mandate
+  excludes:
+  - ERISA self-funded gaps in many states
+  - uninsured
+  geographic_scope: state-specific
+  years: varies by state
+  refresh_cadence: monthly-quarterly-or-annual depending source
+  completeness_lag_months: 6-24 months
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: mixed-public-aggregate-to-restricted-microdata
+  hipaa_status: varies-by-state-and-product
+  contains_dates: varies
+  contains_geo:
+  - varies
+  reid_risk: medium-high for microdata
+  deidentification_method: state-specific DUA, suppression, or de-identification
+quality_gotchas:
+- No single national APCD schema exists.
+- ERISA/self-funded plan gaps can bias commercial estimates.
+- State statutes, suppression thresholds, and use restrictions vary.
+common_use_cases:
+- price-transparency
+- cost-prediction
+- market-intelligence
+omop_mapping:
+  status: custom-state-claims-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Normalize payer, plan, provider, code, date, and geography fields; for claims extracts, map line-level utilization to OMOP/PCORnet.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

@@ -1,0 +1,104 @@
+id: medicare-ffs-claims-rif
+name: Medicare Fee-for-Service Claims Research Identifiable and Limited Data Files
+short_name: Medicare FFS Claims
+category: cms-medicare
+status: active
+description: Research-identifiable and limited-data-set Medicare fee-for-service claims and enrollment files used for longitudinal utilization, outcomes, and cost research.
+owner:
+  organization: Centers for Medicare & Medicaid Services / ResDAC
+  distributor: Centers for Medicare & Medicaid Services / ResDAC
+  url: https://resdac.org/cms-data/request/cms-data-request-center
+  contact: null
+access:
+  tier: dua
+  cost_usd: varies
+  request_url: https://resdac.org/cms-data/request/cms-data-request-center
+  download_url: https://resdac.org/cms-data/request/cms-data-request-center
+  typical_turnaround_days: 30-180
+  redistribution: prohibited
+  commercial_use: restricted-by-dua
+  enclave_required: false
+  license_notes: Formal data-use agreement, project description, institutional approval, and restricted user list are typically required.
+resources:
+  official_page: https://resdac.org/cms-data/request/cms-data-request-center
+  download_url: https://resdac.org/cms-data/request/cms-data-request-center
+  api_url: null
+  documentation_url: https://resdac.org/cms-data/request/cms-data-request-center
+vocabularies:
+- ICD-9-CM
+- ICD-10-CM
+- ICD-10-PCS
+- HCPCS
+- CPT
+- NDC
+- NPI
+- MS-DRG
+grain: beneficiary, claim, claim-line, enrollment-month, and provider/facility records
+unit_of_observation: Medicare FFS beneficiary and claim-line
+primary_keys:
+  patient: BENE_ID or encrypted beneficiary identifier
+  provider: NPI, CCN, PRVDR_NUM
+  geo: state/county/ZIP when approved
+  code: claim ID, line number, HCPCS/CPT, ICD, NDC, DRG
+  other: []
+coverage:
+  population_n: null
+  population_description: tens of millions of FFS Medicare beneficiaries
+  excludes:
+  - Medicare Advantage encounter incompleteness
+  - commercial
+  - Medicaid-only
+  - uninsured
+  geographic_scope: United States + DC + territories
+  years: 1999-present depending file
+  refresh_cadence: annual-or-monthly depending file
+  completeness_lag_months: 12-18
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: hundreds of millions to billions per year across full claims families
+  storage_gb_per_year: hundreds-to-thousands
+  size_notes: Varies by release and selected files.
+phi:
+  classification: research-identifiable-or-limited-data-set
+  hipaa_status: identifiable-or-LDS-under-DUA
+  contains_dates: actual
+  contains_geo:
+  - state
+  - county
+  - ZIP when approved
+  reid_risk: high
+  deidentification_method: CMS-governed release under DUA; public release not permitted
+quality_gotchas:
+- Claims runout and adjudication lag make near-real-time modeling difficult.
+- The October 2015 ICD-9 to ICD-10 transition requires explicit code-era handling.
+- FFS Medicare is older and sicker than commercial populations and excludes Medicare Advantage claims completeness.
+- Use MBSF/enrollment files for denominator, plan, dual-eligible, and vital-status logic rather than claims alone.
+- Payment and DRG rules change annually and can confound longitudinal cost features.
+common_use_cases:
+- cost-prediction
+- provider-benchmarking
+- readmission-prediction
+omop_mapping:
+  status: well-supported
+  reference_etl: https://github.com/OHDSI/ETL-CMS
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Land raw CMS files with provenance, normalize claims/enrollment/provider identifiers, and map patient-level files to OMOP or PCORnet when available.
+prototyping_alternative: medicare-synpuf
+linked_datasets:
+- medicare-beneficiary-summary-file
+- nppes-npi-registry
+- medicare-provider-utilization-payment
+- seer-medicare
+example_notebooks:
+- notebooks/01-synpuf-readmission-baseline.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

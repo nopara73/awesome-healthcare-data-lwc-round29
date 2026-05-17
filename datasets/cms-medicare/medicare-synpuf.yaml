@@ -1,0 +1,90 @@
+id: medicare-synpuf
+name: Medicare Claims Synthetic Public Use Files
+short_name: DE-SynPUF
+category: cms-medicare
+status: active
+description: Synthetic Medicare claims files designed for software prototyping, schema testing, and ETL dry-runs without exposing real beneficiaries.
+owner:
+  organization: Centers for Medicare & Medicaid Services
+  distributor: Centers for Medicare & Medicaid Services
+  url: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
+  download_url: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
+  download_url: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
+  api_url: null
+  documentation_url: https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files
+vocabularies:
+- ICD-9-CM
+- HCPCS
+- CPT
+- NDC
+- MS-DRG
+grain: synthetic beneficiary, claim, claim-line, and prescription event records
+unit_of_observation: synthetic Medicare beneficiary and claim-line
+primary_keys:
+  patient: DESYNPUF_ID
+  provider: synthetic provider fields
+  geo: synthetic or limited geography
+  code: claim IDs, line numbers, HCPCS/CPT, ICD-9-CM, NDC
+  other: []
+coverage:
+  population_n: null
+  population_description: synthetic five-percent-style Medicare sample
+  excludes:
+  - real clinical inference
+  geographic_scope: synthetic U.S. Medicare-like schema
+  years: 2008-2010
+  refresh_cadence: annual-or-monthly depending file
+  completeness_lag_months: not applicable
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: synthetic
+  hipaa_status: not-real-patient-data
+  contains_dates: synthetic
+  contains_geo:
+  - synthetic/limited
+  reid_risk: none
+  deidentification_method: synthetic generation
+quality_gotchas:
+- Use it for ETL and CI, not for clinical or epidemiologic conclusions.
+- Clinical covariance and outcome relationships are intentionally degraded to protect privacy.
+- Some modern code systems are absent because the source era predates ICD-10.
+common_use_cases:
+- cost-prediction
+- provider-benchmarking
+- readmission-prediction
+omop_mapping:
+  status: well-supported
+  reference_etl: https://forums.ohdsi.org/t/synpuf/4936
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Land raw CMS files with provenance, normalize claims/enrollment/provider identifiers, and map patient-level files to OMOP or PCORnet when available.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks:
+- notebooks/01-synpuf-readmission-baseline.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

@@ -1,0 +1,93 @@
+id: seer-medicare
+name: SEER-Medicare Linked Data
+short_name: SEER-Medicare
+category: clinical-research
+status: active
+description: Linked cancer registry and Medicare claims data supporting oncology outcomes, treatment, utilization, and cost research.
+owner:
+  organization: National Cancer Institute / CMS
+  distributor: National Cancer Institute / CMS
+  url: https://healthcaredelivery.cancer.gov/seermedicare/obtain/
+  contact: null
+access:
+  tier: dua
+  cost_usd: varies
+  request_url: https://healthcaredelivery.cancer.gov/seermedicare/obtain/
+  download_url: https://healthcaredelivery.cancer.gov/seermedicare/obtain/
+  typical_turnaround_days: 30-180
+  redistribution: prohibited
+  commercial_use: restricted-by-dua
+  enclave_required: false
+  license_notes: Formal data-use agreement, project description, institutional approval, and restricted user list are typically required.
+resources:
+  official_page: https://healthcaredelivery.cancer.gov/seermedicare/obtain/
+  download_url: https://healthcaredelivery.cancer.gov/seermedicare/obtain/
+  api_url: null
+  documentation_url: https://healthcaredelivery.cancer.gov/seermedicare/obtain/
+vocabularies:
+- ICD-O-3
+- BENE_ID
+- Medicare claims vocabularies
+grain: tumor/case registry records linked to beneficiary enrollment and Medicare claims
+unit_of_observation: cancer case, beneficiary, and claim-line
+primary_keys:
+  patient: linked encrypted beneficiary/case identifiers
+  provider: NPI/CCN where present
+  geo: SEER registry/catchment and approved geography
+  code: ICD-O-3, AJCC, ICD/CPT/HCPCS/NDC/DRG
+  other: []
+coverage:
+  population_n: null
+  population_description: Medicare beneficiaries in SEER catchment areas plus comparison cohorts
+  excludes:
+  - younger commercial populations
+  - non-SEER geographies
+  - MA claims completeness issues
+  geographic_scope: SEER registry areas
+  years: varies by linkage/release
+  refresh_cadence: versioned-release
+  completeness_lag_months: versioned request
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: restricted-linked-registry-claims
+  hipaa_status: governed-under-DUA-and-application
+  contains_dates: actual or release-governed
+  contains_geo:
+  - registry/geography variables under agreement
+  reid_risk: high
+  deidentification_method: project-specific governed release
+quality_gotchas:
+- Generalization is strongest for older Medicare-eligible oncology populations.
+- SEER treatment fields and claims treatment ascertainment must be reconciled carefully.
+- Cost models need inflation and benefit design handling.
+- Right-censoring is central for survival analyses.
+common_use_cases:
+- mortality-risk
+- clinical-benchmarking
+- multimodal-modeling
+omop_mapping:
+  status: custom-registry-plus-claims-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Obtain governed access, load database-specific schemas, track release version, and map to OMOP where reference ETLs or platform tables exist.
+prototyping_alternative: null
+linked_datasets:
+- seer
+- medicare-ffs-claims-rif
+- medicare-beneficiary-summary-file
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

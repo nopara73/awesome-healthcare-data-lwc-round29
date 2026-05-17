@@ -1,0 +1,91 @@
+id: faers
+name: FDA Adverse Event Reporting System
+short_name: FAERS
+category: drug-pharma
+status: active
+description: FDA spontaneous adverse drug event reports for pharmacovigilance signal detection.
+owner:
+  organization: U.S. Food and Drug Administration
+  distributor: U.S. Food and Drug Administration
+  url: https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
+  download_url: https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
+  download_url: https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
+  api_url: null
+  documentation_url: https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
+vocabularies:
+- CASEID
+- ISR
+- MedDRA
+- drug names
+grain: case/report tables across demographic, drug, reaction, indication, outcome, and therapy components
+unit_of_observation: adverse-event case/report
+primary_keys:
+  patient: null
+  provider: null
+  geo: reporting country
+  code: CASEID, ISR/primaryid, MedDRA terms, drug names
+  other: []
+coverage:
+  population_n: null
+  population_description: spontaneous reports submitted to FDA
+  excludes:
+  - true incidence denominator
+  - unreported adverse events
+  geographic_scope: U.S. and international reports received by FDA
+  years: 1969/quarterly modern extracts
+  refresh_cadence: daily-quarterly-or-versioned
+  completeness_lag_months: quarterly
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-public-regulatory-or-knowledgebase
+  hipaa_status: deidentified-or-not-applicable
+  contains_dates: true
+  contains_geo:
+  - country-or-reporting-region-where-available
+  reid_risk: low
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- FAERS reports do not establish causality.
+- Deduplicate initial/follow-up reports and manufacturer duplicates.
+- Reporting biases, notoriety bias, and the Weber effect distort signal strength.
+- No reliable exposed population denominator is present.
+common_use_cases:
+- adverse-drug-events
+- pharmacovigilance
+- drug-knowledge-graph
+omop_mapping:
+  status: custom-pharmacovigilance-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Normalize product identifiers through NDC/RxNorm/UNII, version labels and adverse-event extracts, deduplicate reports, and map safety terms to MedDRA where possible.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks:
+- notebooks/06-faers-signal-detection.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

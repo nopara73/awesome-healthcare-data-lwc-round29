@@ -1,0 +1,89 @@
+id: dartmouth-atlas
+name: Dartmouth Atlas of Health Care
+short_name: Dartmouth Atlas
+category: sdoh
+status: active
+description: Regional health-care variation measures and crosswalks based largely on Medicare utilization and referral regions.
+owner:
+  organization: Dartmouth Institute
+  distributor: Dartmouth Institute
+  url: https://data.dartmouthatlas.org/
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://data.dartmouthatlas.org/
+  download_url: https://data.dartmouthatlas.org/
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://data.dartmouthatlas.org/
+  download_url: https://data.dartmouthatlas.org/
+  api_url: null
+  documentation_url: https://data.dartmouthatlas.org/
+vocabularies: []
+grain: Hospital Referral Region, Hospital Service Area, provider, or geographic measure depending extract
+unit_of_observation: geographic market or provider measure
+primary_keys:
+  patient: null
+  provider: provider/hospital where available
+  geo: HSA, HRR, ZIP crosswalk, state/county
+  code: measure IDs
+  other: []
+coverage:
+  population_n: null
+  population_description: largely Medicare-based utilization and supply-sensitive care measures
+  excludes:
+  - direct patient-level microdata
+  geographic_scope: United States
+  years: longitudinal historical series
+  refresh_cadence: annual-or-periodic
+  completeness_lag_months: release-dependent
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-aggregate-geography
+  hipaa_status: not-applicable
+  contains_dates: true
+  contains_geo:
+  - FIPS
+  - GEOID
+  - ZIP
+  - ZCTA
+  - tract
+  - block-group
+  reid_risk: none
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Medicare FFS-centric measures should not be generalized without caution.
+- Referral-region geography is not the same as county/state boundaries.
+- Historical crosswalks may lag rapid market consolidation.
+common_use_cases:
+- sdoh-risk-stratification
+- health-equity-analysis
+- readmission-prediction
+omop_mapping:
+  status: geospatial-and-provider-context-enrichment
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Version-lock geography vintages, join by FIPS/GEOID/ZCTA/ZIP crosswalks, and avoid treating aggregate geography measures as individual attributes.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

@@ -1,0 +1,86 @@
+id: umls-metathesaurus
+name: UMLS Metathesaurus
+short_name: UMLS
+category: terminologies
+status: active
+description: Large NLM biomedical terminology compendium and crosswalk layer using CUIs across many source vocabularies.
+owner:
+  organization: U.S. National Library of Medicine
+  distributor: U.S. National Library of Medicine
+  url: https://www.nlm.nih.gov/research/umls/
+  contact: null
+access:
+  tier: registration
+  cost_usd: 0 or nominal
+  request_url: https://www.nlm.nih.gov/research/umls/
+  download_url: https://www.nlm.nih.gov/research/umls/
+  typical_turnaround_days: 1-14
+  redistribution: restricted-by-clickthrough-or-license
+  commercial_use: check-source-terms
+  enclave_required: false
+  license_notes: Registration, click-through terms, account creation, training, or license attestation may be required.
+resources:
+  official_page: https://www.nlm.nih.gov/research/umls/
+  download_url: https://www.nlm.nih.gov/research/umls/
+  api_url: null
+  documentation_url: https://www.nlm.nih.gov/research/umls/
+vocabularies:
+- UMLS
+- CUI
+- semantic types
+grain: CUI, atom, string, semantic type, and relationship tables in Rich Release Format
+unit_of_observation: biomedical concept and synonym/relationship atom
+primary_keys:
+  patient: null
+  provider: null
+  geo: null
+  code: CUI, AUI, SAB, TUI, source codes
+  other: []
+coverage:
+  population_n: null
+  population_description: terminology sources rather than patients
+  excludes:
+  - patient-level facts
+  geographic_scope: multilingual biomedical terminologies
+  years: semiannual releases
+  refresh_cadence: annual-or-more-frequent
+  completeness_lag_months: semiannual
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none
+  hipaa_status: not-applicable
+  contains_dates: false
+  contains_geo: []
+  reid_risk: none
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Full releases are large and require installation/subsetting choices.
+- UMLS synonymy is not always clinical equivalence.
+- Downstream licenses can inherit restrictions from source vocabularies.
+common_use_cases:
+- semantic-normalization
+- feature-engineering
+- crosswalks
+omop_mapping:
+  status: terminology-reconciliation
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Version-lock the release, load source tables, preserve source codes, and map to OMOP/Athena standard concepts where supported.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

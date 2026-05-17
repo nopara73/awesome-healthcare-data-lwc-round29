@@ -1,0 +1,93 @@
+id: ahrq-sdoh-database
+name: AHRQ Social Determinants of Health Database
+short_name: AHRQ SDOH
+category: sdoh
+status: active
+description: County and ZIP-level social determinants compendium designed for health services and disparities analytics.
+owner:
+  organization: Agency for Healthcare Research and Quality
+  distributor: Agency for Healthcare Research and Quality
+  url: https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html
+  download_url: https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html
+  download_url: https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html
+  api_url: null
+  documentation_url: https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html
+vocabularies:
+- FIPS
+- county
+- ZIP
+grain: county- and ZIP-level SDOH variables by year/vintage
+unit_of_observation: geography-year indicator
+primary_keys:
+  patient: null
+  provider: null
+  geo: county FIPS and ZIP/ZCTA-like geography
+  code: variable names and source metadata
+  other: []
+coverage:
+  population_n: null
+  population_description: U.S. geographic context from multiple federal and public sources
+  excludes:
+  - individual-level exposures
+  geographic_scope: United States
+  years: multi-year releases
+  refresh_cadence: annual-or-periodic
+  completeness_lag_months: source-dependent
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-aggregate-geography
+  hipaa_status: not-applicable
+  contains_dates: true
+  contains_geo:
+  - FIPS
+  - GEOID
+  - ZIP
+  - ZCTA
+  - tract
+  - block-group
+  reid_risk: none
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Source years differ across variables; store variable-level vintage.
+- Highly collinear neighborhood variables can destabilize coefficients.
+- Do not interpret ZIP/county-level context as individual-level fact.
+common_use_cases:
+- sdoh-risk-stratification
+- health-equity-analysis
+- readmission-prediction
+omop_mapping:
+  status: geospatial-context-enrichment
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Version-lock geography vintages, join by FIPS/GEOID/ZCTA/ZIP crosswalks, and avoid treating aggregate geography measures as individual attributes.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks:
+- notebooks/03-sdoh-county-merge.ipynb
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

@@ -1,0 +1,83 @@
+id: fda-ndc-directory
+name: FDA National Drug Code Directory
+short_name: NDC Directory
+category: terminologies
+status: active
+description: FDA National Drug Code Directory entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+owner:
+  organization: U.S. Food and Drug Administration
+  distributor: U.S. Food and Drug Administration
+  url: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+  download_url: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+  download_url: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+  api_url: null
+  documentation_url: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+vocabularies:
+- NDC
+grain: concept-code, terminology relationship, or ontology release table
+unit_of_observation: coded biomedical concept
+primary_keys:
+  patient: null
+  provider: null
+  geo: source-specific geography or not applicable
+  code: standard vocabulary, concept, product, variant, or ontology identifiers
+  other: []
+coverage:
+  population_n: null
+  population_description: See official documentation; coverage varies by sub-resource, release, geography, and access tier.
+  excludes: []
+  geographic_scope: source-specific
+  years: source-specific
+  refresh_cadence: annual-or-more-frequent
+  completeness_lag_months: null
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none
+  hipaa_status: not-applicable
+  contains_dates: false
+  contains_geo: []
+  reid_risk: none
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Release versions matter; never mix vocabulary vintages without recording the release date.
+- Source-to-standard mappings can collapse clinically meaningful nuance.
+- Some vocabularies have licensing restrictions even when the catalog metadata is public.
+common_use_cases:
+- semantic-normalization
+- feature-engineering
+- crosswalks
+omop_mapping:
+  status: source-or-standard-vocabulary
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Version-lock the release, load source tables, preserve source codes, and map to OMOP/Athena standard concepts where supported.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: seed
+  review_notes: Schema-complete seed entry; needs deeper source-specific maintainer review.

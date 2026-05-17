@@ -1,0 +1,86 @@
+id: eicu-crd
+name: eICU Collaborative Research Database
+short_name: eICU-CRD
+category: clinical-research
+status: active
+description: Multi-center de-identified ICU database from tele-ICU systems for external validation and critical-care ML.
+owner:
+  organization: MIT Laboratory for Computational Physiology / Philips Healthcare
+  distributor: MIT Laboratory for Computational Physiology / Philips Healthcare
+  url: https://physionet.org/content/eicu-crd/2.0/
+  contact: null
+access:
+  tier: registration
+  cost_usd: 0 or nominal
+  request_url: https://physionet.org/content/eicu-crd/2.0/
+  download_url: https://physionet.org/content/eicu-crd/2.0/
+  typical_turnaround_days: 1-14
+  redistribution: restricted-by-clickthrough-or-license
+  commercial_use: check-source-terms
+  enclave_required: false
+  license_notes: Registration, click-through terms, account creation, training, or license attestation may be required.
+resources:
+  official_page: https://physionet.org/content/eicu-crd/2.0/
+  download_url: https://physionet.org/content/eicu-crd/2.0/
+  api_url: null
+  documentation_url: https://physionet.org/content/eicu-crd/2.0/
+vocabularies:
+- patientUnitStayID
+- hospitalid
+- event tables
+grain: ICU patient/unit-stay/event tables across multiple hospitals
+unit_of_observation: ICU stay and event
+primary_keys:
+  patient: patientunitstayid and related IDs
+  provider: hospitalid
+  geo: deidentified hospital context
+  code: event-specific IDs, medication/lab/vital item fields
+  other: []
+coverage:
+  population_n: null
+  population_description: ICU patients across multiple U.S. hospitals
+  excludes:
+  - full longitudinal pre/post-hospital care
+  geographic_scope: U.S. multi-center tele-ICU network
+  years: 2014-2015
+  refresh_cadence: versioned-release
+  completeness_lag_months: versioned release
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: deidentified-credentialed
+  hipaa_status: deidentified-with-DUA
+  contains_dates: shifted/deidentified
+  contains_geo: []
+  reid_risk: medium
+  deidentification_method: PhysioNet credentialing, DUA, de-identification
+quality_gotchas:
+- Cross-site missingness and local practice differences are central.
+- Tele-ICU workflows differ from bedside EHR workflows.
+- Use site-aware validation to test generalization.
+common_use_cases:
+- mortality-risk
+- clinical-benchmarking
+- multimodal-modeling
+omop_mapping:
+  status: custom-critical-care-etl
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Obtain governed access, load database-specific schemas, track release version, and map to OMOP where reference ETLs or platform tables exist.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

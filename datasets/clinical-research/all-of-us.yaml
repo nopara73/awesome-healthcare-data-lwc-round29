@@ -1,0 +1,88 @@
+id: all-of-us
+name: All of Us Research Program
+short_name: All of Us
+category: clinical-research
+status: active
+description: NIH precision-medicine cohort with surveys, EHR, physical measures, wearables, and genomics exposed through a governed Researcher Workbench.
+owner:
+  organization: National Institutes of Health
+  distributor: National Institutes of Health
+  url: https://www.researchallofus.org/
+  contact: null
+access:
+  tier: registration
+  cost_usd: 0 or nominal
+  request_url: https://www.researchallofus.org/
+  download_url: https://www.researchallofus.org/
+  typical_turnaround_days: 1-14
+  redistribution: restricted-by-clickthrough-or-license
+  commercial_use: check-source-terms
+  enclave_required: false
+  license_notes: Registration, click-through terms, account creation, training, or license attestation may be required.
+resources:
+  official_page: https://www.researchallofus.org/
+  download_url: https://www.researchallofus.org/
+  api_url: null
+  documentation_url: https://www.researchallofus.org/
+vocabularies:
+- OMOP CDM
+- SNOMED CT
+- LOINC
+- RxNorm
+grain: participant-level OMOP tables, surveys, measurements, biospecimens, wearables, and genomics by access tier
+unit_of_observation: research participant record
+primary_keys:
+  patient: person_id within workbench
+  provider: null
+  geo: tier-dependent geography
+  code: OMOP concept IDs, survey concept IDs, genomic file identifiers
+  other: []
+coverage:
+  population_n: null
+  population_description: large U.S. volunteer cohort intentionally enriched for diversity and underrepresented communities
+  excludes:
+  - not a probability sample
+  geographic_scope: United States
+  years: ongoing
+  refresh_cadence: versioned-release
+  completeness_lag_months: CDR-versioned
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: controlled-access-deidentified
+  hipaa_status: governed-workbench
+  contains_dates: shifted/generalized depending tier
+  contains_geo:
+  - tier-dependent
+  reid_risk: medium-high
+  deidentification_method: secure cloud workbench, access tiers, data passport/training
+quality_gotchas:
+- Analyses run inside the Researcher Workbench rather than arbitrary local downloads.
+- CDR versions evolve; pin version for reproducibility.
+- Participant volunteer design affects representativeness.
+common_use_cases:
+- mortality-risk
+- clinical-benchmarking
+- multimodal-modeling
+omop_mapping:
+  status: native-omop-oriented
+  reference_etl: https://support.researchallofus.org/hc/en-us/sections/6000110166420-Information-for-Researchers
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Obtain governed access, load database-specific schemas, track release version, and map to OMOP where reference ETLs or platform tables exist.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.

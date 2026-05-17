@@ -1,0 +1,6 @@
+Dual license notice
+
+- Repository content, dataset metadata, docs, crosswalk notes, playbooks, and generated tables are licensed under Creative Commons Attribution 4.0 International (CC-BY-4.0), unless a file says otherwise.
+- Repository code, scripts, tests, and CI configuration are licensed under the MIT License, unless a file says otherwise.
+
+This repository catalogs third-party datasets. It does not grant rights to redistribute third-party data. Always follow upstream dataset licenses, DUAs, IRB/DAC decisions, and terms of use.

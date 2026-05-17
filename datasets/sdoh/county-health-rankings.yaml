@@ -1,0 +1,89 @@
+id: county-health-rankings
+name: County Health Rankings & Roadmaps
+short_name: CHR&R
+category: sdoh
+status: active
+description: County-level health outcomes and health factors measures for community health benchmarking.
+owner:
+  organization: University of Wisconsin Population Health Institute / RWJF
+  distributor: University of Wisconsin Population Health Institute / RWJF
+  url: https://www.countyhealthrankings.org/health-data
+  contact: null
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://www.countyhealthrankings.org/health-data
+  download_url: https://www.countyhealthrankings.org/health-data
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: usually-allowed-with-source-terms
+  enclave_required: false
+  license_notes: Open public access or bulk download. Still verify upstream terms before redistributing downloaded files.
+resources:
+  official_page: https://www.countyhealthrankings.org/health-data
+  download_url: https://www.countyhealthrankings.org/health-data
+  api_url: null
+  documentation_url: https://www.countyhealthrankings.org/health-data
+vocabularies: []
+grain: county/state measure and rank records
+unit_of_observation: county-year measure
+primary_keys:
+  patient: null
+  provider: null
+  geo: county FIPS/state
+  code: measure IDs and ranking fields
+  other: []
+coverage:
+  population_n: null
+  population_description: U.S. counties and county equivalents
+  excludes:
+  - individual-level outcomes
+  geographic_scope: United States
+  years: annual releases
+  refresh_cadence: annual-or-periodic
+  completeness_lag_months: annual
+  representativeness_notes: Review source documentation before using as an external-validity benchmark.
+size:
+  rows_per_year_est: null
+  storage_gb_per_year: null
+  size_notes: Varies by release and selected files.
+phi:
+  classification: none-aggregate-geography
+  hipaa_status: not-applicable
+  contains_dates: true
+  contains_geo:
+  - FIPS
+  - GEOID
+  - ZIP
+  - ZCTA
+  - tract
+  - block-group
+  reid_risk: none
+  deidentification_method: Not applicable or source-specific; consult official release notes and DUA/license terms.
+quality_gotchas:
+- Rankings and composite scores should not be used as labels without understanding methodology.
+- Small rural counties can have wide uncertainty.
+- Method changes across years affect trend analysis.
+common_use_cases:
+- sdoh-risk-stratification
+- health-equity-analysis
+- readmission-prediction
+omop_mapping:
+  status: geospatial-context-enrichment
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: Preserve source fields and vocabulary release versions even when mapping to OMOP/PCORnet.
+etl:
+  canonical_path: raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts
+  notes: Version-lock geography vintages, join by FIPS/GEOID/ZCTA/ZIP crosswalks, and avoid treating aggregate geography measures as individual attributes.
+prototyping_alternative: null
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-17'
+  validation_method: Seeded from curated catalog and official access page; schedule monthly link and metadata review.
+maintainer: '@adnanmasood'
+curation:
+  level: reference
+  review_notes: Reference entry with extra ML/acquisition detail.
