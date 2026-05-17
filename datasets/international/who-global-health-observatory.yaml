@@ -4,6 +4,9 @@ short_name: WHO GHO
 category: international
 status: active
 description: WHO Global Health Observatory entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  WHO country-level health indicators that help teams monitor global disease burden, risk factors,
+  system capacity, and public health progress.
 owner:
   organization: World Health Organization
   distributor: World Health Organization

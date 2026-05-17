@@ -4,6 +4,9 @@ short_name: Decennial Census
 category: census
 status: active
 description: Decennial Census entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  The once-a-decade population and housing baseline that helps teams build small-area denominators,
+  geography profiles, and long-term demographic comparisons.
 owner:
   organization: U.S. Census Bureau
   distributor: U.S. Census Bureau

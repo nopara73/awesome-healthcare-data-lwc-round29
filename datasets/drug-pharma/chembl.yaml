@@ -4,6 +4,9 @@ short_name: ChEMBL
 category: drug-pharma
 status: active
 description: ChEMBL entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A public bioactivity and compound database that helps drug discovery teams study targets, assays,
+  compounds, and mechanism-aware modeling.
 owner:
   organization: European Bioinformatics Institute
   distributor: European Bioinformatics Institute

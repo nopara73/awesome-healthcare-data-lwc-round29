@@ -4,6 +4,9 @@ short_name: ICD-O-3
 category: terminologies
 status: active
 description: ICD-O-3 Oncology Coding Resources entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A cancer-specific coding standard for tumor site and histology that supports oncology registries,
+  cancer outcomes research, tumor cohorting, and specialty analytics.
 owner:
   organization: National Cancer Institute / SEER
   distributor: National Cancer Institute / SEER

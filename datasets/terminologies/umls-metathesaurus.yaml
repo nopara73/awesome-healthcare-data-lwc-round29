@@ -4,6 +4,9 @@ short_name: UMLS
 category: terminologies
 status: active
 description: Large NLM biomedical terminology compendium and crosswalk layer using CUIs across many source vocabularies.
+business_summary: >-
+  A large biomedical terminology crosswalk that helps data and AI teams connect different medical
+  vocabularies, synonyms, abbreviations, and text-mining outputs.
 owner:
   organization: U.S. National Library of Medicine
   distributor: U.S. National Library of Medicine

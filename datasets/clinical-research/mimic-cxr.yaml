@@ -4,6 +4,9 @@ short_name: MIMIC-CXR
 category: clinical-research
 status: active
 description: MIMIC-CXR entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A large de-identified chest X-ray and report dataset that helps teams build and test medical imaging
+  and vision-language models.
 owner:
   organization: MIT Laboratory for Computational Physiology / BIDMC
   distributor: MIT Laboratory for Computational Physiology / BIDMC

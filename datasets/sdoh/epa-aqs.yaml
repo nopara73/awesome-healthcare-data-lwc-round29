@@ -4,6 +4,9 @@ short_name: EPA AQS
 category: sdoh
 status: active
 description: EPA Air Quality System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Air quality monitor data that helps teams connect pollution and environmental exposure patterns to
+  respiratory, cardiovascular, and community health risk.
 owner:
   organization: U.S. Environmental Protection Agency
   distributor: U.S. Environmental Protection Agency

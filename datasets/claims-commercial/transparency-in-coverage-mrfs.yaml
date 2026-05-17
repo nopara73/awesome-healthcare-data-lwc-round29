@@ -4,6 +4,9 @@ short_name: TiC MRFs
 category: claims-commercial
 status: active
 description: Transparency in Coverage Payer Machine-Readable Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Payer-published negotiated-rate files that help price transparency, contracting, and market
+  intelligence teams study commercial rates, provider networks, and reimbursement variation.
 owner:
   organization: Health plans / CMS rule
   distributor: Health plans / CMS rule

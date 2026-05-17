@@ -4,6 +4,9 @@ short_name: ATC/DDD
 category: terminologies
 status: active
 description: ATC/DDD Index entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A global drug classification and dose-reference source that helps pharmacy, population health, and
+  market access teams compare medication use across products, classes, regions, and time periods.
 owner:
   organization: WHO Collaborating Centre for Drug Statistics Methodology
   distributor: WHO Collaborating Centre for Drug Statistics Methodology

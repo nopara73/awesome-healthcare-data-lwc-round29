@@ -4,6 +4,9 @@ short_name: YRBSS
 category: cdc-surveillance
 status: active
 description: Youth Risk Behavior Surveillance System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Youth risk behavior survey data that helps schools, public health agencies, and policy teams
+  understand adolescent behaviors, safety, mental health, and prevention needs.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

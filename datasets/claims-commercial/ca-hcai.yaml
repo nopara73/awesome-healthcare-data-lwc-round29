@@ -4,6 +4,9 @@ short_name: CA HCAI
 category: claims-commercial
 status: active
 description: California Health Care Access and Information Data Resources entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  California healthcare facility, encounter, finance, workforce, and related data that helps teams
+  study state-specific utilization, access, outcomes, capacity, and costs.
 owner:
   organization: California Health Care Access and Information
   distributor: California Health Care Access and Information

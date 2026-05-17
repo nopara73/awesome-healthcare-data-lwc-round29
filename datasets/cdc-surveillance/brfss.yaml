@@ -4,6 +4,9 @@ short_name: BRFSS
 category: cdc-surveillance
 status: active
 description: Behavioral Risk Factor Surveillance System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A large adult health behavior survey that helps public health and strategy teams understand smoking,
+  obesity, prevention, chronic disease risks, and state-level population trends.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

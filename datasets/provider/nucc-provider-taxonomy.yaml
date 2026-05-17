@@ -4,6 +4,9 @@ short_name: NUCC Taxonomy
 category: provider
 status: active
 description: NUCC Provider Taxonomy Code Set entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Provider specialty and taxonomy codes that help teams classify clinicians and organizations
+  consistently across directories, claims, credentialing, and network analytics.
 owner:
   organization: National Uniform Claim Committee
   distributor: National Uniform Claim Committee

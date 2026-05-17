@@ -4,6 +4,9 @@ short_name: dbGaP
 category: clinical-research
 status: active
 description: Database of Genotypes and Phenotypes entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Controlled-access genotype and phenotype studies that help approved researchers connect genetic
+  variation to disease, traits, biomarkers, and outcomes.
 owner:
   organization: National Center for Biotechnology Information / NIH
   distributor: National Center for Biotechnology Information / NIH

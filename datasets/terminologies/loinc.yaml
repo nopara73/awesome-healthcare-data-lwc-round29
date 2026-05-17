@@ -4,6 +4,9 @@ short_name: LOINC
 category: terminologies
 status: active
 description: LOINC entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A standard naming system for lab tests and clinical observations, useful for combining lab results
+  across hospitals, vendors, and data feeds into comparable measures.
 owner:
   organization: Regenstrief Institute
   distributor: Regenstrief Institute

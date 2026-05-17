@@ -4,6 +4,9 @@ short_name: Eurostat Health
 category: international
 status: active
 description: Eurostat Health Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  European health indicator data that helps policy, market, and public health teams compare countries
+  and regions across health status, care, and systems.
 owner:
   organization: Eurostat / European Commission
   distributor: Eurostat / European Commission

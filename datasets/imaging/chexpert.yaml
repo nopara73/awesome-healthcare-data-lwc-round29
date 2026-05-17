@@ -4,6 +4,9 @@ short_name: CheXpert
 category: imaging
 status: active
 description: CheXpert entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A large chest radiograph dataset with labels that helps teams benchmark medical imaging
+  classification, uncertainty handling, and radiology AI workflows.
 owner:
   organization: Stanford AIMI
   distributor: Stanford AIMI

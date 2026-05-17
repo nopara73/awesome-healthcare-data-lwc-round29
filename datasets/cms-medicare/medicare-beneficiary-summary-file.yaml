@@ -4,6 +4,9 @@ short_name: MBSF
 category: cms-medicare
 status: active
 description: Medicare Beneficiary Summary File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Medicare beneficiary demographics, enrollment, and chronic-condition context that helps define
+  cohorts, adjust risk, and understand eligibility over time.
 owner:
   organization: Centers for Medicare & Medicaid Services / ResDAC
   distributor: Centers for Medicare & Medicaid Services / ResDAC

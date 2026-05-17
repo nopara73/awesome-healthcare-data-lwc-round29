@@ -4,6 +4,9 @@ short_name: AHRQ SDOH
 category: sdoh
 status: active
 description: County and ZIP-level social determinants compendium designed for health services and disparities analytics.
+business_summary: >-
+  A compiled set of county and ZIP-level social determinants that helps teams add community context to
+  risk, access, equity, and outcomes analytics.
 owner:
   organization: Agency for Healthcare Research and Quality
   distributor: Agency for Healthcare Research and Quality

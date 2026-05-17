@@ -4,6 +4,9 @@ short_name: GWAS Catalog
 category: genomics
 status: active
 description: NHGRI-EBI GWAS Catalog entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Curated genome-wide association results that help teams find trait-linked variants, build genetic
+  evidence features, and explore polygenic risk signals.
 owner:
   organization: NHGRI / EMBL-EBI
   distributor: NHGRI / EMBL-EBI

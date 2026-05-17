@@ -4,6 +4,9 @@ short_name: Doctors & Clinicians
 category: provider
 status: active
 description: CMS Doctors & Clinicians / Physician Compare entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  CMS clinician and group practice quality data that helps provider organizations, payers, and
+  consumers compare clinicians, specialties, performance, and network options.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

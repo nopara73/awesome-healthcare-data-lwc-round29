@@ -4,6 +4,9 @@ short_name: Medicare Provider Utilization
 category: cms-medicare
 status: active
 description: Medicare Provider Utilization and Payment Public Use Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Public Medicare provider utilization and payment summaries that help teams benchmark services,
+  procedure volumes, prescribing, payment levels, and provider market activity.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

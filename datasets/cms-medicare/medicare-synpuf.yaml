@@ -4,6 +4,9 @@ short_name: DE-SynPUF
 category: cms-medicare
 status: active
 description: Synthetic Medicare claims files designed for software prototyping, schema testing, and ETL dry-runs without exposing real beneficiaries.
+business_summary: >-
+  Synthetic Medicare-like claims data that lets engineering and analytics teams test pipelines, demos,
+  and models without handling real patient information.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

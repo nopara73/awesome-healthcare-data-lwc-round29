@@ -4,6 +4,9 @@ short_name: MIMIC-IV
 category: clinical-research
 status: active
 description: Credentialed de-identified hospital and ICU EHR dataset from Beth Israel Deaconess used for critical care and clinical ML benchmarks.
+business_summary: >-
+  A modern de-identified hospital and ICU dataset that helps teams prototype clinical prediction,
+  operational analytics, and OMOP-style EHR pipelines.
 owner:
   organization: MIT Laboratory for Computational Physiology / BIDMC
   distributor: MIT Laboratory for Computational Physiology / BIDMC

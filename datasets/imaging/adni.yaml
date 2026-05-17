@@ -4,6 +4,9 @@ short_name: ADNI
 category: imaging
 status: active
 description: Alzheimer’s Disease Neuroimaging Initiative entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Longitudinal Alzheimer's imaging, biomarker, clinical, and genetics data that helps teams study
+  disease progression and multimodal prediction.
 owner:
   organization: ADNI / LONI Image & Data Archive
   distributor: ADNI / LONI Image & Data Archive

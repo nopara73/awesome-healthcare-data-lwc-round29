@@ -4,6 +4,9 @@ short_name: CPT/HCPCS
 category: terminologies
 status: active
 description: CPT / HCPCS Level II entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  The main U.S. procedure and service billing code sets, useful for understanding what care was
+  delivered, pricing services, measuring utilization, and grouping outpatient or professional claims.
 owner:
   organization: American Medical Association / CMS
   distributor: American Medical Association / CMS

@@ -4,6 +4,9 @@ short_name: RUCA
 category: sdoh
 status: active
 description: USDA Rural-Urban Commuting Area Codes entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Rural-urban commuting classifications that help teams segment markets, access patterns, provider
+  supply, and outcomes by rurality and commuting context.
 owner:
   organization: USDA Economic Research Service
   distributor: USDA Economic Research Service

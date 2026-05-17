@@ -4,6 +4,9 @@ short_name: PRAMS
 category: cdc-surveillance
 status: active
 description: Pregnancy Risk Assessment Monitoring System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Maternal survey data linked to birth context that helps public health teams study pregnancy
+  experiences, maternal risk factors, infant health, and perinatal programs.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

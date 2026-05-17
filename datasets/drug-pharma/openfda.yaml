@@ -4,6 +4,9 @@ short_name: openFDA
 category: drug-pharma
 status: active
 description: FDA open API and downloads for drugs, devices, food, labels, enforcement reports, recalls, and adverse events.
+business_summary: >-
+  Open FDA APIs and downloads that help teams quickly access regulatory, recall, label, adverse event,
+  and enforcement data for lightweight analytics.
 owner:
   organization: U.S. Food and Drug Administration
   distributor: U.S. Food and Drug Administration

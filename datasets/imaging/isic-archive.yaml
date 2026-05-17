@@ -4,6 +4,9 @@ short_name: ISIC
 category: imaging
 status: active
 description: ISIC Dermoscopy Archive entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A public skin image archive that helps dermatology and AI teams build, test, and compare skin lesion
+  classification models.
 owner:
   organization: International Skin Imaging Collaboration
   distributor: International Skin Imaging Collaboration

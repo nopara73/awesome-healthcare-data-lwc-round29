@@ -4,6 +4,9 @@ short_name: Dartmouth Atlas
 category: sdoh
 status: active
 description: Regional health-care variation measures and crosswalks based largely on Medicare utilization and referral regions.
+business_summary: >-
+  Regional healthcare variation measures that help teams study differences in practice patterns,
+  resource use, spending, and care intensity across markets.
 owner:
   organization: Dartmouth Institute
   distributor: Dartmouth Institute

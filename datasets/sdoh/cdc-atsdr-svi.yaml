@@ -4,6 +4,9 @@ short_name: SVI
 category: sdoh
 status: active
 description: CDC/ATSDR Social Vulnerability Index entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A social vulnerability index that helps emergency response, public health, and healthcare teams
+  identify communities likely to need more support.
 owner:
   organization: CDC / ATSDR
   distributor: CDC / ATSDR

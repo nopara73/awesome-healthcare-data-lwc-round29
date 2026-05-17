@@ -4,6 +4,9 @@ short_name: OECD Health Statistics
 category: international
 status: active
 description: OECD Health Statistics entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Comparable health system, spending, workforce, and outcome indicators that help strategy and policy
+  teams benchmark OECD and partner countries.
 owner:
   organization: Organisation for Economic Co-operation and Development
   distributor: Organisation for Economic Co-operation and Development

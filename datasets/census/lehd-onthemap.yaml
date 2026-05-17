@@ -4,6 +4,9 @@ short_name: LEHD
 category: census
 status: active
 description: LEHD / OnTheMap entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Employment and commuting flow data that helps analysts understand labor markets, daytime
+  populations, access, mobility, and employer-area context.
 owner:
   organization: U.S. Census Bureau
   distributor: U.S. Census Bureau

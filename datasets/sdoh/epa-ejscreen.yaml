@@ -4,6 +4,9 @@ short_name: EJScreen
 category: sdoh
 status: active
 description: EPA EJScreen entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Environmental justice screening data that helps organizations identify communities facing combined
+  environmental, demographic, and socioeconomic burdens.
 owner:
   organization: U.S. Environmental Protection Agency
   distributor: U.S. Environmental Protection Agency

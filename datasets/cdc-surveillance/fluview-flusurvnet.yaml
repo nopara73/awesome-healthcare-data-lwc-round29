@@ -4,6 +4,9 @@ short_name: FluView
 category: cdc-surveillance
 status: active
 description: FluView / FluSurv-NET entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  CDC influenza surveillance and hospitalization data that helps teams monitor flu seasons, forecast
+  respiratory demand, and plan staffing, outreach, and capacity.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

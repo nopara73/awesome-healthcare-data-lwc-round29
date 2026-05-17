@@ -4,6 +4,9 @@ short_name: Hospital Price Transparency
 category: claims-commercial
 status: active
 description: Hospital Price Transparency Machine-Readable Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Hospital-posted machine-readable price files that help revenue, contracting, consumer, and market
+  teams analyze charges, negotiated rates, and price variation.
 owner:
   organization: Individual hospitals / CMS rule
   distributor: Individual hospitals / CMS rule

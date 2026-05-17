@@ -4,6 +4,9 @@ short_name: HCUP SID/SASD
 category: hcup
 status: active
 description: HCUP State Inpatient Databases / State Ambulatory Surgery and Services Databases entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  State inpatient and ambulatory surgery encounter data that helps analysts study local utilization,
+  outcomes, access, and market patterns when state-level detail matters.
 owner:
   organization: AHRQ HCUP and state data organizations
   distributor: AHRQ HCUP and state data organizations

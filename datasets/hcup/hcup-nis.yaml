@@ -4,6 +4,9 @@ short_name: HCUP NIS
 category: hcup
 status: active
 description: Nationally weighted inpatient discharge sample for estimating U.S. hospital utilization, outcomes, and charges.
+business_summary: >-
+  A national inpatient hospital discharge sample that helps estimate U.S. hospitalization volume,
+  outcomes, charges, diagnoses, procedures, and burden of disease.
 owner:
   organization: AHRQ HCUP
   distributor: AHRQ HCUP

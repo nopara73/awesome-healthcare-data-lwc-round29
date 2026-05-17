@@ -11,6 +11,7 @@
     "category",
     "status",
     "description",
+    "business_summary",
     "owner",
     "access",
     "resources",
@@ -77,6 +78,10 @@
     "description": {
       "type": "string",
       "minLength": 20
+    },
+    "business_summary": {
+      "type": "string",
+      "minLength": 40
     },
     "owner": {
       "type": "object",

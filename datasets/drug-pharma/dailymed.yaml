@@ -4,6 +4,9 @@ short_name: DailyMed
 category: drug-pharma
 status: active
 description: DailyMed Structured Product Labels entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Structured FDA drug labels that help teams extract indications, warnings, contraindications, dosage,
+  labeling history, and regulatory text features.
 owner:
   organization: U.S. National Library of Medicine
   distributor: U.S. National Library of Medicine

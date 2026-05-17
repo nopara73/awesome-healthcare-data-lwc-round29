@@ -4,6 +4,9 @@ short_name: WONDER
 category: cdc-surveillance
 status: active
 description: CDC WONDER entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A public query system for mortality, births, disease, and other public health data, useful for quick
+  population benchmarks, outcomes research, and local trend checks.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

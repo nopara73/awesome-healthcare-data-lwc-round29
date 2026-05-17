@@ -4,6 +4,9 @@ short_name: NHANES
 category: cdc-surveillance
 status: active
 description: National survey combining interviews, physical exams, labs, and dietary data for U.S. population health and biomarker modeling.
+business_summary: >-
+  A national survey with interviews, exams, labs, and diet measures, useful for biomarker-rich
+  population health, risk calibration, nutrition, and chronic disease analytics.
 owner:
   organization: National Center for Health Statistics / CDC
   distributor: National Center for Health Statistics / CDC

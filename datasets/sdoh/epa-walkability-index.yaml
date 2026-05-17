@@ -4,6 +4,9 @@ short_name: Walkability Index
 category: sdoh
 status: active
 description: EPA National Walkability Index / Smart Location Mapping entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Built-environment walkability scores that help planners and health teams study transportation
+  access, activity-friendly communities, and neighborhood context.
 owner:
   organization: U.S. Environmental Protection Agency
   distributor: U.S. Environmental Protection Agency

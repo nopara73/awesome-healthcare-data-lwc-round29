@@ -4,6 +4,9 @@ short_name: SAIPE
 category: census
 status: active
 description: Small Area Income and Poverty Estimates entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Small-area poverty and income estimates that help public health, education, and policy teams target
+  resources and understand economic need.
 owner:
   organization: U.S. Census Bureau
   distributor: U.S. Census Bureau

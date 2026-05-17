@@ -4,6 +4,9 @@ short_name: HUD PIT/HMIS
 category: sdoh
 status: active
 description: HUD HMIS / Point-in-Time Homelessness Counts entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Homelessness counts and housing inventory summaries that help community health, policy, and social
+  care teams understand housing instability and service needs.
 owner:
   organization: U.S. Department of Housing and Urban Development
   distributor: U.S. Department of Housing and Urban Development

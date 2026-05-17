@@ -14,6 +14,7 @@ for _, e in load_all_datasets():
         "name": e["name"],
         "short_name": e["short_name"],
         "category": e["category"],
+        "business_summary": e["business_summary"],
         "tier": e["access"]["tier"],
         "official_page": e["resources"]["official_page"],
         "download_url": e["resources"]["download_url"],

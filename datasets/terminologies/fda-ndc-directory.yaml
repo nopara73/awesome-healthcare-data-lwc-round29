@@ -4,6 +4,9 @@ short_name: NDC Directory
 category: terminologies
 status: active
 description: FDA National Drug Code Directory entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A public directory of U.S. drug product and package identifiers that helps teams normalize pharmacy
+  claims, connect products to labels, and track medication portfolios.
 owner:
   organization: U.S. Food and Drug Administration
   distributor: U.S. Food and Drug Administration

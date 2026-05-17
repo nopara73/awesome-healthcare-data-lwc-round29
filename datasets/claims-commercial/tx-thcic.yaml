@@ -4,6 +4,9 @@ short_name: TX THCIC
 category: claims-commercial
 status: active
 description: Texas Health Care Information Collection Public Use Data Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Texas public use healthcare encounter files that help teams analyze hospital and outpatient
+  utilization, charges, outcomes, and regional patterns across the state.
 owner:
   organization: Texas Department of State Health Services
   distributor: Texas Department of State Health Services

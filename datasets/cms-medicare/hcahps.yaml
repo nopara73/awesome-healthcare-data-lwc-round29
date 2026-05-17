@@ -4,6 +4,9 @@ short_name: HCAHPS
 category: cms-medicare
 status: active
 description: HCAHPS Survey Results entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Hospital patient-experience survey results that help business and quality teams compare
+  communication, responsiveness, discharge experience, and overall satisfaction across facilities.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

@@ -4,6 +4,9 @@ short_name: HCUP NEDS
 category: hcup
 status: active
 description: HCUP Nationwide Emergency Department Sample entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A national emergency department sample that helps teams understand ED demand, treat-and-release
+  visits, admissions from the ED, charges, and utilization patterns.
 owner:
   organization: AHRQ HCUP
   distributor: AHRQ HCUP

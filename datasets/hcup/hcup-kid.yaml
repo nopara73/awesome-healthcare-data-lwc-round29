@@ -4,6 +4,9 @@ short_name: HCUP KID
 category: hcup
 status: active
 description: HCUP Kids’ Inpatient Database entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A national pediatric inpatient sample that helps hospitals, researchers, and planners estimate
+  children's hospital use, outcomes, charges, and service-line needs.
 owner:
   organization: AHRQ HCUP
   distributor: AHRQ HCUP

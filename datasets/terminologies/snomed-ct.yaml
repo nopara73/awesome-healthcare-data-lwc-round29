@@ -4,6 +4,9 @@ short_name: SNOMED CT
 category: terminologies
 status: active
 description: SNOMED CT entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A broad clinical terminology for diagnoses, findings, procedures, and body structures, useful for
+  harmonizing EHR data and building clinically meaningful cohorts.
 owner:
   organization: SNOMED International / U.S. NLM
   distributor: SNOMED International / U.S. NLM

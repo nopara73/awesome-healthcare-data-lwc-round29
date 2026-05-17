@@ -4,6 +4,9 @@ short_name: All of Us
 category: clinical-research
 status: active
 description: NIH precision-medicine cohort with surveys, EHR, physical measures, wearables, and genomics exposed through a governed Researcher Workbench.
+business_summary: >-
+  A diverse U.S. research cohort with EHR, surveys, measurements, wearables, and genomics that helps
+  study precision medicine and health equity.
 owner:
   organization: National Institutes of Health
   distributor: National Institutes of Health

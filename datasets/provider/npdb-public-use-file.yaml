@@ -4,6 +4,9 @@ short_name: NPDB PUF
 category: provider
 status: active
 description: National Practitioner Data Bank Public Use File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Public malpractice and adverse action summaries that help credentialing, risk, workforce, and policy
+  teams study provider safety and professional accountability trends.
 owner:
   organization: Health Resources and Services Administration
   distributor: Health Resources and Services Administration

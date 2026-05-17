@@ -4,6 +4,9 @@ short_name: AHRF
 category: sdoh
 status: active
 description: Area Health Resources File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  County-level health workforce, facility, population, and resource data that helps planners assess
+  provider supply, access gaps, and community capacity.
 owner:
   organization: Health Resources and Services Administration
   distributor: Health Resources and Services Administration

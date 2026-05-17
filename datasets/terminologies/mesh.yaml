@@ -4,6 +4,9 @@ short_name: MeSH
 category: terminologies
 status: active
 description: Medical Subject Headings entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A biomedical topic vocabulary used for literature indexing, useful for evidence search, medical
+  knowledge graphs, research discovery, and retrieval-augmented analytics.
 owner:
   organization: U.S. National Library of Medicine
   distributor: U.S. National Library of Medicine

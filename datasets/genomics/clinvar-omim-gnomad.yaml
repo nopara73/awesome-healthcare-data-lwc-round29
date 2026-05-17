@@ -4,6 +4,9 @@ short_name: ClinVar-OMIM-gnomAD
 category: genomics
 status: active
 description: ClinVar / OMIM / gnomAD entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Variant, disease, and population frequency resources that help genetics teams interpret variants,
+  connect genes to phenotypes, and assess population context.
 owner:
   organization: NCBI / OMIM / Broad Institute and partners
   distributor: NCBI / OMIM / Broad Institute and partners

@@ -4,6 +4,9 @@ short_name: FAERS
 category: drug-pharma
 status: active
 description: FDA spontaneous adverse drug event reports for pharmacovigilance signal detection.
+business_summary: >-
+  FDA adverse drug event reports that help safety teams detect potential signals, monitor product
+  issues, and enrich pharmacovigilance workflows.
 owner:
   organization: U.S. Food and Drug Administration
   distributor: U.S. Food and Drug Administration

@@ -4,6 +4,9 @@ short_name: Provider Data Catalog
 category: provider
 status: active
 description: CMS Provider Data Catalog entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  The CMS provider data hub that helps teams find official facility, clinician, quality, and reporting
+  datasets for provider benchmarking and market analysis.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

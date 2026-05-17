@@ -4,6 +4,9 @@ short_name: POS File
 category: cms-medicare
 status: active
 description: CMS Provider of Services File entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A national file of Medicare-certified facilities and provider attributes, useful as a facility
+  master list for market sizing, geographic access, and provider network analytics.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

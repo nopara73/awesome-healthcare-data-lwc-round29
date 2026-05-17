@@ -4,6 +4,9 @@ short_name: HCRIS
 category: cms-medicare
 status: active
 description: Medicare Cost Reports / HCRIS entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Hospital and institutional cost-report data that helps finance, strategy, and operations teams study
+  margins, costs, capacity, and provider financial performance.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

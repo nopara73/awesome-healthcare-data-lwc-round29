@@ -4,6 +4,9 @@ short_name: ClinicalTrials.gov
 category: clinical-research
 status: active
 description: ClinicalTrials.gov entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A public registry of clinical studies and results that helps life sciences, research, and strategy
+  teams monitor evidence, trial activity, and competitors.
 owner:
   organization: U.S. National Library of Medicine
   distributor: U.S. National Library of Medicine

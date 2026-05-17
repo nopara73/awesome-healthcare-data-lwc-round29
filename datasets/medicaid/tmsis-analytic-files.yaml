@@ -4,6 +4,9 @@ short_name: TAF / T-MSIS
 category: medicaid
 status: active
 description: CMS Medicaid and CHIP analytic files derived from Transformed Medicaid Statistical Information System submissions.
+business_summary: >-
+  National Medicaid and CHIP eligibility, encounter, and claims-style files that help study access,
+  cost, utilization, equity, and state program performance.
 owner:
   organization: Centers for Medicare & Medicaid Services / Medicaid.gov
   distributor: Centers for Medicare & Medicaid Services / Medicaid.gov

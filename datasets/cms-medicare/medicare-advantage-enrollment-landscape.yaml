@@ -4,6 +4,9 @@ short_name: MA enrollment/landscape
 category: cms-medicare
 status: active
 description: Medicare Advantage Enrollment and Landscape Files entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Medicare Advantage plan and enrollment files that help payers, brokers, providers, and investors
+  understand plan availability, market share, and county-level competition.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

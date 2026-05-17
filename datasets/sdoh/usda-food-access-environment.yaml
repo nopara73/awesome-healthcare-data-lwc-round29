@@ -4,6 +4,9 @@ short_name: USDA Food Atlas
 category: sdoh
 status: active
 description: USDA Food Access Research Atlas / Food Environment Atlas entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Food access and food environment measures that help teams study nutrition access, food deserts,
+  retail context, and community health risks.
 owner:
   organization: USDA Economic Research Service
   distributor: USDA Economic Research Service

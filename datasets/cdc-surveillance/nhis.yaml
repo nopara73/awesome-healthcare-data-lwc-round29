@@ -4,6 +4,9 @@ short_name: NHIS
 category: cdc-surveillance
 status: active
 description: National Health Interview Survey entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A household health interview survey that helps teams understand insurance, access, disability,
+  health status, and care use across the U.S. population.
 owner:
   organization: National Center for Health Statistics / CDC
   distributor: National Center for Health Statistics / CDC

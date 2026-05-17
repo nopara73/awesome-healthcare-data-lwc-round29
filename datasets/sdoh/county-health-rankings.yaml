@@ -4,6 +4,9 @@ short_name: CHR&R
 category: sdoh
 status: active
 description: County-level health outcomes and health factors measures for community health benchmarking.
+business_summary: >-
+  County health outcomes and factor rankings that help community health, policy, and strategy teams
+  compare places and prioritize interventions.
 owner:
   organization: University of Wisconsin Population Health Institute / RWJF
   distributor: University of Wisconsin Population Health Institute / RWJF

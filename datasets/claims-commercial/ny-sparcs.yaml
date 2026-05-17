@@ -4,6 +4,9 @@ short_name: NY SPARCS
 category: claims-commercial
 status: active
 description: New York SPARCS Hospital Inpatient / ED / Ambulatory Surgery Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  New York hospital, emergency department, and ambulatory surgery data that helps teams study state
+  utilization, quality, charges, and local market dynamics.
 owner:
   organization: New York State Department of Health
   distributor: New York State Department of Health

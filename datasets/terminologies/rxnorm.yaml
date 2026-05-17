@@ -4,6 +4,9 @@ short_name: RxNorm
 category: terminologies
 status: active
 description: RxNorm entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A normalized U.S. medication vocabulary that helps pharmacy, clinical, and claims teams reconcile
+  drug names, ingredients, strengths, and dispense records.
 owner:
   organization: U.S. National Library of Medicine
   distributor: U.S. National Library of Medicine

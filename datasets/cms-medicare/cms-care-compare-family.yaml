@@ -4,6 +4,9 @@ short_name: CMS Care Compare
 category: cms-medicare
 status: active
 description: CMS Hospital / Nursing Home / Home Health / Hospice Compare entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Public CMS quality and performance data for hospitals, nursing homes, home health, hospice, and
+  other providers, useful for provider selection, benchmarking, and network strategy.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

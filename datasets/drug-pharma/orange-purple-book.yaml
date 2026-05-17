@@ -4,6 +4,9 @@ short_name: Orange/Purple Book
 category: drug-pharma
 status: active
 description: FDA Orange Book / Purple Book entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  FDA approval, therapeutic equivalence, biologic, patent, and exclusivity information that helps
+  market access, formulary, and product lifecycle teams.
 owner:
   organization: U.S. Food and Drug Administration
   distributor: U.S. Food and Drug Administration

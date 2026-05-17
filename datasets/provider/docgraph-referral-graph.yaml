@@ -4,6 +4,9 @@ short_name: DocGraph
 category: provider
 status: active
 description: DocGraph / Medicare Provider Referral Graph entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Provider relationship and referral-pattern data that helps network, sales, and population health
+  teams understand clinical communities and patient flow proxies.
 owner:
   organization: CareSet / CMS-derived sources
   distributor: CareSet / CMS-derived sources

@@ -4,6 +4,9 @@ short_name: UK Biobank
 category: clinical-research
 status: active
 description: UK Biobank entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A large U.K. cohort with health, imaging, lifestyle, and genetic data that helps study long-term
+  disease risk and multimodal prediction.
 owner:
   organization: UK Biobank
   distributor: UK Biobank

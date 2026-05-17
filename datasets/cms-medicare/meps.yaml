@@ -4,6 +4,9 @@ short_name: MEPS
 category: cms-medicare
 status: active
 description: Medical Expenditure Panel Survey entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A national survey of healthcare use, insurance, spending, and conditions, useful for estimating cost
+  burden, affordability, utilization patterns, and population-level demand.
 owner:
   organization: Agency for Healthcare Research and Quality
   distributor: Agency for Healthcare Research and Quality

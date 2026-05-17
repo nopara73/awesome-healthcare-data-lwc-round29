@@ -4,6 +4,9 @@ short_name: SAHIE
 category: census
 status: active
 description: Small Area Health Insurance Estimates entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  County and state health insurance coverage estimates that help teams study uninsured rates, coverage
+  gaps, access strategy, and policy impact.
 owner:
   organization: U.S. Census Bureau
   distributor: U.S. Census Bureau

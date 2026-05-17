@@ -4,6 +4,9 @@ short_name: ICD-9-CM/GEMs
 category: terminologies
 status: active
 description: ICD-9-CM and General Equivalence Mappings entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Legacy diagnosis and procedure codes plus crosswalks that help teams interpret older claims, compare
+  historical trends, and bridge pre-2015 data to newer coding systems.
 owner:
   organization: CMS / CDC
   distributor: CMS / CDC

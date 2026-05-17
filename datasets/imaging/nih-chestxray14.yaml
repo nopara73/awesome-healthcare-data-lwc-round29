@@ -4,6 +4,9 @@ short_name: ChestX-ray14
 category: imaging
 status: active
 description: NIH ChestX-ray14 entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A public chest X-ray benchmark that helps teams prototype computer vision models for thoracic
+  disease detection and transfer learning.
 owner:
   organization: NIH Clinical Center
   distributor: NIH Clinical Center

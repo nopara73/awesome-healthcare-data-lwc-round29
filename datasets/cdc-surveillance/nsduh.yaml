@@ -4,6 +4,9 @@ short_name: NSDUH
 category: cdc-surveillance
 status: active
 description: National Survey on Drug Use and Health entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A national survey on substance use and mental health that helps policy, behavioral health, and
+  market teams estimate need, risk, and service demand.
 owner:
   organization: Substance Abuse and Mental Health Services Administration
   distributor: Substance Abuse and Mental Health Services Administration

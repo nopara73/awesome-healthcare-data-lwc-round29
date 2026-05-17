@@ -4,6 +4,9 @@ short_name: HCCI
 category: claims-commercial
 status: active
 description: Health Care Cost Institute Commercial Claims Data and Aggregates entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Commercial claims data and benchmarks that help employers, payers, researchers, and policy teams
+  understand spending, prices, utilization, and privately insured populations.
 owner:
   organization: Health Care Cost Institute
   distributor: Health Care Cost Institute

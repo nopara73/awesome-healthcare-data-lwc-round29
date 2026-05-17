@@ -4,6 +4,9 @@ short_name: SEER
 category: cdc-surveillance
 status: active
 description: SEER Cancer Incidence and Survival Data entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Cancer incidence and survival registry data that helps oncology, public health, and life sciences
+  teams study cancer burden, outcomes, and disparities.
 owner:
   organization: National Cancer Institute
   distributor: National Cancer Institute

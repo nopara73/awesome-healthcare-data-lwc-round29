@@ -4,6 +4,9 @@ short_name: DrugBank
 category: drug-pharma
 status: active
 description: DrugBank entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A curated drug knowledge base that helps research, product, and AI teams connect drugs to targets,
+  pathways, indications, interactions, and mechanisms.
 owner:
   organization: DrugBank
   distributor: DrugBank

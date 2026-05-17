@@ -4,6 +4,9 @@ short_name: NNDSS
 category: cdc-surveillance
 status: active
 description: National Notifiable Diseases Surveillance System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  National notifiable disease surveillance outputs that help public health teams track infectious and
+  reportable disease trends, outbreaks, and geographic risk patterns.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

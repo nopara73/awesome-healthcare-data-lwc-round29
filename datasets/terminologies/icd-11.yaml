@@ -4,6 +4,9 @@ short_name: ICD-11
 category: terminologies
 status: active
 description: ICD-11 entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  The WHO disease classification for global health reporting, useful for international comparisons,
+  public health measurement, and planning analytics that need a modern worldwide disease framework.
 owner:
   organization: World Health Organization
   distributor: World Health Organization

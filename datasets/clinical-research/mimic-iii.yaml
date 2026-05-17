@@ -4,6 +4,9 @@ short_name: MIMIC-III
 category: clinical-research
 status: active
 description: MIMIC-III entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A classic ICU research dataset that helps teams benchmark critical care analytics, mortality
+  prediction, length-of-stay modeling, and retrospective methods.
 owner:
   organization: MIT Laboratory for Computational Physiology / BIDMC
   distributor: MIT Laboratory for Computational Physiology / BIDMC

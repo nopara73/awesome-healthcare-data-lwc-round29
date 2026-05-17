@@ -4,6 +4,9 @@ short_name: ICD-10-CM/PCS
 category: terminologies
 status: active
 description: ICD-10-CM / ICD-10-PCS entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  The current U.S. diagnosis and inpatient procedure coding system, used to group diseases,
+  procedures, utilization, quality measures, risk scores, and reimbursement analytics.
 owner:
   organization: CDC / CMS
   distributor: CDC / CMS

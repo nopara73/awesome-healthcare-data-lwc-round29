@@ -4,6 +4,9 @@ short_name: PLACES
 category: cdc-surveillance
 status: active
 description: CDC small-area model-based estimates for chronic disease, prevention, and health behaviors.
+business_summary: >-
+  Small-area CDC estimates of chronic disease, prevention, and health behaviors that help planners
+  target interventions at county, city, tract, or ZIP-like levels.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

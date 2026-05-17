@@ -4,6 +4,9 @@ short_name: ADI
 category: sdoh
 status: active
 description: Neighborhood socioeconomic deprivation index for geospatial risk adjustment and equity analytics.
+business_summary: >-
+  A neighborhood disadvantage score that helps health systems, payers, and researchers account for
+  socioeconomic context in risk adjustment and equity programs.
 owner:
   organization: University of Wisconsin Neighborhood Atlas
   distributor: University of Wisconsin Neighborhood Atlas

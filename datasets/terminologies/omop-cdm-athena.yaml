@@ -4,6 +4,9 @@ short_name: OMOP/Athena
 category: terminologies
 status: active
 description: Common data model and standardized vocabulary distribution layer for harmonizing claims, EHR, registry, and public reference assets.
+business_summary: >-
+  A common data model and vocabulary hub that helps organizations standardize claims, EHR, registry,
+  and public data so analytics can be reused across sources.
 owner:
   organization: OHDSI
   distributor: OHDSI

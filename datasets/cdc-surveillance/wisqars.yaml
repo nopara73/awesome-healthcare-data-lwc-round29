@@ -4,6 +4,9 @@ short_name: WISQARS
 category: cdc-surveillance
 status: active
 description: Web-based Injury Statistics Query and Reporting System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  CDC injury and violence statistics that help public health, safety, and policy teams measure injury
+  burden, mortality, and prevention priorities.
 owner:
   organization: Centers for Disease Control and Prevention
   distributor: Centers for Disease Control and Prevention

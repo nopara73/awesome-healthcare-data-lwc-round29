@@ -4,6 +4,9 @@ short_name: LAUS
 category: sdoh
 status: active
 description: BLS Local Area Unemployment Statistics entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Local unemployment and labor force measures that help teams connect economic conditions to health
+  access, coverage, demand, and community risk.
 owner:
   organization: U.S. Bureau of Labor Statistics
   distributor: U.S. Bureau of Labor Statistics

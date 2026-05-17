@@ -4,6 +4,9 @@ short_name: eICU-CRD
 category: clinical-research
 status: active
 description: Multi-center de-identified ICU database from tele-ICU systems for external validation and critical-care ML.
+business_summary: >-
+  A multi-center ICU dataset that helps validate critical care models beyond one hospital and study
+  practice variation, mortality, and resource use.
 owner:
   organization: MIT Laboratory for Computational Physiology / Philips Healthcare
   distributor: MIT Laboratory for Computational Physiology / Philips Healthcare

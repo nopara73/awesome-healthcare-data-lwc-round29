@@ -4,6 +4,9 @@ short_name: NPPES
 category: provider
 status: active
 description: Public NPI registry and downloadable provider reference file used to normalize clinicians and organizations.
+business_summary: >-
+  The national NPI registry for clinicians and organizations, useful as core provider master data for
+  directories, claims, networks, and enrichment.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

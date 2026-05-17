@@ -4,6 +4,9 @@ short_name: NCIt
 category: terminologies
 status: active
 description: NCI Thesaurus entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A cancer and biomedical ontology that helps oncology, genomics, and clinical research teams
+  standardize diseases, drugs, anatomy, biomarkers, and trial concepts.
 owner:
   organization: National Cancer Institute EVS
   distributor: National Cancer Institute EVS

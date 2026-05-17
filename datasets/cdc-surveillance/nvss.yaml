@@ -4,6 +4,9 @@ short_name: NVSS
 category: cdc-surveillance
 status: active
 description: National Vital Statistics System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Birth and death statistics that help analysts measure mortality, natality, life expectancy,
+  cause-specific death trends, and community health outcomes.
 owner:
   organization: National Center for Health Statistics / CDC
   distributor: National Center for Health Statistics / CDC

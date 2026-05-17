@@ -4,6 +4,9 @@ short_name: PhysioNet
 category: clinical-research
 status: active
 description: PhysioNet Database Catalog entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A catalog of clinical, waveform, imaging, and signal datasets that helps researchers find benchmark
+  data for healthcare AI and physiology analytics.
 owner:
   organization: MIT Laboratory for Computational Physiology
   distributor: MIT Laboratory for Computational Physiology

@@ -16,8 +16,9 @@ for _, e in load_all_datasets():
         "curation": e["curation"]["level"],
         "use_cases": e["common_use_cases"],
         "vocabularies": e.get("vocabularies", []),
+        "business_summary": e["business_summary"],
         "url": e["resources"]["official_page"],
-        "text": " ".join([e["name"], e["description"], e["grain"], e["etl"]["canonical_path"], " ".join(e["quality_gotchas"])]),
+        "text": " ".join([e["name"], e["business_summary"], e["description"], e["grain"], e["etl"]["canonical_path"], " ".join(e["quality_gotchas"])]),
     })
 
 out = ROOT / "docs" / "assets" / "search-index.json"

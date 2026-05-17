@@ -4,6 +4,9 @@ short_name: SEER-Medicare
 category: clinical-research
 status: active
 description: Linked cancer registry and Medicare claims data supporting oncology outcomes, treatment, utilization, and cost research.
+business_summary: >-
+  Linked cancer registry and Medicare claims data that helps oncology teams study treatment paths,
+  outcomes, utilization, survivorship, and cost of cancer care.
 owner:
   organization: National Cancer Institute / CMS
   distributor: National Cancer Institute / CMS

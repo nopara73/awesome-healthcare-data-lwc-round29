@@ -4,6 +4,9 @@ short_name: DRG groupers
 category: terminologies
 status: active
 description: MS-DRG / APR-DRG entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Hospital episode grouping systems that summarize inpatient stays by clinical complexity and payment
+  category, useful for reimbursement, case-mix, service-line, and capacity analysis.
 owner:
   organization: CMS / Solventum
   distributor: CMS / Solventum

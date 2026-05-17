@@ -4,6 +4,9 @@ short_name: State APCDs
 category: claims-commercial
 status: active
 description: State-administered all-payer claims databases with variable access, coverage, and reporting rules.
+business_summary: >-
+  State all-payer claims databases that help teams understand regional spending, utilization, payer
+  mix, and access across commercial and public coverage where available.
 owner:
   organization: State APCD agencies / APCD Council
   distributor: State APCD agencies / APCD Council

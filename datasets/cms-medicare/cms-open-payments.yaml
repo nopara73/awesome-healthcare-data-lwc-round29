@@ -4,6 +4,9 @@ short_name: Open Payments
 category: cms-medicare
 status: active
 description: CMS Open Payments entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Public records of industry payments to physicians and teaching hospitals, useful for compliance
+  reviews, conflict-of-interest checks, market mapping, and provider relationship analysis.
 owner:
   organization: Centers for Medicare & Medicaid Services
   distributor: Centers for Medicare & Medicaid Services

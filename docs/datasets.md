@@ -4,6 +4,160 @@ A machine-readable catalog of healthcare, public health, SDOH, claims, research,
 
 > This README is generated from `datasets/**/*.yaml`. Do not hand-edit dataset tables; update YAML and rerun `make build`.
 
+## What these data sources can help with
+
+This catalog brings together data sources that help healthcare, life sciences, public health, policy, and analytics teams answer practical business questions: where care is delivered, what it costs, which populations are at risk, how communities differ, how drugs and devices perform, and how clinical evidence can be reused responsibly. The summaries below explain each source in plain language before the technical index.
+
+### Terminologies & Vocabularies
+
+- **[ATC/DDD](https://atcddd.fhi.no/)**: A global drug classification and dose-reference source that helps pharmacy, population health, and market access teams compare medication use across products, classes, regions, and time periods.
+- **[CPT/HCPCS](https://www.cms.gov/medicare/coding/healthcare-common-procedure-system)**: The main U.S. procedure and service billing code sets, useful for understanding what care was delivered, pricing services, measuring utilization, and grouping outpatient or professional claims.
+- **[NDC Directory](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)**: A public directory of U.S. drug product and package identifiers that helps teams normalize pharmacy claims, connect products to labels, and track medication portfolios.
+- **[ICD-10-CM/PCS](https://www.cms.gov/medicare/coding-billing/icd-10-codes)**: The current U.S. diagnosis and inpatient procedure coding system, used to group diseases, procedures, utilization, quality measures, risk scores, and reimbursement analytics.
+- **[ICD-11](https://icd.who.int/browse11)**: The WHO disease classification for global health reporting, useful for international comparisons, public health measurement, and planning analytics that need a modern worldwide disease framework.
+- **[ICD-9-CM/GEMs](https://www.cms.gov/medicare/coding-billing/icd-10-codes/general-equivalence-mappings)**: Legacy diagnosis and procedure codes plus crosswalks that help teams interpret older claims, compare historical trends, and bridge pre-2015 data to newer coding systems.
+- **[ICD-O-3](https://seer.cancer.gov/icd-o-3/)**: A cancer-specific coding standard for tumor site and histology that supports oncology registries, cancer outcomes research, tumor cohorting, and specialty analytics.
+- **[LOINC](https://loinc.org/downloads/)**: A standard naming system for lab tests and clinical observations, useful for combining lab results across hospitals, vendors, and data feeds into comparable measures.
+- **[MedDRA](https://www.meddra.org/)**: A global adverse-event terminology used in drug and device safety, helping safety, regulatory, and pharmacovigilance teams group symptoms and events consistently.
+- **[MeSH](https://www.nlm.nih.gov/mesh/download_mesh.html)**: A biomedical topic vocabulary used for literature indexing, useful for evidence search, medical knowledge graphs, research discovery, and retrieval-augmented analytics.
+- **[DRG groupers](https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/ms-drg-classifications-and-software)**: Hospital episode grouping systems that summarize inpatient stays by clinical complexity and payment category, useful for reimbursement, case-mix, service-line, and capacity analysis.
+- **[NCIt](https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/)**: A cancer and biomedical ontology that helps oncology, genomics, and clinical research teams standardize diseases, drugs, anatomy, biomarkers, and trial concepts.
+- **[OMOP/Athena](https://athena.ohdsi.org/)**: A common data model and vocabulary hub that helps organizations standardize claims, EHR, registry, and public data so analytics can be reused across sources.
+- **[RxNorm](https://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html)**: A normalized U.S. medication vocabulary that helps pharmacy, clinical, and claims teams reconcile drug names, ingredients, strengths, and dispense records.
+- **[SNOMED CT](https://www.nlm.nih.gov/healthit/snomedct/)**: A broad clinical terminology for diagnoses, findings, procedures, and body structures, useful for harmonizing EHR data and building clinically meaningful cohorts.
+- **[UMLS](https://www.nlm.nih.gov/research/umls/)**: A large biomedical terminology crosswalk that helps data and AI teams connect different medical vocabularies, synonyms, abbreviations, and text-mining outputs.
+
+### CMS / Medicare
+
+- **[CMS Care Compare](https://data.cms.gov/provider-data/)**: Public CMS quality and performance data for hospitals, nursing homes, home health, hospice, and other providers, useful for provider selection, benchmarking, and network strategy.
+- **[Open Payments](https://openpaymentsdata.cms.gov/)**: Public records of industry payments to physicians and teaching hospitals, useful for compliance reviews, conflict-of-interest checks, market mapping, and provider relationship analysis.
+- **[POS File](https://data.cms.gov/provider-characteristics/hospitals-and-other-facilities/provider-of-services-file)**: A national file of Medicare-certified facilities and provider attributes, useful as a facility master list for market sizing, geographic access, and provider network analytics.
+- **[HCAHPS](https://www.cms.gov/medicare/quality/initiatives/hospital-quality-initiative/hcahps-patients-perspectives-care-survey)**: Hospital patient-experience survey results that help business and quality teams compare communication, responsiveness, discharge experience, and overall satisfaction across facilities.
+- **[MEPS](https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp)**: A national survey of healthcare use, insurance, spending, and conditions, useful for estimating cost burden, affordability, utilization patterns, and population-level demand.
+- **[MA enrollment/landscape](https://www.cms.gov/data-research/statistics-trends-and-reports/medicareadvantagepartdenrollment)**: Medicare Advantage plan and enrollment files that help payers, brokers, providers, and investors understand plan availability, market share, and county-level competition.
+- **[MBSF](https://resdac.org/cms-data/files/mbsf-base)**: Medicare beneficiary demographics, enrollment, and chronic-condition context that helps define cohorts, adjust risk, and understand eligibility over time.
+- **[DE-SynPUF](https://www.cms.gov/data-research/statistics-trends-and-reports/medicare-claims-synthetic-public-use-files)**: Synthetic Medicare-like claims data that lets engineering and analytics teams test pipelines, demos, and models without handling real patient information.
+- **[HCRIS](https://www.cms.gov/data-research/statistics-trends-and-reports/cost-reports)**: Hospital and institutional cost-report data that helps finance, strategy, and operations teams study margins, costs, capacity, and provider financial performance.
+- **[Medicare FFS Claims](https://resdac.org/cms-data/request/cms-data-request-center)**: Detailed Medicare fee-for-service claims used to follow patient care, cost, utilization, outcomes, and provider patterns over time for approved research and analytics.
+- **[Medicare Provider Utilization](https://data.cms.gov/provider-summary-by-type-of-service)**: Public Medicare provider utilization and payment summaries that help teams benchmark services, procedure volumes, prescribing, payment levels, and provider market activity.
+
+### Medicaid
+
+- **[TAF / T-MSIS](https://www.medicaid.gov/medicaid/data-systems/macbis/transformed-medicaid-statistical-information-system-t-msis/index.html)**: National Medicaid and CHIP eligibility, encounter, and claims-style files that help study access, cost, utilization, equity, and state program performance.
+
+### CDC Surveillance & Public Health
+
+- **[BRFSS](https://www.cdc.gov/brfss/data_documentation/index.htm)**: A large adult health behavior survey that helps public health and strategy teams understand smoking, obesity, prevention, chronic disease risks, and state-level population trends.
+- **[WONDER](https://wonder.cdc.gov/)**: A public query system for mortality, births, disease, and other public health data, useful for quick population benchmarks, outcomes research, and local trend checks.
+- **[FluView](https://www.cdc.gov/fluview/)**: CDC influenza surveillance and hospitalization data that helps teams monitor flu seasons, forecast respiratory demand, and plan staffing, outreach, and capacity.
+- **[NHANES](https://www.cdc.gov/nchs/nhanes/index.htm)**: A national survey with interviews, exams, labs, and diet measures, useful for biomarker-rich population health, risk calibration, nutrition, and chronic disease analytics.
+- **[NHIS](https://www.cdc.gov/nchs/nhis/documentation/index.html)**: A household health interview survey that helps teams understand insurance, access, disability, health status, and care use across the U.S. population.
+- **[NHSN](https://www.cdc.gov/nhsn/)**: Healthcare-associated infection and facility safety surveillance data that helps quality, infection prevention, and reporting teams monitor safety outcomes and compliance.
+- **[NNDSS](https://www.cdc.gov/nndss/)**: National notifiable disease surveillance outputs that help public health teams track infectious and reportable disease trends, outbreaks, and geographic risk patterns.
+- **[NPCR](https://www.cdc.gov/national-program-cancer-registries/index.html)**: Cancer registry data that complements SEER and helps surveillance, policy, and oncology teams understand cancer incidence and outcomes across more of the U.S.
+- **[NSDUH](https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health)**: A national survey on substance use and mental health that helps policy, behavioral health, and market teams estimate need, risk, and service demand.
+- **[NVSS](https://www.cdc.gov/nchs/nvss/index.htm)**: Birth and death statistics that help analysts measure mortality, natality, life expectancy, cause-specific death trends, and community health outcomes.
+- **[PLACES](https://www.cdc.gov/places/)**: Small-area CDC estimates of chronic disease, prevention, and health behaviors that help planners target interventions at county, city, tract, or ZIP-like levels.
+- **[PRAMS](https://www.cdc.gov/prams/php/data-research/index.html)**: Maternal survey data linked to birth context that helps public health teams study pregnancy experiences, maternal risk factors, infant health, and perinatal programs.
+- **[SEER](https://seer.cancer.gov/data/)**: Cancer incidence and survival registry data that helps oncology, public health, and life sciences teams study cancer burden, outcomes, and disparities.
+- **[VAERS](https://vaers.hhs.gov/data.html)**: Spontaneous vaccine adverse event reports that help safety teams look for early warning signals while remembering reports do not prove causation.
+- **[WISQARS](https://wisqars.cdc.gov/)**: CDC injury and violence statistics that help public health, safety, and policy teams measure injury burden, mortality, and prevention priorities.
+- **[YRBSS](https://www.cdc.gov/yrbs/)**: Youth risk behavior survey data that helps schools, public health agencies, and policy teams understand adolescent behaviors, safety, mental health, and prevention needs.
+
+### HCUP
+
+- **[HCUP KID](https://hcup-us.ahrq.gov/kidoverview.jsp)**: A national pediatric inpatient sample that helps hospitals, researchers, and planners estimate children's hospital use, outcomes, charges, and service-line needs.
+- **[HCUP NIS](https://hcup-us.ahrq.gov/nisoverview.jsp)**: A national inpatient hospital discharge sample that helps estimate U.S. hospitalization volume, outcomes, charges, diagnoses, procedures, and burden of disease.
+- **[HCUP NEDS](https://hcup-us.ahrq.gov/nedsoverview.jsp)**: A national emergency department sample that helps teams understand ED demand, treat-and-release visits, admissions from the ED, charges, and utilization patterns.
+- **[HCUP SID/SASD](https://hcup-us.ahrq.gov/db/state/siddbdocumentation.jsp)**: State inpatient and ambulatory surgery encounter data that helps analysts study local utilization, outcomes, access, and market patterns when state-level detail matters.
+
+### Claims, Cost & Transparency
+
+- **[CA HCAI](https://hcai.ca.gov/data/data-resources/)**: California healthcare facility, encounter, finance, workforce, and related data that helps teams study state-specific utilization, access, outcomes, capacity, and costs.
+- **[HCCI](https://healthcostinstitute.org/data)**: Commercial claims data and benchmarks that help employers, payers, researchers, and policy teams understand spending, prices, utilization, and privately insured populations.
+- **[Hospital Price Transparency](https://www.cms.gov/priorities/key-initiatives/hospital-price-transparency)**: Hospital-posted machine-readable price files that help revenue, contracting, consumer, and market teams analyze charges, negotiated rates, and price variation.
+- **[NY SPARCS](https://www.health.ny.gov/statistics/sparcs/access/)**: New York hospital, emergency department, and ambulatory surgery data that helps teams study state utilization, quality, charges, and local market dynamics.
+- **[State APCDs](https://www.apcdcouncil.org/)**: State all-payer claims databases that help teams understand regional spending, utilization, payer mix, and access across commercial and public coverage where available.
+- **[TX THCIC](https://www.dshs.texas.gov/center-health-statistics/texas-health-care-information-collection)**: Texas public use healthcare encounter files that help teams analyze hospital and outpatient utilization, charges, outcomes, and regional patterns across the state.
+- **[TiC MRFs](https://www.cms.gov/priorities/healthplan-price-transparency)**: Payer-published negotiated-rate files that help price transparency, contracting, and market intelligence teams study commercial rates, provider networks, and reimbursement variation.
+
+### Provider Data
+
+- **[Doctors & Clinicians](https://data.cms.gov/provider-data/topics/doctors-clinicians)**: CMS clinician and group practice quality data that helps provider organizations, payers, and consumers compare clinicians, specialties, performance, and network options.
+- **[Provider Data Catalog](https://data.cms.gov/provider-data/)**: The CMS provider data hub that helps teams find official facility, clinician, quality, and reporting datasets for provider benchmarking and market analysis.
+- **[DocGraph](https://careset.com/docgraph-open-social-doctor-data/)**: Provider relationship and referral-pattern data that helps network, sales, and population health teams understand clinical communities and patient flow proxies.
+- **[NPDB PUF](https://www.npdb.hrsa.gov/resources/publicData.jsp)**: Public malpractice and adverse action summaries that help credentialing, risk, workforce, and policy teams study provider safety and professional accountability trends.
+- **[NPPES](https://download.cms.gov/nppes/NPI_Files.html)**: The national NPI registry for clinicians and organizations, useful as core provider master data for directories, claims, networks, and enrichment.
+- **[NUCC Taxonomy](https://taxonomy.nucc.org/)**: Provider specialty and taxonomy codes that help teams classify clinicians and organizations consistently across directories, claims, credentialing, and network analytics.
+
+### SDOH & Environment
+
+- **[AHRQ SDOH](https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html)**: A compiled set of county and ZIP-level social determinants that helps teams add community context to risk, access, equity, and outcomes analytics.
+- **[ADI](https://www.neighborhoodatlas.medicine.wisc.edu/)**: A neighborhood disadvantage score that helps health systems, payers, and researchers account for socioeconomic context in risk adjustment and equity programs.
+- **[AHRF](https://data.hrsa.gov/data/download)**: County-level health workforce, facility, population, and resource data that helps planners assess provider supply, access gaps, and community capacity.
+- **[LAUS](https://www.bls.gov/lau/)**: Local unemployment and labor force measures that help teams connect economic conditions to health access, coverage, demand, and community risk.
+- **[SVI](https://www.atsdr.cdc.gov/place-health/php/svi/)**: A social vulnerability index that helps emergency response, public health, and healthcare teams identify communities likely to need more support.
+- **[CHR&R](https://www.countyhealthrankings.org/health-data)**: County health outcomes and factor rankings that help community health, policy, and strategy teams compare places and prioritize interventions.
+- **[Dartmouth Atlas](https://data.dartmouthatlas.org/)**: Regional healthcare variation measures that help teams study differences in practice patterns, resource use, spending, and care intensity across markets.
+- **[EPA AQS](https://www.epa.gov/aqs)**: Air quality monitor data that helps teams connect pollution and environmental exposure patterns to respiratory, cardiovascular, and community health risk.
+- **[EJScreen](https://www.epa.gov/ejscreen)**: Environmental justice screening data that helps organizations identify communities facing combined environmental, demographic, and socioeconomic burdens.
+- **[Walkability Index](https://www.epa.gov/smartgrowth/smart-location-mapping)**: Built-environment walkability scores that help planners and health teams study transportation access, activity-friendly communities, and neighborhood context.
+- **[HUD PIT/HMIS](https://www.huduser.gov/portal/datasets/ahar.html)**: Homelessness counts and housing inventory summaries that help community health, policy, and social care teams understand housing instability and service needs.
+- **[USDA Food Atlas](https://www.ers.usda.gov/data-products/food-access-research-atlas/)**: Food access and food environment measures that help teams study nutrition access, food deserts, retail context, and community health risks.
+- **[RUCA](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/)**: Rural-urban commuting classifications that help teams segment markets, access patterns, provider supply, and outcomes by rurality and commuting context.
+
+### Census & Demographic
+
+- **[ACS](https://www.census.gov/programs-surveys/acs/data.html)**: The default U.S. demographic and socioeconomic context source, useful for market sizing, equity analytics, community profiles, and denominator estimates.
+- **[Decennial Census](https://www.census.gov/programs-surveys/decennial-census/data.html)**: The once-a-decade population and housing baseline that helps teams build small-area denominators, geography profiles, and long-term demographic comparisons.
+- **[LEHD](https://lehd.ces.census.gov/data/)**: Employment and commuting flow data that helps analysts understand labor markets, daytime populations, access, mobility, and employer-area context.
+- **[SAHIE](https://www.census.gov/programs-surveys/sahie.html)**: County and state health insurance coverage estimates that help teams study uninsured rates, coverage gaps, access strategy, and policy impact.
+- **[SAIPE](https://www.census.gov/programs-surveys/saipe.html)**: Small-area poverty and income estimates that help public health, education, and policy teams target resources and understand economic need.
+
+### Clinical / Research / ICU
+
+- **[All of Us](https://www.researchallofus.org/)**: A diverse U.S. research cohort with EHR, surveys, measurements, wearables, and genomics that helps study precision medicine and health equity.
+- **[ClinicalTrials.gov](https://clinicaltrials.gov/data-api)**: A public registry of clinical studies and results that helps life sciences, research, and strategy teams monitor evidence, trial activity, and competitors.
+- **[dbGaP](https://www.ncbi.nlm.nih.gov/gap/)**: Controlled-access genotype and phenotype studies that help approved researchers connect genetic variation to disease, traits, biomarkers, and outcomes.
+- **[eICU-CRD](https://physionet.org/content/eicu-crd/2.0/)**: A multi-center ICU dataset that helps validate critical care models beyond one hospital and study practice variation, mortality, and resource use.
+- **[MIMIC-CXR](https://physionet.org/content/mimic-cxr/)**: A large de-identified chest X-ray and report dataset that helps teams build and test medical imaging and vision-language models.
+- **[MIMIC-III](https://physionet.org/content/mimiciii/)**: A classic ICU research dataset that helps teams benchmark critical care analytics, mortality prediction, length-of-stay modeling, and retrospective methods.
+- **[MIMIC-IV](https://physionet.org/content/mimiciv/)**: A modern de-identified hospital and ICU dataset that helps teams prototype clinical prediction, operational analytics, and OMOP-style EHR pipelines.
+- **[PhysioNet](https://physionet.org/)**: A catalog of clinical, waveform, imaging, and signal datasets that helps researchers find benchmark data for healthcare AI and physiology analytics.
+- **[SEER-Medicare](https://healthcaredelivery.cancer.gov/seermedicare/obtain/)**: Linked cancer registry and Medicare claims data that helps oncology teams study treatment paths, outcomes, utilization, survivorship, and cost of cancer care.
+- **[UK Biobank](https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/)**: A large U.K. cohort with health, imaging, lifestyle, and genetic data that helps study long-term disease risk and multimodal prediction.
+
+### Drug & Pharmacology
+
+- **[ChEMBL](https://www.ebi.ac.uk/chembl/downloads/)**: A public bioactivity and compound database that helps drug discovery teams study targets, assays, compounds, and mechanism-aware modeling.
+- **[DailyMed](https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm)**: Structured FDA drug labels that help teams extract indications, warnings, contraindications, dosage, labeling history, and regulatory text features.
+- **[DrugBank](https://go.drugbank.com/)**: A curated drug knowledge base that helps research, product, and AI teams connect drugs to targets, pathways, indications, interactions, and mechanisms.
+- **[FAERS](https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard)**: FDA adverse drug event reports that help safety teams detect potential signals, monitor product issues, and enrich pharmacovigilance workflows.
+- **[Orange/Purple Book](https://www.fda.gov/drugs/drug-approvals-and-databases/approved-drug-products-therapeutic-equivalence-evaluations-orange-book)**: FDA approval, therapeutic equivalence, biologic, patent, and exclusivity information that helps market access, formulary, and product lifecycle teams.
+- **[openFDA](https://open.fda.gov/)**: Open FDA APIs and downloads that help teams quickly access regulatory, recall, label, adverse event, and enforcement data for lightweight analytics.
+- **[SIDER](http://sideeffects.embl.de/)**: A side-effect knowledge resource that helps teams prototype drug safety knowledge graphs, adverse event matching, and medication risk features.
+
+### Imaging
+
+- **[ADNI](https://adni.loni.usc.edu/data-samples/)**: Longitudinal Alzheimer's imaging, biomarker, clinical, and genetics data that helps teams study disease progression and multimodal prediction.
+- **[CheXpert](https://aimi.stanford.edu/datasets/chexpert-chest-x-rays)**: A large chest radiograph dataset with labels that helps teams benchmark medical imaging classification, uncertainty handling, and radiology AI workflows.
+- **[ISIC](https://www.isic-archive.com/)**: A public skin image archive that helps dermatology and AI teams build, test, and compare skin lesion classification models.
+- **[ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)**: A public chest X-ray benchmark that helps teams prototype computer vision models for thoracic disease detection and transfer learning.
+- **[TCIA](https://www.cancerimagingarchive.net/collections/)**: Cancer imaging collections that help oncology, radiology, and AI teams study imaging biomarkers, segmentation, treatment response, and multimodal research.
+
+### Genomics / Phenotype
+
+- **[ClinVar-OMIM-gnomAD](https://www.ncbi.nlm.nih.gov/clinvar/)**: Variant, disease, and population frequency resources that help genetics teams interpret variants, connect genes to phenotypes, and assess population context.
+- **[HPO](https://hpo.jax.org/app/download/ontology)**: A standard vocabulary for clinical features that helps rare disease, genomics, and AI teams describe phenotypes consistently.
+- **[GWAS Catalog](https://www.ebi.ac.uk/gwas/downloads)**: Curated genome-wide association results that help teams find trait-linked variants, build genetic evidence features, and explore polygenic risk signals.
+
+### International / Global Health
+
+- **[Eurostat Health](https://ec.europa.eu/eurostat/web/health/database)**: European health indicator data that helps policy, market, and public health teams compare countries and regions across health status, care, and systems.
+- **[GBD + DHS](https://www.healthdata.org/research-analysis/gbd)**: Global disease burden estimates and demographic health surveys that help teams compare risks, outcomes, coverage, and population health across countries.
+- **[OECD Health Statistics](https://www.oecd.org/en/data/datasets/oecd-health-statistics.html)**: Comparable health system, spending, workforce, and outcome indicators that help strategy and policy teams benchmark OECD and partner countries.
+- **[WHO GHO](https://www.who.int/data/gho)**: WHO country-level health indicators that help teams monitor global disease burden, risk factors, system capacity, and public health progress.
+
 ## What makes this maintainable
 
 - **Machine-readable entries**: every dataset is YAML validated against `schemas/dataset.schema.json`.

@@ -4,6 +4,9 @@ short_name: HPO
 category: genomics
 status: active
 description: Human Phenotype Ontology entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A standard vocabulary for clinical features that helps rare disease, genomics, and AI teams describe
+  phenotypes consistently.
 owner:
   organization: HPO Consortium / Jackson Laboratory
   distributor: HPO Consortium / Jackson Laboratory

@@ -18,6 +18,22 @@ lines.append("# Awesome Health Data\n\n")
 lines.append("A machine-readable catalog of healthcare, public health, SDOH, claims, research, imaging, genomics, drug, and global-health datasets for ML and analytics.\n\n")
 lines.append("> This README is generated from `datasets/**/*.yaml`. Do not hand-edit dataset tables; update YAML and rerun `make build`.\n\n")
 
+lines.append("## What these data sources can help with\n\n")
+lines.append(
+    "This catalog brings together data sources that help healthcare, life sciences, public health, policy, and analytics teams answer practical business questions: "
+    "where care is delivered, what it costs, which populations are at risk, how communities differ, how drugs and devices perform, and how clinical evidence can be reused responsibly. "
+    "The summaries below explain each source in plain language before the technical index.\n\n"
+)
+for cat in CATEGORY_TITLES:
+    cat_entries = sorted(by_cat.get(cat, []), key=lambda x: x["name"].lower())
+    if not cat_entries:
+        continue
+    lines.append(f"### {category_title(cat)}\n\n")
+    for e in cat_entries:
+        official = e["resources"]["official_page"]
+        lines.append(f"- **[{esc(e['short_name'])}]({official})**: {esc(e['business_summary'])}\n")
+    lines.append("\n")
+
 lines.append("## What makes this maintainable\n\n")
 lines.append("- **Machine-readable entries**: every dataset is YAML validated against `schemas/dataset.schema.json`.\n")
 lines.append("- **Use-case-first navigation**: `use-cases/` pages shortlist datasets for real ML workflows.\n")

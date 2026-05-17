@@ -4,6 +4,9 @@ short_name: Medicare FFS Claims
 category: cms-medicare
 status: active
 description: Research-identifiable and limited-data-set Medicare fee-for-service claims and enrollment files used for longitudinal utilization, outcomes, and cost research.
+business_summary: >-
+  Detailed Medicare fee-for-service claims used to follow patient care, cost, utilization, outcomes,
+  and provider patterns over time for approved research and analytics.
 owner:
   organization: Centers for Medicare & Medicaid Services / ResDAC
   distributor: Centers for Medicare & Medicaid Services / ResDAC

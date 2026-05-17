@@ -4,6 +4,9 @@ short_name: MedDRA
 category: terminologies
 status: active
 description: MedDRA entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  A global adverse-event terminology used in drug and device safety, helping safety, regulatory, and
+  pharmacovigilance teams group symptoms and events consistently.
 owner:
   organization: MedDRA MSSO
   distributor: MedDRA MSSO

@@ -4,6 +4,9 @@ short_name: VAERS
 category: cdc-surveillance
 status: active
 description: Vaccine Adverse Event Reporting System entry in the Awesome Health Data catalog, documenting access, grain, coverage, PHI posture, quality gotchas, and ETL/CDM path for ML and analytics.
+business_summary: >-
+  Spontaneous vaccine adverse event reports that help safety teams look for early warning signals
+  while remembering reports do not prove causation.
 owner:
   organization: CDC / FDA
   distributor: CDC / FDA
