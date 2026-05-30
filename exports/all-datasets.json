@@ -608,6 +608,25 @@
     "last_validated": "2026-05-17"
   },
   {
+    "id": "longevity-world-cup",
+    "name": "Longevity World Cup",
+    "short_name": "LWC",
+    "category": "clinical-research",
+    "business_summary": "A public, biomarker-rich longevity competition dataset useful for prototyping healthspan analytics, biological-age ranking views, reproducible leaderboard examples, and public data/RAG demonstrations.",
+    "tier": "open",
+    "official_page": "https://longevityworldcup.com/",
+    "download_url": "https://longevityworldcup.com/api/data/athletes",
+    "grain": "Public athlete profile with nested biomarker submissions, biological-age result fields, proof asset references, placements, crowd-age counts, and profile/contact metadata.",
+    "unit_of_observation": "athlete profile and biomarker submission record",
+    "phi_classification": "public-participant-submitted-identifiable-biomarker-data",
+    "reid_risk": "high",
+    "omop_status": "custom-etl-required",
+    "curation_level": "needs-review",
+    "use_cases": "longevity-leaderboard-exploration;biological-age-ranking-prototypes;public-biomarker-json-examples;healthspan-data-rag-and-agent-demos",
+    "vocabularies": "AthleteSlug;biological age fields;PhenoAge biomarkers;Bortz age biomarkers;crowd age fields;leaderboard placement fields",
+    "last_validated": "2026-05-30"
+  },
+  {
     "id": "mimic-cxr",
     "name": "MIMIC-CXR",
     "short_name": "MIMIC-CXR",

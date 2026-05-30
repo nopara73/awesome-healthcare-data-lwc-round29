@@ -1,0 +1,123 @@
+id: longevity-world-cup
+name: Longevity World Cup
+short_name: LWC
+category: clinical-research
+status: active
+description: >-
+  Public longevity leaderboard and JSON dataset with participant-submitted biomarker, biological-age,
+  proof, placement, crowd-age, profile, and contact fields.
+business_summary: >-
+  A public, biomarker-rich longevity competition dataset useful for prototyping healthspan analytics,
+  biological-age ranking views, reproducible leaderboard examples, and public data/RAG demonstrations.
+owner:
+  organization: Longevity World Cup
+  distributor: Longevity World Cup
+  url: https://longevityworldcup.com/
+  contact: hi@longevityworldcup.com
+access:
+  tier: open
+  cost_usd: '0'
+  request_url: https://longevityworldcup.com/
+  download_url: https://longevityworldcup.com/api/data/athletes
+  typical_turnaround_days: 0-1
+  redistribution: check-source-terms
+  commercial_use: check-source-terms
+  enclave_required: false
+  license_notes: >-
+    Public website and API access; verify source terms before redistributing profile, proof, or
+    participant-submitted data.
+resources:
+  official_page: https://longevityworldcup.com/
+  download_url: https://longevityworldcup.com/api/data/athletes
+  api_url: https://longevityworldcup.com/api/data/athletes
+  documentation_url: https://longevityworldcup.com/llms.txt
+vocabularies:
+- AthleteSlug
+- biological age fields
+- PhenoAge biomarkers
+- Bortz age biomarkers
+- crowd age fields
+- leaderboard placement fields
+grain: >-
+  Public athlete profile with nested biomarker submissions, biological-age result fields, proof asset
+  references, placements, crowd-age counts, and profile/contact metadata.
+unit_of_observation: athlete profile and biomarker submission record
+primary_keys:
+  patient: AthleteSlug
+  provider: null
+  geo: Flag or participant-provided country indicator where available
+  code: source field names and biomarker labels
+  other:
+  - Biomarkers.Date
+  - Placement event and leaderboard fields
+coverage:
+  population_n: 203
+  population_description: >-
+    Public Longevity World Cup participants with voluntary profile, biomarker, proof, and leaderboard
+    submissions visible through the website API.
+  excludes:
+  - non-public participants
+  - people without published Longevity World Cup profiles
+  geographic_scope: global voluntary participant submissions
+  years: source-specific live submissions; biomarker dates are included where participants publish them
+  refresh_cadence: live-site-updated
+  completeness_lag_months: null
+  representativeness_notes: >-
+    Self-selected competition participants are not representative of a clinical population or the general
+    population; use as a public leaderboard and biomarker-prototyping dataset, not as a prevalence benchmark.
+size:
+  rows_per_year_est: 282
+  storage_gb_per_year: null
+  size_notes: >-
+    Public API validation on 2026-05-30 returned 203 athlete profiles and 282 nested biomarker records;
+    size changes as the live site changes.
+phi:
+  classification: public-participant-submitted-identifiable-biomarker-data
+  hipaa_status: not-applicable-public-consented-submissions
+  contains_dates: true
+  contains_geo:
+  - participant flag or country indicator where available
+  - public profile and proof context
+  reid_risk: high
+  deidentification_method: >-
+    None. The source intentionally publishes participant-submitted public profiles, names or display names,
+    media/contact links where provided, proof assets, and dated biomarker context.
+quality_gotchas:
+- Public identifiable participant context requires careful consent, quoting, and redistribution review.
+- Voluntary competition submissions create strong selection bias and are not representative clinical samples.
+- Nested JSON fields and leaderboard-specific rank logic can change with the live application.
+- Biological-age comparability depends on source proof, measurement date, biomarker availability, and model-specific rules.
+common_use_cases:
+- longevity-leaderboard-exploration
+- biological-age-ranking-prototypes
+- public-biomarker-json-examples
+- healthspan-data-rag-and-agent-demos
+omop_mapping:
+  status: custom-etl-required
+  reference_etl: null
+  vocab_coverage_pct: null
+  notes: >-
+    Not natively mapped to OMOP. A responsible ETL should preserve source profile/proof context, model-specific
+    biological-age fields, measurement dates, and the public-identifiable nature of the records.
+etl:
+  canonical_path: >-
+    API JSON -> schema capture -> normalized athlete/profile, biomarker submission, proof asset, and placement
+    tables -> optional feature store or analytics views
+  notes: >-
+    Treat public identities and proof links as first-class governance fields. Avoid silently converting this into
+    a deidentified clinical cohort.
+prototyping_alternative: https://longevityworldcup.com/ai/leaderboard.md
+linked_datasets: []
+example_notebooks: []
+key_papers: []
+freshness:
+  last_validated: '2026-05-30'
+  validation_method: >-
+    Checked official website, llms.txt, and public athletes API; API returned 203 athlete profiles and 282 nested
+    biomarker records on 2026-05-30.
+maintainer: '@nopara73'
+curation:
+  level: needs-review
+  review_notes: >-
+    Schema-complete seed entry from the public API. Maintainer review recommended because the source is public,
+    participant-submitted, identifiable longevity competition data rather than a deidentified clinical dataset.

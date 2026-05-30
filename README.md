@@ -5,9 +5,9 @@
 <p align="center"><strong>A machine-readable healthcare dataset catalog for ML, analytics, public health, policy, and life sciences teams.</strong></p>
 
 <p align="center">
-  <img alt="Datasets" src="https://img.shields.io/badge/datasets-108-0b7285.svg?style=for-the-badge">
+  <img alt="Datasets" src="https://img.shields.io/badge/datasets-109-0b7285.svg?style=for-the-badge">
   <img alt="Categories" src="https://img.shields.io/badge/categories-14-1864ab.svg?style=for-the-badge">
-  <img alt="Open sources" src="https://img.shields.io/badge/open-69-2f9e44.svg?style=for-the-badge">
+  <img alt="Open sources" src="https://img.shields.io/badge/open-70-2f9e44.svg?style=for-the-badge">
   <img alt="Generated from YAML" src="https://img.shields.io/badge/source-YAML-495057.svg?style=for-the-badge">
   <img alt="Awesome" src="https://img.shields.io/badge/awesome-health%20data-6741d9.svg?style=for-the-badge">
 </p>
@@ -18,9 +18,9 @@
 
 <table>
 <tr>
-<td align="center"><strong>108</strong><br><sub>datasets</sub></td>
+<td align="center"><strong>109</strong><br><sub>datasets</sub></td>
 <td align="center"><strong>14</strong><br><sub>categories</sub></td>
-<td align="center"><strong>69</strong><br><sub>open sources</sub></td>
+<td align="center"><strong>70</strong><br><sub>open sources</sub></td>
 <td align="center"><strong>17</strong><br><sub>DUA, IRB, or purchase</sub></td>
 <td align="center"><strong>20</strong><br><sub>reference entries</sub></td>
 </tr>
@@ -50,7 +50,7 @@
 | &#x1F9D1;&#x200D;&#x2695;&#xFE0F; [Provider Data](#provider) | 6 | Provider directories, taxonomy files, quality measures, and relationship data. |
 | &#x1F3D8;&#xFE0F; [SDOH & Environment](#sdoh) | 13 | Social, economic, environmental, housing, workforce, and place-based context. |
 | &#x1F5FA;&#xFE0F; [Census & Demographic](#census) | 5 | Population, insurance, poverty, commuting, and denominator datasets. |
-| &#x1F52C; [Clinical / Research / ICU](#clinical-research) | 10 | Credentialed EHR, ICU, cohort, trial, and multimodal research datasets. |
+| &#x1F52C; [Clinical / Research / ICU](#clinical-research) | 11 | Credentialed EHR, ICU, cohort, trial, and multimodal research datasets. |
 | &#x1F48A; [Drug & Pharmacology](#drug-pharma) | 7 | Drug labels, approvals, adverse events, compounds, side effects, and safety data. |
 | &#x1F5BC;&#xFE0F; [Imaging](#imaging) | 5 | Radiology, dermatology, cancer imaging, and benchmark medical image collections. |
 | &#x1F9EC; [Genomics / Phenotype](#genomics) | 3 | Variant, phenotype, ontology, and association resources for genetics workflows. |
@@ -60,7 +60,7 @@
 
 | Tier | Count | Meaning |
 |---|---:|---|
-| `open` Open | 69 | Public download, API, or aggregate portal. |
+| `open` Open | 70 | Public download, API, or aggregate portal. |
 | `registration` Registration | 13 | Free account, click-through terms, training, or attestation. |
 | `dua` DUA | 8 | Data use agreement or project approval. |
 | `irb` IRB | 2 | IRB, DAC, or human-subjects governed access. |
@@ -223,7 +223,7 @@ Population, insurance, poverty, commuting, and denominator datasets.
 </details>
 
 <details>
-<summary><strong>&#x1F52C; Clinical / Research / ICU</strong> <sub>10 datasets</sub></summary>
+<summary><strong>&#x1F52C; Clinical / Research / ICU</strong> <sub>11 datasets</sub></summary>
 
 Credentialed EHR, ICU, cohort, trial, and multimodal research datasets.
 
@@ -231,6 +231,7 @@ Credentialed EHR, ICU, cohort, trial, and multimodal research datasets.
 - **[ClinicalTrials.gov](https://clinicaltrials.gov/data-api)**: A public registry of clinical studies and results that helps life sciences, research, and strategy teams monitor evidence, trial activity, and competitors.
 - **[dbGaP](https://www.ncbi.nlm.nih.gov/gap/)**: Controlled-access genotype and phenotype studies that help approved researchers connect genetic variation to disease, traits, biomarkers, and outcomes.
 - **[eICU-CRD](https://physionet.org/content/eicu-crd/2.0/)**: A multi-center ICU dataset that helps validate critical care models beyond one hospital and study practice variation, mortality, and resource use.
+- **[LWC](https://longevityworldcup.com/)**: A public, biomarker-rich longevity competition dataset useful for prototyping healthspan analytics, biological-age ranking views, reproducible leaderboard examples, and public data/RAG demonstrations.
 - **[MIMIC-CXR](https://physionet.org/content/mimic-cxr/)**: A large de-identified chest X-ray and report dataset that helps teams build and test medical imaging and vision-language models.
 - **[MIMIC-III](https://physionet.org/content/mimiciii/)**: A classic ICU research dataset that helps teams benchmark critical care analytics, mortality prediction, length-of-stay modeling, and retrospective methods.
 - **[MIMIC-IV](https://physionet.org/content/mimiciv/)**: A modern de-identified hospital and ICU dataset that helps teams prototype clinical prediction, operational analytics, and OMOP-style EHR pipelines.
@@ -302,7 +303,7 @@ Global and country-comparable health indicators, burden, and system measures.
 
 ## Dataset Index
 
-Total entries: **108**.
+Total entries: **109**.
 
 <a id="terminologies"></a>
 
@@ -476,7 +477,7 @@ Total entries: **108**.
 <a id="clinical-research"></a>
 
 <details>
-<summary><strong>&#x1F52C; Clinical / Research / ICU</strong> <sub>10 datasets</sub></summary>
+<summary><strong>&#x1F52C; Clinical / Research / ICU</strong> <sub>11 datasets</sub></summary>
 
 | Dataset | Tier | PHI posture | Grain | OMOP/CDM status | Curation | Last validated |
 |---|---:|---|---|---|---|---|
@@ -484,6 +485,7 @@ Total entries: **108**.
 | [ClinicalTrials.gov](https://clinicaltrials.gov/data-api)<br><sub>[yaml](datasets/clinical-research/clinicaltrials-gov.yaml)</sub> | `open` | credentialed-deidentified-or-controlled | participant, encounter, stay, event, waveform, image, or study record | supported-for-some-sources | seed | 2026-05-17 |
 | [dbGaP](https://www.ncbi.nlm.nih.gov/gap/)<br><sub>[yaml](datasets/clinical-research/dbgap.yaml)</sub> | `irb` | credentialed-deidentified-or-controlled | participant, encounter, stay, event, waveform, image, or study record | supported-for-some-sources | seed | 2026-05-17 |
 | [eICU-CRD](https://physionet.org/content/eicu-crd/2.0/)<br><sub>[yaml](datasets/clinical-research/eicu-crd.yaml)</sub> | `registration` | deidentified-credentialed | ICU patient/unit-stay/event tables across multiple hospitals | custom-critical-care-etl | reference | 2026-05-17 |
+| [LWC](https://longevityworldcup.com/)<br><sub>[yaml](datasets/clinical-research/longevity-world-cup.yaml)</sub> | `open` | public-participant-submitted-identifiable-biomarker-data | Public athlete profile with nested biomarker submissions, biological-age result fields, proof asset references, placements, crowd-age counts, and profile/contact metadata. | custom-etl-required | needs-review | 2026-05-30 |
 | [MIMIC-CXR](https://physionet.org/content/mimic-cxr/)<br><sub>[yaml](datasets/clinical-research/mimic-cxr.yaml)</sub> | `registration` | credentialed-deidentified-or-controlled | participant, encounter, stay, event, waveform, image, or study record | supported-for-some-sources | seed | 2026-05-17 |
 | [MIMIC-III](https://physionet.org/content/mimiciii/)<br><sub>[yaml](datasets/clinical-research/mimic-iii.yaml)</sub> | `registration` | credentialed-deidentified-or-controlled | participant, encounter, stay, event, waveform, image, or study record | supported-for-some-sources | seed | 2026-05-17 |
 | [MIMIC-IV](https://physionet.org/content/mimiciv/)<br><sub>[yaml](datasets/clinical-research/mimic-iv.yaml)</sub> | `registration` | deidentified-credentialed | person, admission, ICU stay, procedure, diagnosis, lab, medication, chart-event, and note/module records depending access | well-supported | reference | 2026-05-17 |

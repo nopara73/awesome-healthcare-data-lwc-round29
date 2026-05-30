@@ -696,6 +696,33 @@
     "text": "eICU Collaborative Research Database A multi-center ICU dataset that helps validate critical care models beyond one hospital and study practice variation, mortality, and resource use. Multi-center de-identified ICU database from tele-ICU systems for external validation and critical-care ML. ICU patient/unit-stay/event tables across multiple hospitals raw-source -> validated landing zone -> normalized source tables -> OMOP/PCORnet or feature store -> model-ready cohorts Cross-site missingness and local practice differences are central. Tele-ICU workflows differ from bedside EHR workflows. Use site-aware validation to test generalization."
   },
   {
+    "id": "longevity-world-cup",
+    "title": "Longevity World Cup",
+    "category": "clinical-research",
+    "tier": "open",
+    "phi": "public-participant-submitted-identifiable-biomarker-data",
+    "reid_risk": "high",
+    "omop": "custom-etl-required",
+    "curation": "needs-review",
+    "use_cases": [
+      "longevity-leaderboard-exploration",
+      "biological-age-ranking-prototypes",
+      "public-biomarker-json-examples",
+      "healthspan-data-rag-and-agent-demos"
+    ],
+    "vocabularies": [
+      "AthleteSlug",
+      "biological age fields",
+      "PhenoAge biomarkers",
+      "Bortz age biomarkers",
+      "crowd age fields",
+      "leaderboard placement fields"
+    ],
+    "business_summary": "A public, biomarker-rich longevity competition dataset useful for prototyping healthspan analytics, biological-age ranking views, reproducible leaderboard examples, and public data/RAG demonstrations.",
+    "url": "https://longevityworldcup.com/",
+    "text": "Longevity World Cup A public, biomarker-rich longevity competition dataset useful for prototyping healthspan analytics, biological-age ranking views, reproducible leaderboard examples, and public data/RAG demonstrations. Public longevity leaderboard and JSON dataset with participant-submitted biomarker, biological-age, proof, placement, crowd-age, profile, and contact fields. Public athlete profile with nested biomarker submissions, biological-age result fields, proof asset references, placements, crowd-age counts, and profile/contact metadata. API JSON -> schema capture -> normalized athlete/profile, biomarker submission, proof asset, and placement tables -> optional feature store or analytics views Public identifiable participant context requires careful consent, quoting, and redistribution review. Voluntary competition submissions create strong selection bias and are not representative clinical samples. Nested JSON fields and leaderboard-specific rank logic can change with the live application. Biological-age comparability depends on source proof, measurement date, biomarker availability, and model-specific rules."
+  },
+  {
     "id": "mimic-cxr",
     "title": "MIMIC-CXR",
     "category": "clinical-research",
