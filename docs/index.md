@@ -13,9 +13,9 @@
 </section>
 
 <section class="stat-grid" aria-label="Catalog statistics">
-<div class="stat-card"><span class="stat-card__value">108</span><span class="stat-card__label">datasets</span></div>
+<div class="stat-card"><span class="stat-card__value">109</span><span class="stat-card__label">datasets</span></div>
 <div class="stat-card"><span class="stat-card__value">14</span><span class="stat-card__label">categories</span></div>
-<div class="stat-card"><span class="stat-card__value">69</span><span class="stat-card__label">open sources</span></div>
+<div class="stat-card"><span class="stat-card__value">70</span><span class="stat-card__label">open sources</span></div>
 <div class="stat-card"><span class="stat-card__value">17</span><span class="stat-card__label">DUA, IRB, or purchase</span></div>
 <div class="stat-card"><span class="stat-card__value">20</span><span class="stat-card__label">reference entries</span></div>
 </section>
@@ -90,7 +90,7 @@
     <span class="category-card__icon">&#x1F52C;</span>
     <span>
       <strong>Clinical / Research / ICU</strong>
-      <small>10 datasets - Credentialed EHR, ICU, cohort, trial, and multimodal research datasets.</small>
+      <small>11 datasets - Credentialed EHR, ICU, cohort, trial, and multimodal research datasets.</small>
     </span>
   </a>
   <a class="category-card" href="datasets.md#drug-pharma">
@@ -137,7 +137,7 @@
 <section class="tier-grid">
   <div class="tier-card tier-card--open">
     <strong>Open</strong>
-    <span>69 datasets</span>
+    <span>70 datasets</span>
     <small>Public download, API, or aggregate portal.</small>
   </div>
   <div class="tier-card tier-card--registration">
